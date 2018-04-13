@@ -7,26 +7,26 @@ import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 
 
-public class fileInput {
+public class FileInput {
 	public String fileName;
 	public String fileCode;
 
-	public static fileInput[] createFileInput(File rootDir) {
-			String extensions[] = {"java" , "py"};
-			Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
-			File[] filesArray = files.toArray(new File[files.size()]);
+	public static FileInput[] createFileInput(File rootDir) {
+		String extensions[] = {"java" , "py"};
+		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
+		File[] filesArray = files.toArray(new File[files.size()]);
 
-			int size = filesArray.length;
+		int size = filesArray.length;
 
-			fileInput[] inputArray = new fileInput[size];
+		FileInput[] inputArray = new FileInput[size];
 
-			for (int i=0; i<size; i++) {	
-				inputArray[i] = new fileInput();
-				inputArray[i].fileName = filesArray[i].getName();
-				inputArray[i].fileCode = readFile(filesArray[i]);
+		for (int i=0; i<size; i++) {	
+			inputArray[i] = new FileInput();
+			inputArray[i].fileName = filesArray[i].getName();
+			inputArray[i].fileCode = readFile(filesArray[i]);
 
-			}
-			return inputArray;
+		}
+		return inputArray;
 	}
 
 	private static String readFile(File file) {
@@ -38,7 +38,7 @@ public class fileInput {
 		}
 	}
 
-	public fileInput() {
+	public FileInput() {
 		fileName="";
 		fileCode="";
 	}
