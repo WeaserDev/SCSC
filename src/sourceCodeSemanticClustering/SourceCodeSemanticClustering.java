@@ -11,7 +11,7 @@ import featureExtraction.FeatureExtraction;
 public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) {
-		File projectDir=new File(("c:\\project"));
+		File projectDir=new File(("C:\\Users\\Aris\\eclipse-workspace\\Ergasia"));
 		FileInput[] fileIn = FileInput.createFileInput(projectDir);
 		int size = fileIn.length;
 		FeatureExtraction features = new FeatureExtraction(fileIn);
