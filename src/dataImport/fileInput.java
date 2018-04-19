@@ -8,8 +8,8 @@ import java.util.Collection;
 
 
 public class FileInput {
-	public String fileName;
-	public String fileCode;
+	private String fileName;
+	private String fileCode;
 
 	public static FileInput[] createFileInput(File rootDir) {
 		String extensions[] = {"java" , "py"};
@@ -43,6 +43,14 @@ public class FileInput {
 		fileCode="";
 	}
 
+	public String getFileName() {
+		return fileName;
+	}
+	
+	public String getFileCode() {
+		return fileCode;
+	}
+	
 }
 
 

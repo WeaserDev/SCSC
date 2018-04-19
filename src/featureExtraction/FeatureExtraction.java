@@ -7,11 +7,11 @@ import java.util.HashMap;
 
 public class FeatureExtraction {
 
-	public int occurenceTable[][];
-	public HashMap<String, Integer> fileID = new HashMap<String, Integer>();
-	public HashMap<String, Integer> wordID = new HashMap<String, Integer>();
-	public HashMap<Integer, String> idFile = new HashMap<Integer, String>();
-	public HashMap<Integer, String> idWord = new HashMap<Integer, String>();
+	private int occurenceTable[][];
+	private HashMap<String, Integer> fileID = new HashMap<String, Integer>();
+	private HashMap<String, Integer> wordID = new HashMap<String, Integer>();
+	private HashMap<Integer, String> idFile = new HashMap<Integer, String>();
+	private HashMap<Integer, String> idWord = new HashMap<Integer, String>();
 	
 	
 	public FeatureExtraction() {
@@ -33,7 +33,7 @@ public class FeatureExtraction {
 		
 		
 		for (int i=0; i<fileNumber; i++) {
-			String[] words = input[i].fileCode.split("\\W+");
+			String[] words = input[i].getFileCode().split("\\W+");
 			for (int k=0; k<words.length; k++) {
 
 				if (!wordID.containsKey(words[k])){
@@ -50,8 +50,8 @@ public class FeatureExtraction {
 
 		
 		for (int i=0; i<fileNumber; i++) {
-			idFile.put(i,input[i].fileName);
-			fileID.put(input[i].fileName,i);
+			idFile.put(i,input[i].getFileName());
+			fileID.put(input[i].getFileName(),i);
 			
 		}
 	}
@@ -63,7 +63,7 @@ public class FeatureExtraction {
 		
 		
 		for (int i=0; i<fileNumber; i++) {
-			String[] words = input[i].fileCode.split("\\W+");
+			String[] words = input[i].getFileCode().split("\\W+");
 			for (int k=0; k<words.length; k++) {
 				if (wordID.containsKey(words[k])) {
 				index = wordID.get(words[k]);
@@ -72,5 +72,25 @@ public class FeatureExtraction {
 			}	
 		}
 		return occurence;
+	}
+	
+	public int[][] getOccurenceTable(){
+		return occurenceTable;
+	}
+	
+	public HashMap<String, Integer> getFileID(){
+		return fileID;
+	}
+	
+	public HashMap<String, Integer> getWordID(){
+		return wordID;
+	}
+	
+	public HashMap<Integer, String> getIdFile(){
+		return idFile;
+	}
+	
+	public HashMap<Integer, String> getIdWord(){
+		return idWord;
 	}
 }

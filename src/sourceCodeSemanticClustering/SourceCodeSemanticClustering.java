@@ -15,11 +15,11 @@ public class SourceCodeSemanticClustering {
 		FileInput[] fileIn = FileInput.createFileInput(projectDir);
 		int size = fileIn.length;
 		FeatureExtraction features = new FeatureExtraction(fileIn);
-		int wordCount = features.wordID.size();
+		int wordCount = features.getWordID().size();
 		for (int i=0; i<size; i++) {	
-			System.out.println("file name: " + features.idFile.get(i));
+			System.out.println("file name: " + features.getIdFile().get(i));
 			for (int k=0; k<wordCount ; k++) {
-				System.out.println("word: " + features.idWord.get(k) + " :" + features.occurenceTable[i][k]);
+				System.out.println("word: " + features.getIdWord().get(k) + " :" + features.getOccurenceTable()[i][k]);
 				
 			}
 
