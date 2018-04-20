@@ -7,6 +7,7 @@ import java.util.Iterator;
 import dataImport.FileInput;
 
 import featureExtraction.FeatureExtraction;
+import clustering.WekaClusteringKmeans;
 
 public class SourceCodeSemanticClustering {
 
@@ -22,10 +23,13 @@ public class SourceCodeSemanticClustering {
 				System.out.println("word: " + features.getIdWord().get(k) + " :" + features.getOccurenceTable()[i][k]);
 				
 			}
-
-			
-			
+		}
 		
+		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable());
+		int clusters[] = clusterer.returnAssignments();
+		for (int i=0; i<clusters.length ; i++) {
+			System.out.println(clusters[i]);
+			System.out.println(features.getIdFile().get(i));
 		}
 	}
 	

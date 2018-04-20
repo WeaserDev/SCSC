@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class FeatureExtraction {
 
-	private int occurenceTable[][];
+	private float occurenceTable[][];
 	private HashMap<String, Integer> fileID = new HashMap<String, Integer>();
 	private HashMap<String, Integer> wordID = new HashMap<String, Integer>();
 	private HashMap<Integer, String> idFile = new HashMap<Integer, String>();
@@ -56,10 +56,10 @@ public class FeatureExtraction {
 		}
 	}
 	
-	private int[][] createOccurenceTable(FileInput[] input) {
+	private float[][] createOccurenceTable(FileInput[] input) {
 		int fileNumber = input.length;
 		int index = wordID.size();
-		int[][] occurence = new int[fileNumber][index];
+		float[][] occurence = new float[fileNumber][index];
 		
 		
 		for (int i=0; i<fileNumber; i++) {
@@ -74,7 +74,7 @@ public class FeatureExtraction {
 		return occurence;
 	}
 	
-	public int[][] getOccurenceTable(){
+	public float[][] getOccurenceTable(){
 		return occurenceTable;
 	}
 	
