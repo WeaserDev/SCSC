@@ -21,10 +21,7 @@ public class FileInput {
 		FileInput[] inputArray = new FileInput[size];
 
 		for (int i=0; i<size; i++) {	
-			inputArray[i] = new FileInput();
-			inputArray[i].fileName = filesArray[i].getName();
-			inputArray[i].fileCode = readFile(filesArray[i]);
-
+			inputArray[i] = new FileInput(filesArray[i].getName(),readFile(filesArray[i]));
 		}
 		return inputArray;
 	}
@@ -38,9 +35,9 @@ public class FileInput {
 		}
 	}
 
-	public FileInput() {
-		fileName="";
-		fileCode="";
+	public FileInput(String fileName, String fileCode) {
+		this.fileName = fileName;
+		this.fileCode = fileCode;
 	}
 
 	public String getFileName() {

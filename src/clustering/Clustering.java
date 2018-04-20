@@ -9,11 +9,11 @@ abstract class Clustering {
 		this.occurenceTable = occurenceTable;
 	}
 	
-	protected abstract void createClusters();
+	protected abstract int[] createClusters();
 	
 	public int[] returnAssignments() {
 		if (assignments==null){
-			createClusters();
+			assignments = createClusters();
 		}
 		return assignments;
 	}

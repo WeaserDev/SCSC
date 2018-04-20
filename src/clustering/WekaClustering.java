@@ -14,7 +14,7 @@ abstract class WekaClustering extends Clustering {
 	}
 	
 	
-	protected void createWekaData() {
+	protected Instances createWekaData() {
 		ArrayList<Attribute> atts = new ArrayList<Attribute>();
 		List<Instance> instances = new ArrayList<Instance>();
 		int featuresNumber = occurenceTable[0].length;
@@ -39,11 +39,12 @@ abstract class WekaClustering extends Clustering {
 		    atts.add(current);
 		}
 
-		wekaDataset = new Instances("wekaDataset", atts, instances.size());
+		Instances wekaData = new Instances("wekaDataset", atts, instances.size());
 
 		for(Instance inst : instances) {
-			wekaDataset.add(inst);
+			wekaData.add(inst);
 		}
+		return wekaData;
 
 	}
 	
