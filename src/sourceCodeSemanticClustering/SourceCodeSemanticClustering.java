@@ -6,7 +6,8 @@ import java.util.Iterator;
 
 import dataImport.FileInput;
 
-import featureExtraction.FeatureExtraction;
+import featureExtraction.NaiveFeatureExtraction;
+import visualization.PrintFile;
 import clustering.WekaClusteringKmeans;
 
 public class SourceCodeSemanticClustering {
@@ -15,7 +16,7 @@ public class SourceCodeSemanticClustering {
 		File projectDir=new File(("C:\\Users\\Aris\\eclipse-workspace\\Ergasia"));
 		FileInput[] fileIn = FileInput.createFileInput(projectDir);
 		int size = fileIn.length;
-		FeatureExtraction features = new FeatureExtraction(fileIn);
+		NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn);
 		int wordCount = features.getWordID().size();
 		for (int i=0; i<size; i++) {	
 			System.out.println("file name: " + features.getIdFile().get(i));
@@ -31,6 +32,8 @@ public class SourceCodeSemanticClustering {
 			System.out.println(clusters[i]);
 			System.out.println(features.getIdFile().get(i));
 		}
+		PrintFile print=new PrintFile(clusters, features.getIdFile());
+		print.printClusters();
 	}
 	
 		

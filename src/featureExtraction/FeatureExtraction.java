@@ -5,92 +5,59 @@ import dataImport.FileInput;
 
 import java.util.HashMap;
 
-public class FeatureExtraction {
-
-	private float occurenceTable[][];
-	private HashMap<String, Integer> fileID = new HashMap<String, Integer>();
-	private HashMap<String, Integer> wordID = new HashMap<String, Integer>();
-	private HashMap<Integer, String> idFile = new HashMap<Integer, String>();
-	private HashMap<Integer, String> idWord = new HashMap<Integer, String>();
+abstract class FeatureExtraction {
+	protected FileInput[] input;
+	protected float occurenceTable[][];
+	protected HashMap<String, Integer> fileID;
+	protected HashMap<Integer, String> idFile;
 	
-	
-	public FeatureExtraction() {
-		
-	}
 	
 	public FeatureExtraction(FileInput[] input) {
-
-		createFileMap(input);
-		createWordMap(input);
-		occurenceTable = createOccurenceTable(input);
-		
+		this.input = input;
 	}
-
-	
-	private void createWordMap(FileInput[] input){
-		int fileNumber = input.length;
-		int wordNumber = 0;
 		
+	private HashMap<String, Integer> createFileID() {
+		int fileNumber = input.length;
+		HashMap<String, Integer> fileID = new HashMap<String, Integer>();
 		
 		for (int i=0; i<fileNumber; i++) {
-			String[] words = input[i].getFileCode().split("\\W+");
-			for (int k=0; k<words.length; k++) {
-
-				if (!wordID.containsKey(words[k])){
-					wordID.put(words[k],wordNumber);
-					idWord.put(wordNumber, words[k]);
-					wordNumber +=1;	
-				}
-			}
+			fileID.put(input[i].getFileName(),i);			
 		}
+		return fileID;
 	}
 	
-	private void createFileMap(FileInput[] input) {
+	private HashMap<Integer, String> createidFile() {
 		int fileNumber = input.length;
-
-		
+		HashMap<Integer, String> idFile = new HashMap<Integer, String>();		
 		for (int i=0; i<fileNumber; i++) {
-			idFile.put(i,input[i].getFileName());
-			fileID.put(input[i].getFileName(),i);
-			
+			idFile.put(i,input[i].getFileName());			
 		}
+		return idFile;
 	}
 	
-	private float[][] createOccurenceTable(FileInput[] input) {
-		int fileNumber = input.length;
-		int index = wordID.size();
-		float[][] occurence = new float[fileNumber][index];
-		
-		
-		for (int i=0; i<fileNumber; i++) {
-			String[] words = input[i].getFileCode().split("\\W+");
-			for (int k=0; k<words.length; k++) {
-				if (wordID.containsKey(words[k])) {
-				index = wordID.get(words[k]);
-				occurence[i][index] += 1;
-				}
-			}	
-		}
-		return occurence;
-	}
+	protected abstract float[][] createOccurenceTable();
 	
 	public float[][] getOccurenceTable(){
+		if (occurenceTable==null) {
+			occurenceTable=createOccurenceTable();
+		}
 		return occurenceTable;
 	}
 	
 	public HashMap<String, Integer> getFileID(){
+		if (fileID==null) {
+			fileID=createFileID();
+		}		
 		return fileID;
 	}
 	
-	public HashMap<String, Integer> getWordID(){
-		return wordID;
-	}
 	
 	public HashMap<Integer, String> getIdFile(){
+		if (idFile==null) {
+			idFile=createidFile();
+		}
 		return idFile;
 	}
 	
-	public HashMap<Integer, String> getIdWord(){
-		return idWord;
-	}
+
 }
