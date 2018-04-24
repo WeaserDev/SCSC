@@ -10,33 +10,20 @@ public class WekaClusteringKmeans extends WekaClustering {
 	protected int[] createClusters() {
 		wekaDataset = createWekaData();
 		int[] result = null;
-		int k=4;
+		int k = 5;
+		
 		SimpleKMeans kmeans = new SimpleKMeans();
-        
+        kmeans.setPreserveInstancesOrder(true);
+
 		try {
 			kmeans.setNumClusters(k);
+        	kmeans.buildClusterer(wekaDataset);
+        	result = kmeans.getAssignments();
 		} 	
 		catch (
 			Exception e) {e.printStackTrace();
 		}
 		
-		
-        kmeans.setPreserveInstancesOrder(true);
-        
-        try {
-        	kmeans.buildClusterer(wekaDataset);
-        }
-        catch (
-        	Exception e) {e.printStackTrace();
-        }
-        
-        try {
-        	result = kmeans.getAssignments();
-        } 	
-        catch (Exception e) {
-        	e.printStackTrace();
-        }
-        
         return result;
 	}
 }
