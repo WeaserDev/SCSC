@@ -12,11 +12,11 @@ public class PrintFile extends Visualization {
 		super(assignments, idFile);
 	}
 	
-	public void printClusters() {
+	public void printClusters(String fileName) {
 		
 
 		try {
-			BufferedWriter wr = new BufferedWriter(new FileWriter( "output.txt"));
+			BufferedWriter wr = new BufferedWriter(new FileWriter(fileName));
 			int clusters=clusterNumber();
 			for (int i=0; i<clusters; i++) {
 			wr.write("Cluster " + i);

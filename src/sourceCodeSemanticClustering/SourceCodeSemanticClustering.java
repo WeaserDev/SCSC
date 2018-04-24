@@ -33,7 +33,7 @@ public class SourceCodeSemanticClustering {
 			System.out.println(features.getIdFile().get(i));
 		}
 		PrintFile print=new PrintFile(clusters, features.getIdFile());
-		print.printClusters();
+		print.printClusters("output.txt");
 	}
 	
 		
