@@ -12,7 +12,7 @@ public class PrintFile extends Visualization {
 		super(assignments, idFile);
 	}
 	
-	public void printClusters(String fileName) {
+	public void visualize(String fileName) {
 		
 
 		try {

@@ -12,6 +12,8 @@ abstract class Visualization {
 		this.idFile = idFile;
 	}
 	
+	abstract void visualize(String description);
+	
 	protected int clusterNumber() {
 		int max = assignments[0];
 		for (int i=1; i < assignments.length ; i++) {
