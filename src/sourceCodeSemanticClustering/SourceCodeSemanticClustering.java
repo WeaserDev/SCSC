@@ -18,19 +18,22 @@ public class SourceCodeSemanticClustering {
 		int size = fileIn.length;
 		NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn);
 		int wordCount = features.getFeatureId().size();
-		for (int i=0; i<size; i++) {	
-			System.out.println("file name: " + features.getIdFile().get(i));
-			for (int k=0; k<wordCount ; k++) {
+		int fileCount = features.getFileId().size();
+		System.out.println(wordCount + " x " + fileCount);
+
+		//for (int i=0; i<size; i++) {	
+			//System.out.println("file name: " + features.getIdFile().get(i));
+			//for (int k=0; k<wordCount ; k++) {
 				//System.out.println("word: " + features.getIdWord().get(k) + " :" + features.getOccurenceTable()[i][k]);
 				
-			}
-		}
+			//}
+		//}
 		
-		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable());
-		int clusters[] = clusterer.returnAssignments();
+		//WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable());
+		//int clusters[] = clusterer.returnAssignments();
 
-		PrintFile print=new PrintFile(clusters, features.getIdFile());
-		print.visualize("output.txt");
+		//PrintFile print=new PrintFile(clusters, features.getIdFile());
+		//print.visualize("output.txt");
 	}
 	
 		
