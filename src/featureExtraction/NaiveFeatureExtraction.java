@@ -6,68 +6,51 @@ import dataImport.FileInput;
 
 public class NaiveFeatureExtraction extends FeatureExtraction {
 
-	protected HashMap<String, Integer> featureId;
-	protected HashMap<Integer, String> idFeature;
+	private HashMap<String, Integer> featureIds;
+	private HashMap<Integer, String> idFeatures;
 
 	
 	public NaiveFeatureExtraction(FileInput[] input) {
 		super(input);
 	}
 	
-	
-	private HashMap<String, Integer> createFeatureId(){
-		int fileNumber = input.length;
-		int wordNumber = 0;
-		HashMap<String, Integer> featureId = new HashMap<String, Integer>();
-		
-		for (int i=0; i<fileNumber; i++) {
-			String[] words = input[i].getFileCode().split("\\W+");
-			for (int k=0; k<words.length; k++) {
 
-				if (!featureId.containsKey(words[k])){
-					featureId.put(words[k],wordNumber);
-					wordNumber +=1;	
-				}
-			}
-		}
-		return featureId;
-	}
-	
-	private HashMap<Integer, String> createIdFeature(){
+	private void createFeatureIds(){
 		int fileNumber = input.length;
 		int wordNumber = 0;
-		HashMap<Integer, String> idFeature = new HashMap<Integer, String>();
-		HashMap<String, Integer> featureId = new HashMap<String, Integer>();
+		HashMap<Integer, String> idFeatures = new HashMap<Integer, String>();
+		HashMap<String, Integer> featureIds = new HashMap<String, Integer>();
 
 		
 		for (int i=0; i<fileNumber; i++) {
 			String[] words = input[i].getFileCode().split("\\W+");
 			for (int k=0; k<words.length; k++) {
 
-				if (!featureId.containsKey(words[k])){
-					featureId.put(words[k],wordNumber);
-					idFeature.put(wordNumber, words[k]);
+				if (!featureIds.containsKey(words[k])){
+					featureIds.put(words[k],wordNumber);
+					idFeatures.put(wordNumber, words[k]);
 					wordNumber +=1;	
 				}
 			}
 		}
-		return idFeature;
+		this.featureIds = featureIds;
+		this.idFeatures = idFeatures;
 	}
 	
 	protected float[][] createOccurenceTable() {
 		int fileNumber = input.length;
-		if (featureId==null) {
-			featureId=createFeatureId();
+		if (featureIds==null) {
+			createFeatureIds();
 		}
-		int index = featureId.size();
+		int index = featureIds.size();
 		float[][] occurence = new float[fileNumber][index];
 		
 		
 		for (int i=0; i<fileNumber; i++) {
 			String[] words = input[i].getFileCode().split("\\W+");
 			for (int k=0; k<words.length; k++) {
-				if (featureId.containsKey(words[k])) {
-				index = featureId.get(words[k]);
+				if (featureIds.containsKey(words[k])) {
+				index = featureIds.get(words[k]);
 				occurence[i][index] = 1;
 				}
 			}	
@@ -77,19 +60,26 @@ public class NaiveFeatureExtraction extends FeatureExtraction {
 	
 
 	
-	public HashMap<String, Integer> getFeatureId(){
-		if (featureId==null) {
-			featureId=createFeatureId();
+	public int getFeatureId(String feature){
+		if (featureIds==null) {
+			createFeatureIds();
 		}		
-		return featureId;
+		return featureIds.get(feature);
 	}
 	
 	
-	public HashMap<Integer, String> getIdFeature(){
-		if (idFeature==null) {
-			idFeature=createIdFeature();
+	public String getIdFeature(int i){
+		if (idFeatures==null) {
+			createFeatureIds();
 		}		
-		return idFeature;
+		return idFeatures.get(i);
+	}
+	
+	public int getFeatureNumber() {
+		if (featureIds==null) {
+			createFeatureIds();
+		}		
+		return featureIds.size();
 	}
 }
 	

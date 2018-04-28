@@ -8,35 +8,35 @@ import java.util.HashMap;
 abstract class FeatureExtraction {
 	protected FileInput[] input;
 	protected float occurenceTable[][];
-	protected HashMap<String, Integer> fileId;
-	protected HashMap<Integer, String> idFile;
+	protected HashMap<String, Integer> fileIds;
+	protected HashMap<Integer, String> idFiles;
 	
 	
 	public FeatureExtraction(FileInput[] input) {
 		this.input = input;
 	}
 	
-	abstract HashMap<String, Integer> getFeatureId();
-	abstract HashMap<Integer, String> getIdFeature();
+	abstract int getFeatureId(String feature);
+	abstract String getIdFeature(int i);
 
 	
-	private HashMap<String, Integer> createFileId() {
+	private HashMap<String, Integer> createFileIds() {
 		int fileNumber = input.length;
-		HashMap<String, Integer> fileId = new HashMap<String, Integer>();
+		HashMap<String, Integer> fileIds = new HashMap<String, Integer>();
 		
 		for (int i=0; i<fileNumber; i++) {
-			fileId.put(input[i].getFileName(),i);			
+			fileIds.put(input[i].getFileName(),i);			
 		}
-		return fileId;
+		return fileIds;
 	}
 	
-	private HashMap<Integer, String> createIdFile() {
+	private HashMap<Integer, String> createIdFiles() {
 		int fileNumber = input.length;
-		HashMap<Integer, String> idFile = new HashMap<Integer, String>();		
+		HashMap<Integer, String> idFiles = new HashMap<Integer, String>();		
 		for (int i=0; i<fileNumber; i++) {
-			idFile.put(i,input[i].getFileName());			
+			idFiles.put(i,input[i].getFileName());			
 		}
-		return idFile;
+		return idFiles;
 	}
 	
 	protected abstract float[][] createOccurenceTable();
@@ -48,20 +48,26 @@ abstract class FeatureExtraction {
 		return occurenceTable;
 	}
 	
-	public HashMap<String, Integer> getFileId(){
-		if (fileId==null) {
-			fileId=createFileId();
+	public int getFileId(String name){
+		if (fileIds==null) {
+			fileIds=createFileIds();
 		}		
-		return fileId;
+		return fileIds.get(name);
 	}
 	
 	
-	public HashMap<Integer, String> getIdFile(){
-		if (idFile==null) {
-			idFile=createIdFile();
+	public String getIdFile(int i){
+		if (idFiles==null) {
+			idFiles=createIdFiles();
 		}
-		return idFile;
+		return idFiles.get(i);
 	}
 	
+	public int getFileNumber() {
+		if (idFiles==null) {
+			idFiles=createIdFiles();
+		}
+		return idFiles.size();
+	}
 
 }
