@@ -44,7 +44,7 @@ public class SourceCodeSemanticClustering {
 		int clusters[] = clusterer.returnAssignments();
 
 		PrintFile print=new PrintFile(clusters, idFiles);
-		print.visualize("CanC5F1.txt");
+		print.visualize("C:\\results\\CanC5F1.txt");
 	}
 	
 		
