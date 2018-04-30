@@ -3,6 +3,7 @@ package clustering;
 import java.util.ArrayList;
 import java.util.List;
 
+import weka.clusterers.Clusterer;
 import weka.core.*;
 
 abstract class WekaClustering extends Clustering {
@@ -46,6 +47,24 @@ abstract class WekaClustering extends Clustering {
 		}
 		return wekaData;
 
+	}
+	
+	protected int[] createAssignments(Clusterer clusterer) {
+		int[] clusters = new int[wekaDataset.numInstances()];
+		int i=0;
+		
+		
+		for(Instance instance: wekaDataset) {
+			try {
+				clusters[i] = clusterer.clusterInstance(instance);
+			} 
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+			i+=1;
+		}
+
+		return clusters;
 	}
 	
 }

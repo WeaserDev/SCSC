@@ -11,9 +11,9 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 	private HashMap<String, Integer> featureIds;
 	private HashMap<Integer, String> idFeatures;
 	
-	public WordModelFeatureExtraction(FileInput[] input,int method) {
+	public WordModelFeatureExtraction(FileInput[] input,int methodId) {
 		super(input);
-		switch(method) {
+		switch(methodId) {
 		case 1: wordModel = WordModel.commonBagOfWords;
 		break;
 		case 2: wordModel = WordModel.commonWordNet;

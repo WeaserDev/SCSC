@@ -8,11 +8,13 @@ import dataImport.FileInput;
 import featureExtraction.WordModelFeatureExtraction;
 import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
-import clustering.WekaClusteringKmeans;
+import clustering.*;
 
 public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) {
+		HashMap<Integer, String> idFiles = new HashMap<Integer, String>();
+		
 		File projectDir=new File(("C:\\Users\\Aris\\eclipse-workspace\\Ergasia"));
 		FileInput[] fileIn = FileInput.createFileInput(projectDir);
 		int size = fileIn.length;
@@ -26,7 +28,9 @@ public class SourceCodeSemanticClustering {
 			System.out.println("feature: " + features.getIdFeature(k));
 		}
 		
-		
+		for (int i=0;i<fileNumber;i++) {
+			idFiles.put(i, features.getIdFile(i));
+		}
 		
 		//for (int i=0; i<size; i++) {	
 			//System.out.println("file name: " + features.getIdFile().get(i));
@@ -36,11 +40,11 @@ public class SourceCodeSemanticClustering {
 			//}
 		//}
 		
-		//WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable());
-		//int clusters[] = clusterer.returnAssignments();
+		WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
+		int clusters[] = clusterer.returnAssignments();
 
-		//PrintFile print=new PrintFile(clusters, features.getIdFile());
-		//print.visualize("output.txt");
+		PrintFile print=new PrintFile(clusters, idFiles);
+		print.visualize("CanC5F1.txt");
 	}
 	
 		

@@ -11,13 +11,13 @@ public class WekaClusteringKmeans extends WekaClustering {
 	protected int[] createClusters() {
 		wekaDataset = createWekaData();
 		int[] result = null;
-		int k=12;
+		int k=7;
 		
 		SimpleKMeans kmeans = new SimpleKMeans();
         kmeans.setPreserveInstancesOrder(true);
         kmeans.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
 		try {
-	        kmeans.setMaxIterations(5);
+	        kmeans.setMaxIterations(100);
 			kmeans.setNumClusters(k);
         	kmeans.buildClusterer(wekaDataset);
         	result = kmeans.getAssignments();
