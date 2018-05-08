@@ -1,19 +1,20 @@
 package featureExtraction;
 
 import dataImport.FileInput;
-
+import featureWeight.WeightMethod;
 
 import java.util.HashMap;
 
-abstract class FeatureExtraction {
+public abstract class FeatureExtraction {
 	protected FileInput[] input;
 	protected float occurenceTable[][];
 	protected HashMap<String, Integer> fileIds;
 	protected HashMap<Integer, String> idFiles;
+	WeightMethod weightMethod;
 	
-	
-	public FeatureExtraction(FileInput[] input) {
+	public FeatureExtraction(FileInput[] input, WeightMethod weightMethod) {
 		this.input = input;
+		this.weightMethod=weightMethod;
 	}
 	
 	abstract int getFeatureId(String feature);

@@ -3,6 +3,7 @@ package featureExtraction;
 import java.util.HashMap;
 
 import dataImport.FileInput;
+import featureWeight.WeightMethod;
 
 public class NaiveFeatureExtraction extends FeatureExtraction {
 
@@ -10,8 +11,8 @@ public class NaiveFeatureExtraction extends FeatureExtraction {
 	private HashMap<Integer, String> idFeatures;
 
 	
-	public NaiveFeatureExtraction(FileInput[] input) {
-		super(input);
+	public NaiveFeatureExtraction(FileInput[] input, WeightMethod weightMethod) {
+		super(input,weightMethod);
 	}
 	
 
@@ -51,10 +52,11 @@ public class NaiveFeatureExtraction extends FeatureExtraction {
 			for (int k=0; k<words.length; k++) {
 				if (featureIds.containsKey(words[k])) {
 				index = featureIds.get(words[k]);
-				occurence[i][index] = 1;
+				occurence[i][index] += 1;
 				}
 			}	
 		}
+		occurence = weightMethod.weightOccurenceTable(occurence);
 		return occurence;
 	}
 	

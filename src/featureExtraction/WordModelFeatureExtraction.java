@@ -1,6 +1,7 @@
 package featureExtraction;
 
 import dataImport.FileInput;
+import featureWeight.WeightMethod;
 
 import java.util.HashMap;
 
@@ -11,8 +12,8 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 	private HashMap<String, Integer> featureIds;
 	private HashMap<Integer, String> idFeatures;
 	
-	public WordModelFeatureExtraction(FileInput[] input,int methodId) {
-		super(input);
+	public WordModelFeatureExtraction(FileInput[] input,WeightMethod weightMethod, int methodId) {
+		super(input,weightMethod);
 		switch(methodId) {
 		case 1: wordModel = WordModel.commonBagOfWords;
 		break;
@@ -28,18 +29,15 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 		HashMap<String, Integer> featureIds = new HashMap<String, Integer>();
 	
 		for (int i=0; i<fileNumber; i++) {
-			String[] sentences = WordModel.getTextSentences(input[i].getFileCode());
-			for (int j=0; j<sentences.length; j++) {		
-				String[] words = wordModel.getSentenceFeatures(sentences[j]);
-				for (int k=0; k<words.length; k++) {
-
-					if (!featureIds.containsKey(words[k])){
-						featureIds.put(words[k],wordNumber);
-						idFeatures.put(wordNumber, words[k]);
-						wordNumber +=1;	
-					}
+			String[] words = wordModel.getSentenceFeatures(input[i].getFileCode());
+			for (int k=0; k<words.length; k++) {
+				if (!featureIds.containsKey(words[k])){
+					featureIds.put(words[k],wordNumber);
+					idFeatures.put(wordNumber, words[k]);
+					wordNumber +=1;	
 				}
 			}
+			
 		}
 		this.featureIds = featureIds;
 		this.idFeatures = idFeatures;
@@ -69,17 +67,15 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 		float[][] occurence = new float[fileNumber][index];
 			
 		for (int i=0; i<fileNumber; i++) {
-			String[] sentences = WordModel.getTextSentences(input[i].getFileCode());
-			for (int j=0; j<sentences.length; j++) {	
-				String[] words = wordModel.getSentenceFeatures(sentences[j]);
-				for (int k=0; k<words.length; k++) {
-					if (featureIds.containsKey(words[k])) {
-						index = featureIds.get(words[k]);
-						occurence[i][index] = 1;
-					}
-				}	
-			}
+			String[] words = wordModel.getSentenceFeatures(input[i].getFileCode());
+			for (int k=0; k<words.length; k++) {
+				if (featureIds.containsKey(words[k])) {
+					index = featureIds.get(words[k]);
+					occurence[i][index] += 1;
+				}
+			}	
 		}
+		occurence = weightMethod.weightOccurenceTable(occurence);
 		return occurence;
 	}
 

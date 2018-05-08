@@ -5,6 +5,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
+import featureExtraction.FeatureExtraction;
+
 public class PrintFile extends Visualization {
 	
 	
@@ -19,7 +21,7 @@ public class PrintFile extends Visualization {
 			BufferedWriter wr = new BufferedWriter(new FileWriter(fileName));
 			int clusters=clusterNumber();
 			for (int i=0; i<clusters; i++) {
-			wr.write("Cluster " + i);
+			wr.write("Cluster " + (i+1));
 			wr.newLine();
 				for (int k=0; k<assignments.length; k++) {
 					if (assignments[k]==i) {
@@ -29,6 +31,7 @@ public class PrintFile extends Visualization {
 				wr.newLine();
 				wr.newLine();
 			}
+			wr.write("entropy: " + calculateEntropy());
 			wr.close();
 			
 		} 

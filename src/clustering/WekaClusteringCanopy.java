@@ -15,7 +15,7 @@ public class WekaClusteringCanopy extends WekaClustering {
 		try {
 			clusterer.setOptions(new String[] {"-L", "COMPLETE"});
 			clusterer.setDebug(true);
-			clusterer.setNumClusters(5);
+			clusterer.setNumClusters(2);
 
 			clusterer.buildClusterer(wekaDataset);
 

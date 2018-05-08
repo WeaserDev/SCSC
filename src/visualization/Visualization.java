@@ -1,7 +1,7 @@
 package visualization;
 
 import java.util.HashMap;
-
+import featureExtraction.*;
 
 abstract class Visualization {
 	protected int[] assignments;
@@ -23,6 +23,22 @@ abstract class Visualization {
 		}
 		max+=1;
 		return max;
+	}
+	
+	protected double calculateEntropy() {
+		int clusterNumber = clusterNumber();
+		double entropy=0;
+		for (int i=0; i<clusterNumber; i++) {
+			int clusterPoints=0;
+			for (int k=0 ; k<assignments.length; k++) {
+				if (assignments[k]==i) {
+					clusterPoints += 1;
+				}	
+			}
+			double temp = (double)clusterPoints/(double)assignments.length;
+			entropy += temp * Math.log(temp)/Math.log(assignments.length);
+		}
+		return -1*entropy;
 	}
 	
 }
