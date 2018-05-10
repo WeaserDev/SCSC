@@ -12,9 +12,7 @@ public class TermFrequencyInverseDocumentFrequencyWeight extends WeightMethod {
 					occurenceTable[i][k] = occurenceTable[i][k]*inverseDocumentFrequency[k];
 				}
 			}		
-			return occurenceTable;
-		
-		
+			return occurenceTable;		
 	}
 
 }

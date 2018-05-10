@@ -12,10 +12,11 @@ public class WekaClusteringHierarchical extends WekaClustering {
 
 	protected int[] createClusters() {
 		wekaDataset = createWekaData();
-		
+		CosineDistance cosineDistance = new CosineDistance();
 		HierarchicalClusterer clusterer = new HierarchicalClusterer();
 		try {
-			clusterer.setOptions(new String[] {"-L", "COMPLETE"});
+			clusterer.setDistanceFunction(cosineDistance);
+			clusterer.setOptions(new String[] {"-L", "CENDROID"});
 			clusterer.setDebug(true);
 			clusterer.setNumClusters(8);
 			clusterer.setDistanceIsBranchLength(true);

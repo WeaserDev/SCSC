@@ -19,11 +19,12 @@ public class SourceCodeSemanticClustering {
 		File projectDir=new File(("C:\\Users\\Aris\\eclipse-workspace\\Ergasia"));
 		FileInput[] fileIn = FileInput.createFileInput(projectDir);
 		int size = fileIn.length;
+		BinaryInverseDocumentFrequencyWeight bwidf = new BinaryInverseDocumentFrequencyWeight();
 		BinaryWeight bw = new BinaryWeight();
 		TermFrequencyWeight tf = new TermFrequencyWeight();
 		TermFrequencyInverseDocumentFrequencyWeight tfidf = new TermFrequencyInverseDocumentFrequencyWeight();
-		WordModelFeatureExtraction features = new WordModelFeatureExtraction(fileIn, tf , 2);
-		//NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn);
+		//WordModelFeatureExtraction features = new WordModelFeatureExtraction(fileIn, tfidf , 1);
+		NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn,tfidf);
 		int featureNumber = features.getFeatureNumber();
 		int fileNumber = features.getFileNumber();
 		System.out.println(featureNumber + " x " + fileNumber);
@@ -36,13 +37,13 @@ public class SourceCodeSemanticClustering {
 			idFiles.put(i, features.getIdFile(i));
 		}
 		
-		for (int i=0; i<size; i++) {	
-			System.out.println("file name: " + features.getIdFile(i));
-			for (int k=0; k<featureNumber ; k++) {
-				System.out.println("word: " + features.getIdFeature(k) + " :" + features.getOccurenceTable()[i][k]);
+		//for (int i=0; i<size; i++) {	
+			//System.out.println("file name: " + features.getIdFile(i));
+			//for (int k=0; k<featureNumber ; k++) {
+				//System.out.println("word: " + features.getIdFeature(k) + " :" + features.getOccurenceTable()[i][k]);
 				
-			}
-		}
+			//}
+		//}
 		
 		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
@@ -51,7 +52,7 @@ public class SourceCodeSemanticClustering {
 		int clusters[] = clusterer.returnAssignments();
 
 		PrintFile print=new PrintFile(clusters, idFiles);
-		print.visualize("C:\\results\\kMeansC7F2tf.txt");
+		print.visualize("C:\\results\\kCosineC7Fntfidf.txt");
 	}
 	
 		
