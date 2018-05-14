@@ -3,7 +3,7 @@ package featureExtraction;
 import java.util.HashMap;
 
 import dataImport.FileInput;
-import featureWeight.WeightMethod;
+import featureExtraction.featureWeight.WeightMethod;
 
 public class NaiveFeatureExtraction extends FeatureExtraction {
 

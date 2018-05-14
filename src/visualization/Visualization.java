@@ -38,7 +38,7 @@ abstract class Visualization {
 			double temp = (double)clusterPoints/(double)assignments.length;
 			entropy += temp * Math.log(temp)/Math.log(assignments.length);
 		}
-		return -1*entropy;
+		return -entropy;
 	}
 	
 }

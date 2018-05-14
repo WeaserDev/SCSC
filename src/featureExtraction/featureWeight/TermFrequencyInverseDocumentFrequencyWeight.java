@@ -1,4 +1,4 @@
-package featureWeight;
+package featureExtraction.featureWeight;
 
 public class TermFrequencyInverseDocumentFrequencyWeight extends WeightMethod {
 	public float[][] weightOccurenceTable(float[][] occurenceTable) {

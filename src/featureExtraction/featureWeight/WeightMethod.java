@@ -1,4 +1,4 @@
-package featureWeight;
+package featureExtraction.featureWeight;
 
 public abstract class WeightMethod {
 	abstract public float[][] weightOccurenceTable(float[][] occurenceTable);
@@ -32,5 +32,21 @@ public abstract class WeightMethod {
 		}
 		
 		return inverseDocumentFrequency;
+	}
+	
+	protected float[][] normalizeTable(float[][] occurenceTable) {
+		int featuresNumber = occurenceTable[0].length;
+		int filesNumber = occurenceTable.length;
+		float sum;
+		for (int i=0; i<filesNumber; i++) {
+			sum = 0;
+			for (int k=0; k<featuresNumber; k++) {
+				sum += (float)Math.pow(occurenceTable[i][k],2);
+				}	
+			for (int k=0; k<featuresNumber; k++) {
+				occurenceTable[i][k] = occurenceTable[i][k]/(float)Math.sqrt(sum);
+			}
+		}
+		return occurenceTable;
 	}
 }

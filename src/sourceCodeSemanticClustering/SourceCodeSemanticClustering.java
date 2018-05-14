@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 import dataImport.FileInput;
 import featureExtraction.WordModelFeatureExtraction;
-import featureWeight.*;
+import featureExtraction.featureWeight.*;
 import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
 import clustering.*;
@@ -21,10 +21,13 @@ public class SourceCodeSemanticClustering {
 		int size = fileIn.length;
 		BinaryInverseDocumentFrequencyWeight bwidf = new BinaryInverseDocumentFrequencyWeight();
 		BinaryWeight bw = new BinaryWeight();
+		WeightMethod ntfidf = new NormalizedTermFrequencyInverseDocumentFrequencyWeight();
 		TermFrequencyWeight tf = new TermFrequencyWeight();
 		TermFrequencyInverseDocumentFrequencyWeight tfidf = new TermFrequencyInverseDocumentFrequencyWeight();
-		//WordModelFeatureExtraction features = new WordModelFeatureExtraction(fileIn, tfidf , 1);
-		NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn,tfidf);
+		WeightMethod nw = new NormalizedWeight();
+		WeightMethod nwidf = new NormalizedInverseDocumentFrequencyWeight();
+		WordModelFeatureExtraction features = new WordModelFeatureExtraction(fileIn, tf , 2);
+		//NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn,tfidf);
 		int featureNumber = features.getFeatureNumber();
 		int fileNumber = features.getFileNumber();
 		System.out.println(featureNumber + " x " + fileNumber);
@@ -47,12 +50,12 @@ public class SourceCodeSemanticClustering {
 		
 		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
-		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable());
+		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),7);
 
 		int clusters[] = clusterer.returnAssignments();
 
 		PrintFile print=new PrintFile(clusters, idFiles);
-		print.visualize("C:\\results\\kCosineC7Fntfidf.txt");
+		print.visualize("results\\kCosineC7F2tf.txt");
 	}
 	
 		

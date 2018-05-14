@@ -20,6 +20,9 @@ public class PrintFile extends Visualization {
 		try {
 			BufferedWriter wr = new BufferedWriter(new FileWriter(fileName));
 			int clusters=clusterNumber();
+			wr.write("entropy: " + calculateEntropy());
+			wr.newLine();
+			wr.newLine();
 			for (int i=0; i<clusters; i++) {
 			wr.write("Cluster " + (i+1));
 			wr.newLine();
@@ -30,8 +33,7 @@ public class PrintFile extends Visualization {
 				}
 				wr.newLine();
 				wr.newLine();
-			}
-			wr.write("entropy: " + calculateEntropy());
+			}			
 			wr.close();
 			
 		} 

@@ -1,22 +1,17 @@
-package featureWeight;
+package featureExtraction.featureWeight;
 
-public class BinaryWeight extends WeightMethod {
-	
+public class TermFrequencyWeight extends WeightMethod {
+
 	public float[][] weightOccurenceTable(float[][] occurenceTable) {
+		float[] fileFeaturesCount = countFileFeatures(occurenceTable);		
 		int featuresNumber = occurenceTable[0].length;
 		int filesNumber = occurenceTable.length;
 		for (int i=0; i<filesNumber; i++) {
 			for (int k=0; k<featuresNumber; k++) {
-				if (occurenceTable[i][k]>0) {
-					occurenceTable[i][k]=1;
-				}
-				else {
-					occurenceTable[i][k]=0;
-				}
+				occurenceTable[i][k] = occurenceTable[i][k]/fileFeaturesCount[i];
 			}
-		}
+		}	
 		return occurenceTable;
 	}
-	
 
 }

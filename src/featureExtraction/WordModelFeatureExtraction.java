@@ -1,7 +1,7 @@
 package featureExtraction;
 
 import dataImport.FileInput;
-import featureWeight.WeightMethod;
+import featureExtraction.featureWeight.WeightMethod;
 
 import java.util.HashMap;
 
