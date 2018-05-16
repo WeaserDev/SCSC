@@ -6,10 +6,12 @@ import featureExtraction.*;
 abstract class Visualization {
 	protected int[] assignments;
 	protected HashMap<Integer, String> idFile;
+	protected String[][] labels;
 	
-	Visualization(int[] assignments, HashMap<Integer,String> idFile){
+	Visualization(int[] assignments, HashMap<Integer,String> idFile, String[][] labels){
 		this.assignments = assignments;
 		this.idFile = idFile;
+		this.labels = labels;
 	}
 	
 	abstract void visualize(String description);

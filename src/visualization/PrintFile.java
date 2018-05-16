@@ -10,8 +10,8 @@ import featureExtraction.FeatureExtraction;
 public class PrintFile extends Visualization {
 	
 	
-	public PrintFile(int[] assignments, HashMap<Integer,String> idFile) {
-		super(assignments, idFile);
+	public PrintFile(int[] assignments, HashMap<Integer,String> idFile, String[][] labels) {
+		super(assignments, idFile, labels);
 	}
 	
 	public void visualize(String fileName) {
@@ -30,6 +30,11 @@ public class PrintFile extends Visualization {
 					if (assignments[k]==i) {
 						wr.write(idFile.get(k) + ", ");
 					}
+				}
+				wr.newLine();
+				wr.write("labels: ");
+				for (int k=0 ; k<labels[0].length ; k++) {
+					wr.write(labels[i][k] + ", ");
 				}
 				wr.newLine();
 				wr.newLine();

@@ -15,15 +15,15 @@ public class WekaClusteringKmeans extends WekaClustering {
 		int[] result = null;
 		CosineDistance cosineDistance = new CosineDistance();
 		ManhattanDistance manhattanDistance = new ManhattanDistance();
-		SimpleKMeans kmeans = new SimpleKMeans();
-        kmeans.setPreserveInstancesOrder(true);
-        kmeans.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
+		SimpleKMeans clusterer = new SimpleKMeans();
+        clusterer.setPreserveInstancesOrder(true);
+        clusterer.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
 		try {
-			kmeans.setDistanceFunction(cosineDistance);
-	        kmeans.setMaxIterations(10);
-			kmeans.setNumClusters(clusterNumber);
-        	kmeans.buildClusterer(wekaDataset);
-        	result = kmeans.getAssignments();
+			clusterer.setDistanceFunction(cosineDistance);
+	        clusterer.setMaxIterations(10);
+			clusterer.setNumClusters(clusterNumber);
+        	clusterer.buildClusterer(wekaDataset);
+        	result = clusterer.getAssignments();
 		} 	
 		catch (
 			Exception e) {e.printStackTrace();

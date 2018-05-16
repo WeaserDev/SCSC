@@ -1,25 +1,26 @@
+entropy: 0.5094747046240263
+
 Cluster 1
-FileInput.java, 
+IteratedLovinsStemmer.java, WekaClustering.java, 
 
 Cluster 2
-WekaClustering.java, WekaClusteringKmeans.java, 
+Labeling.java, MostFrequentFeaturesLabeling.java, 
 
 Cluster 3
-LevenshteinDistance.java, CosineDistance.java, 
+PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
 
 Cluster 4
-BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+Clustering.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
 
 Cluster 5
-IteratedLovinsStemmer.java, LovinsStemmer.java, PorterStemmer.java, Stemmer.java, WordModel.java, 
+PorterStemmer.java, Stemmer.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, 
 
 Cluster 6
-Clustering.java, WekaClusteringCanopy.java, WekaClusteringHierarchical.java, Visualization.java, 
+LevenshteinDistance.java, CosineDistance.java, 
 
 Cluster 7
-Example.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, SourceCodeSemanticClustering.java, 
+WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, 
 
 Cluster 8
-PrintFile.java, 
+Example.java, LovinsStemmer.java, WordModel.java, FileInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, SourceCodeSemanticClustering.java, PrintFile.java, Visualization.java, 
 
-entropy: 0.5966376260623857

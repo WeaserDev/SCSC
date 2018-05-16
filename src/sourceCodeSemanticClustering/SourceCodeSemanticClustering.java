@@ -3,7 +3,8 @@ package sourceCodeSemanticClustering;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
-
+import clustering.DBSCAN.*;
+import clustering.labeling.*;
 import dataImport.FileInput;
 import featureExtraction.WordModelFeatureExtraction;
 import featureExtraction.featureWeight.*;
@@ -26,7 +27,7 @@ public class SourceCodeSemanticClustering {
 		TermFrequencyInverseDocumentFrequencyWeight tfidf = new TermFrequencyInverseDocumentFrequencyWeight();
 		WeightMethod nw = new NormalizedWeight();
 		WeightMethod nwidf = new NormalizedInverseDocumentFrequencyWeight();
-		WordModelFeatureExtraction features = new WordModelFeatureExtraction(fileIn, tf , 2);
+		WordModelFeatureExtraction features = new WordModelFeatureExtraction(fileIn, tfidf , 1);
 		//NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn,tfidf);
 		int featureNumber = features.getFeatureNumber();
 		int fileNumber = features.getFileNumber();
@@ -50,13 +51,19 @@ public class SourceCodeSemanticClustering {
 		
 		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
-		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),7);
-
+		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),9);
+		//WekaClusteringDBSCAN clusterer = new WekaClusteringDBSCAN(features.getOccurenceTable());
 		int clusters[] = clusterer.returnAssignments();
-
-		PrintFile print=new PrintFile(clusters, idFiles);
-		print.visualize("results\\kCosineC7F2tf.txt");
-	}
-	
+		Labeling labels = new MostFrequentFeaturesLabeling(features,clusters,5);
 		
+		//for (int i=0; i<labelTable.length; i++) {	
+			//for (int k=0; k<labelTable[0].length ; k++) {
+				//System.out.println(labelTable[i][k]);
+			//}
+		//}
+		PrintFile print=new PrintFile(clusters, idFiles,labels.getLabels());
+		print.visualize("results\\kCosineC9F1tfidfLabeled.txt");
+	
+	
+	}	
 }

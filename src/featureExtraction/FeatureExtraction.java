@@ -17,9 +17,9 @@ public abstract class FeatureExtraction {
 		this.weightMethod=weightMethod;
 	}
 	
-	abstract int getFeatureId(String feature);
-	abstract String getIdFeature(int i);
-
+	public abstract int getFeatureId(String feature);
+	public abstract String getIdFeature(int i);
+	public abstract int getFeatureNumber();
 	
 	private HashMap<String, Integer> createFileIds() {
 		int fileNumber = input.length;
