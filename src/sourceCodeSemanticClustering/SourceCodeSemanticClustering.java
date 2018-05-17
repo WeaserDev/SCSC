@@ -51,7 +51,7 @@ public class SourceCodeSemanticClustering {
 		
 		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
-		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),9);
+		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8);
 		//WekaClusteringDBSCAN clusterer = new WekaClusteringDBSCAN(features.getOccurenceTable());
 		int clusters[] = clusterer.returnAssignments();
 		Labeling labels = new MostFrequentFeaturesLabeling(features,clusters,5);
@@ -62,7 +62,7 @@ public class SourceCodeSemanticClustering {
 			//}
 		//}
 		PrintFile print=new PrintFile(clusters, idFiles,labels.getLabels());
-		print.visualize("results\\kCosineC9F1tfidfLabeled.txt");
+		print.visualize("results\\kCosineC8F1tfidfLabeledtest.txt");
 	
 	
 	}	

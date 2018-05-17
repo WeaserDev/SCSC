@@ -44,25 +44,24 @@ public abstract class Labeling {
 	
 	protected int[] kLargestElementsIndex(float[] array, int k) {
 		float [] temp = new float[k];
-		float min[];
+		int minIndex;
 		int [] tempIndex = new int[k];
 		for (int i=0; i<k; i++) {
 			temp[i] = array[i];
 			tempIndex[i] = i;
 		}
 		for (int i=k;i<array.length;i++) {
-			min = arrayMinimum(temp);
-			if (min[0]<array[i]) {
-				temp[(int)min[1]] = array[i];
-				tempIndex[(int)min[1]] = i;
-			}
-			
+			minIndex = arrayMinimum(temp);
+			if (temp[minIndex] < array[i]) {
+				temp[minIndex] = array[i];
+				tempIndex[minIndex] = i;
+			}			
 		}
 		
 		return tempIndex;
 	}
 
-	private float[] arrayMinimum(float[] temp) {
+	private int arrayMinimum(float[] temp) {
 		float min = temp[0];
 		int index = 0;
 		
@@ -72,9 +71,6 @@ public abstract class Labeling {
 				index = i;
 			}
 		}
-		float[] minIndex = new float[2];
-		minIndex[0] = min;
-		minIndex[1] = index;
-		return minIndex;
+		return index;
 	}
 }
