@@ -37,6 +37,7 @@ public abstract class WeightMethod {
 	protected float[][] normalizeTable(float[][] occurenceTable) {
 		int featuresNumber = occurenceTable[0].length;
 		int filesNumber = occurenceTable.length;
+
 		float sum;
 		for (int i=0; i<filesNumber; i++) {
 			sum = 0;

@@ -14,13 +14,14 @@ public class WekaClusteringKmeans extends WekaClustering {
 		wekaDataset = createWekaData();
 		int[] result = null;
 		CosineDistance cosineDistance = new CosineDistance();
+		ModifiedCosineDistance modifiedCosineDistance = new ModifiedCosineDistance();
 		ManhattanDistance manhattanDistance = new ManhattanDistance();
 		SimpleKMeans clusterer = new SimpleKMeans();
         clusterer.setPreserveInstancesOrder(true);
         clusterer.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
 		try {
-			clusterer.setDistanceFunction(cosineDistance);
-	        clusterer.setMaxIterations(10);
+			clusterer.setDistanceFunction(modifiedCosineDistance);
+	        clusterer.setMaxIterations(1000);
 			clusterer.setNumClusters(clusterNumber);
         	clusterer.buildClusterer(wekaDataset);
         	result = clusterer.getAssignments();

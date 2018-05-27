@@ -8,6 +8,7 @@ import weka.core.*;
 
 abstract class WekaClustering extends Clustering {
 	protected Instances wekaDataset;
+
 	
 	WekaClustering(float[][] occurenceTable) {
 		super(occurenceTable);

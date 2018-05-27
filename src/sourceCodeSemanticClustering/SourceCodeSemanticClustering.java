@@ -15,6 +15,7 @@ import clustering.*;
 public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) {
+		long startTime = System.nanoTime();
 		HashMap<Integer, String> idFiles = new HashMap<Integer, String>();
 		
 		File projectDir=new File(("C:\\Users\\Aris\\eclipse-workspace\\Ergasia"));
@@ -51,8 +52,10 @@ public class SourceCodeSemanticClustering {
 		
 		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
-		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8);
+		//WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8);
 		//WekaClusteringDBSCAN clusterer = new WekaClusteringDBSCAN(features.getOccurenceTable());
+		WekaClusteringXmeans clusterer = new WekaClusteringXmeans(features.getOccurenceTable(),12 , 2);
+
 		int clusters[] = clusterer.returnAssignments();
 		Labeling labels = new MostFrequentFeaturesLabeling(features,clusters,5);
 		
@@ -62,7 +65,10 @@ public class SourceCodeSemanticClustering {
 			//}
 		//}
 		PrintFile print=new PrintFile(clusters, idFiles,labels.getLabels());
-		print.visualize("results\\kCosineC8F1tfidfLabeledtest.txt");
+		print.visualize("results\\xModCosineC2_12F1tfidfLabel.txt");
+		long endTime = System.nanoTime();
+		System.out.println("Took "+((endTime - startTime)/1000000) + " ms"); 
+
 	
 	
 	}	

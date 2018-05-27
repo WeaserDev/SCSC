@@ -47,5 +47,19 @@ public class PrintFile extends Visualization {
 		}
 	}
 	
-
+	private double calculateEntropy() {
+		int clusterNumber = clusterNumber();
+		double entropy=0;
+		for (int i=0; i<clusterNumber; i++) {
+			int clusterPoints=0;
+			for (int k=0 ; k<assignments.length; k++) {
+				if (assignments[k]==i) {
+					clusterPoints += 1;
+				}	
+			}
+			double temp = (double)clusterPoints/(double)assignments.length;
+			entropy += temp * Math.log(temp)/Math.log(1/(double)clusterNumber);
+		}
+		return entropy;
+	}
 }
