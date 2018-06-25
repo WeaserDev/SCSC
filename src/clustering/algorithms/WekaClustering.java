@@ -1,4 +1,4 @@
-package clustering;
+package clustering.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;

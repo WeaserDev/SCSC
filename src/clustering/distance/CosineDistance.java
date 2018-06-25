@@ -1,4 +1,4 @@
-package clustering;
+package clustering.distance;
 
 import weka.core.*;
 import weka.core.TechnicalInformation.Field;

@@ -58,7 +58,9 @@ public class PrintFile extends Visualization {
 				}	
 			}
 			double temp = (double)clusterPoints/(double)assignments.length;
-			entropy += temp * Math.log(temp)/Math.log(1/(double)clusterNumber);
+			if (temp!=0) {
+				entropy += temp * Math.log(temp)/Math.log(1/(double)clusterNumber);
+			}
 		}
 		return entropy;
 	}

@@ -1,4 +1,5 @@
-package clustering;
+package clustering.algorithms;
+import clustering.distance.*;
 
 public class WekaClusteringXmeans extends WekaClustering {
 

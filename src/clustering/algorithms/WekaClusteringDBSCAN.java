@@ -1,4 +1,4 @@
-package clustering;
+package clustering.algorithms;
 
 import clustering.DBSCAN.*;
 

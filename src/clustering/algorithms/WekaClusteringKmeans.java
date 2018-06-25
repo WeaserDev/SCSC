@@ -1,7 +1,9 @@
-package clustering;
+package clustering.algorithms;
 import weka.clusterers.*;
 import weka.core.SelectedTag;
 import weka.core.ManhattanDistance;
+import clustering.distance.*;
+
 public class WekaClusteringKmeans extends WekaClustering {
 	int clusterNumber;
 	

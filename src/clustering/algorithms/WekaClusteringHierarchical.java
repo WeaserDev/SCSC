@@ -1,6 +1,7 @@
-package clustering;
+package clustering.algorithms;
 
 import weka.clusterers.HierarchicalClusterer;
+import clustering.distance.*;
 
 public class WekaClusteringHierarchical extends WekaClustering {
 

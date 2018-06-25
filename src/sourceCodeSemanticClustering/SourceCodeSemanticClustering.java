@@ -10,7 +10,7 @@ import featureExtraction.WordModelFeatureExtraction;
 import featureExtraction.featureWeight.*;
 import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
-import clustering.*;
+import clustering.algorithms.*;
 
 public class SourceCodeSemanticClustering {
 
@@ -54,7 +54,7 @@ public class SourceCodeSemanticClustering {
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
 		//WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8);
 		//WekaClusteringDBSCAN clusterer = new WekaClusteringDBSCAN(features.getOccurenceTable());
-		WekaClusteringXmeans clusterer = new WekaClusteringXmeans(features.getOccurenceTable(),12 , 2);
+		WekaClusteringXmeans clusterer = new WekaClusteringXmeans(features.getOccurenceTable(),12 , 8);
 
 		int clusters[] = clusterer.returnAssignments();
 		Labeling labels = new MostFrequentFeaturesLabeling(features,clusters,5);
@@ -65,10 +65,11 @@ public class SourceCodeSemanticClustering {
 			//}
 		//}
 		PrintFile print=new PrintFile(clusters, idFiles,labels.getLabels());
-		print.visualize("results\\xModCosineC2_12F1tfidfLabel.txt");
+		print.visualize("results\\xModCosineC8_12F1tfidfLabel.txt");
 		long endTime = System.nanoTime();
 		System.out.println("Took "+((endTime - startTime)/1000000) + " ms"); 
-
+		int x = 6/2*(1+2);
+		System.out.println(x);
 	
 	
 	}	

@@ -1,0 +1,26 @@
+entropy: 0.9141183195270857
+
+Cluster 1
+Clustering.java, Labeling.java, MostFrequentFeaturesLabeling.java, FileInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, SourceCodeSemanticClustering.java, Visualization.java, 
+labels: assign, label, file, featur, id, 
+
+Cluster 2
+Example.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, XMeans.java, 
+labels: cosin, dataset, cluster, weka, canopi, 
+
+Cluster 3
+PrintFile.java, 
+labels: line, writer, io, entropi, wr, 
+
+Cluster 4
+IteratedLovinsStemmer.java, LovinsStemmer.java, PorterStemmer.java, Stemmer.java, WordModel.java, 
+labels: str, stemmer, stem, word, put, 
+
+Cluster 5
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occur, weight, featur, tabl, frequenc, 
+
+Cluster 6
+LevenshteinDistance.java, CosineDistance.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, ModifiedCosineDistance.java, 
+labels: prioriti, queue, object, the, distanc, 
+

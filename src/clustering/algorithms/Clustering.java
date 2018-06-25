@@ -1,4 +1,4 @@
-package clustering;
+package clustering.algorithms;
 
 abstract class Clustering {
 	protected float occurenceTable[][];

@@ -1,4 +1,4 @@
-package clustering;
+package clustering.distance;
 
 import weka.core.Instance;
 import weka.core.neighboursearch.PerformanceStats;
