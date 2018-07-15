@@ -6,7 +6,7 @@ import weka.core.TechnicalInformation.Type;
 
 import weka.core.neighboursearch.PerformanceStats;
 
-public class CosineDistance
+public class WekaCosineDistance
   extends EuclideanDistance {
 
     /** for serialization. */
@@ -16,7 +16,7 @@ public class CosineDistance
   /**
    * Constructs an Cosine Distance object, Instances must be still set.
    */
-  public CosineDistance() {
+  public WekaCosineDistance() {
     super();
   }
 
@@ -26,7 +26,7 @@ public class CosineDistance
    * 
    * @param data 	the instances the distance function should work on
    */
-  public CosineDistance(Instances data) {
+  public WekaCosineDistance(Instances data) {
     super(data);
   }
 

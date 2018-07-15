@@ -22,7 +22,7 @@ public class WekaClusteringDBSCAN extends WekaClustering {
 			e.printStackTrace();
 		}
 		
-		int[] clusters=createAssignments(clusterer);
+		int[] clusters=createClusterAssignments(clusterer);
 
 		return clusters;
 	}

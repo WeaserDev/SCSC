@@ -48,6 +48,7 @@ import java.util.List;
 import java.util.Vector;
 
 /**
+ * @deprecated does not work as intended 
  <!-- globalinfo-start -->
  * Basic implementation of DBSCAN clustering algorithm that should *not* be used as a reference for runtime benchmarks: more sophisticated implementations exist! Clustering of new instances is not supported. More info:<br/>
  * <br/>

@@ -14,8 +14,8 @@ public class WekaClusteringXmeans extends WekaClustering {
 		
 		protected int[] createClusters() {
 			wekaDataset = createWekaData();
-			CosineDistance cosineDistance = new CosineDistance();
-			ModifiedCosineDistance modifiedCosineDistance = new ModifiedCosineDistance();
+			WekaCosineDistance cosineDistance = new WekaCosineDistance();
+			WekaModifiedCosineDistance modifiedCosineDistance = new WekaModifiedCosineDistance();
 			XMeans clusterer = new XMeans();
 			try {
 				clusterer.setDistanceF(modifiedCosineDistance);
@@ -27,7 +27,7 @@ public class WekaClusteringXmeans extends WekaClustering {
 			catch (
 				Exception e) {e.printStackTrace();
 			}
-        	int[] clusters=createAssignments(clusterer);
+        	int[] clusters=createClusterAssignments(clusterer);
 			
 	        return clusters;
 		}

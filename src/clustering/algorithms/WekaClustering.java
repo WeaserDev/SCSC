@@ -11,8 +11,7 @@ abstract class WekaClustering extends Clustering {
 
 	
 	WekaClustering(float[][] occurenceTable) {
-		super(occurenceTable);
-		
+		super(occurenceTable);	
 	}
 	
 	
@@ -50,7 +49,7 @@ abstract class WekaClustering extends Clustering {
 
 	}
 	
-	protected int[] createAssignments(Clusterer clusterer) {
+	protected int[] createClusterAssignments(Clusterer clusterer) {
 		int[] clusters = new int[wekaDataset.numInstances()];
 		int i=0;
 		

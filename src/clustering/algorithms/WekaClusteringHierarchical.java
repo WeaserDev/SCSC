@@ -13,7 +13,7 @@ public class WekaClusteringHierarchical extends WekaClustering {
 
 	protected int[] createClusters() {
 		wekaDataset = createWekaData();
-		CosineDistance cosineDistance = new CosineDistance();
+		WekaCosineDistance cosineDistance = new WekaCosineDistance();
 		HierarchicalClusterer clusterer = new HierarchicalClusterer();
 		try {
 			clusterer.setDistanceFunction(cosineDistance);
@@ -29,7 +29,7 @@ public class WekaClusteringHierarchical extends WekaClustering {
 			e.printStackTrace();
 		}
 		
-		int[] clusters=createAssignments(clusterer);
+		int[] clusters=createClusterAssignments(clusterer);
 
 		return clusters;
 	}

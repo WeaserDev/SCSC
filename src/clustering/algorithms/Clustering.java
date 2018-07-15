@@ -2,7 +2,7 @@ package clustering.algorithms;
 
 abstract class Clustering {
 	protected float occurenceTable[][];
-	protected int[] assignments;
+	protected int[] clusters;
 
 	
 	Clustering(float[][] occurenceTable){
@@ -11,11 +11,11 @@ abstract class Clustering {
 	
 	protected abstract int[] createClusters();
 	
-	public int[] returnAssignments() {
-		if (assignments==null){
-			assignments = createClusters();
+	public int[] returnClusters() {
+		if (clusters==null){
+			clusters = createClusters();
 		}
-		return assignments;
+		return clusters;
 	}
 	
 }
