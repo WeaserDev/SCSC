@@ -9,15 +9,14 @@ import auth.eng.textManager.*;
 
 public class WordModelFeatureExtraction extends FeatureExtraction {
 	WordModel wordModel;
-	private HashMap<String, Integer> featureIds;
-	private HashMap<Integer, String> idFeatures;
+	protected HashMap<String, Integer> featureIds;
+	protected HashMap<Integer, String> idFeatures;
 	
-	public WordModelFeatureExtraction(FileInput[] input,WeightMethod weightMethod, int methodId) {
+	public WordModelFeatureExtraction(FileInput[] input,WeightMethod weightMethod, String method) {
 		super(input,weightMethod);
-		switch(methodId) {
-		case 1: wordModel = WordModel.commonBagOfWords;
-		break;
-		case 2: wordModel = WordModel.commonWordNet;
+		wordModel = WordModel.commonBagOfWords;
+		switch(method) {
+		case "WordNet": wordModel = WordModel.commonWordNet;
 		break;
 		}
 	}

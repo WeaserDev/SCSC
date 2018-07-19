@@ -20,7 +20,8 @@ public class WekaClusteringKmeansDynamic extends WekaClusteringKmeans {
 		currentEvaluation = evaluation.evaluate(result, occurenceTable); 
 		if(previousEvaluation>currentEvaluation) break; 
 		previousEvaluation = currentEvaluation; 
-		this.clusterNumber++; } 
+		this.clusterNumber++; 
+		} 
 		return result; 
 	}
 	

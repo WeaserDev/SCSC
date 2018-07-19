@@ -28,10 +28,10 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 	}	
 	
 	protected int clusterNumber() {
-		int max = assignments[0];
-		for (int i=1; i < assignments.length ; i++) {
-			if (assignments[i]>max) {
-				max=assignments[i];
+		int max = clusters[0];
+		for (int i=1; i < clusters.length ; i++) {
+			if (clusters[i]>max) {
+				max=clusters[i];
 			}
 		}
 		max+=1;
@@ -45,7 +45,7 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 		for (int cluster=0; cluster<clusterNumber();cluster++) {
 			for (int i=0; i<features.getFileNumber();i++) {
 				for (int k=0; k<features.getFeatureNumber();k++) {
-					clusterTable[assignments[i]][k] += occurenceTable[i][k];					
+					clusterTable[clusters[i]][k] += occurenceTable[i][k];					
 				}								
 			}
 		}

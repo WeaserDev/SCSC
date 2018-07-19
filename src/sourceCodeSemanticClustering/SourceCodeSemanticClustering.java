@@ -6,7 +6,7 @@ import java.util.Iterator;
 import clustering.DBSCAN.*;
 import clustering.labeling.*;
 import dataImport.FileInput;
-import featureExtraction.WordModelFeatureExtraction;
+import featureExtraction.*;
 import featureExtraction.featureWeight.*;
 import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
@@ -28,7 +28,7 @@ public class SourceCodeSemanticClustering {
 		TermFrequencyInverseDocumentFrequencyWeight tfidf = new TermFrequencyInverseDocumentFrequencyWeight();
 		WeightMethod nw = new NormalizedWeight();
 		WeightMethod nwidf = new NormalizedInverseDocumentFrequencyWeight();
-		WordModelFeatureExtraction features = new WordModelFeatureExtraction(fileIn, tfidf , 1);
+		WordModelFeatureExtractionFileNameAddedWeight features = new WordModelFeatureExtractionFileNameAddedWeight(fileIn, tfidf , "", 30);
 		//NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn,tfidf);
 		int featureNumber = features.getFeatureNumber();
 		int fileNumber = features.getFileNumber();
@@ -52,12 +52,12 @@ public class SourceCodeSemanticClustering {
 		
 		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
-		//WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8);
+		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8,"modifiedCosine");
 		//WekaClusteringDBSCAN clusterer = new WekaClusteringDBSCAN(features.getOccurenceTable());
-		WekaClusteringXmeans clusterer = new WekaClusteringXmeans(features.getOccurenceTable(),12 , 8);
+		//WekaClusteringXmeans clusterer = new WekaClusteringXmeans(features.getOccurenceTable(),12 , 8);
 
-		int clusters[] = clusterer.returnAssignments();
-		Labeling labels = new MostFrequentFeaturesLabeling(features,clusters,5);
+		int clusters[] = clusterer.returnClusters();
+		Labeling labels = new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionFileNameAddedWeight(fileIn, new NoWeight(),"",100),clusters,3,tfidf);
 		
 		//for (int i=0; i<labelTable.length; i++) {	
 			//for (int k=0; k<labelTable[0].length ; k++) {
@@ -65,11 +65,9 @@ public class SourceCodeSemanticClustering {
 			//}
 		//}
 		PrintFile print=new PrintFile(clusters, idFiles,labels.getLabels());
-		print.visualize("results\\xModCosineC8_12F1tfidfLabel.txt");
+		print.visualize("results\\kmodcosC8newLabelsnewFE.txt");
 		long endTime = System.nanoTime();
 		System.out.println("Took "+((endTime - startTime)/1000000) + " ms"); 
-		int x = 6/2*(1+2);
-		System.out.println(x);
 	
 	
 	}	

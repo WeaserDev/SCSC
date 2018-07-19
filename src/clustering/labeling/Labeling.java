@@ -5,11 +5,11 @@ import featureExtraction.FeatureExtraction;
 
 public abstract class Labeling {
 	FeatureExtraction features;
-	int[] assignments;
+	int[] clusters;
 	
-	Labeling(FeatureExtraction features,int[] assignments){
+	Labeling(FeatureExtraction features,int[] clusters){
 		this.features = features;
-		this.assignments = assignments;
+		this.clusters = clusters;
 	}
 	protected abstract String[][] createLabels();
 	

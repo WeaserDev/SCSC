@@ -8,7 +8,7 @@ public class WekaClusteringKmeans extends WekaClustering {
 	int clusterNumber;
 	String distanceFunction;
 	
-	WekaClusteringKmeans(float[][] occurenceTable,int clusterNumber, String distanceFunction){
+	public WekaClusteringKmeans(float[][] occurenceTable,int clusterNumber, String distanceFunction){
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;
 		this.distanceFunction = distanceFunction;
@@ -28,7 +28,9 @@ public class WekaClusteringKmeans extends WekaClustering {
 			break;
 			case "modifiedCosine": clusterer.setDistanceFunction(new WekaModifiedCosineDistance());
 			break;
-			case "Manhattan" : clusterer.setDistanceFunction(new ManhattanDistance());
+			case "manhattan" : clusterer.setDistanceFunction(new ManhattanDistance());
+			break;
+			case "dot" : clusterer.setDistanceFunction(new WekaDotDistance());
 			break;
 			}
 	        clusterer.setMaxIterations(1000);
