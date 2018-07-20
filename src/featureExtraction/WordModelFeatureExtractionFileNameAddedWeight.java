@@ -2,24 +2,24 @@ package featureExtraction;
 
 import java.util.Arrays;
 
+import auth.eng.textManager.WordModel;
 import dataImport.FileInput;
 import featureExtraction.featureWeight.*;
 
 public class WordModelFeatureExtractionFileNameAddedWeight extends WordModelFeatureExtraction {
 	int fileNameWeight;
+	private WeightMethod weight;
 
-	public WordModelFeatureExtractionFileNameAddedWeight(FileInput[] input, WeightMethod weightMethod, String method, int fileNameWeight) {
-		super(input, new NoWeight(), method);
-		this.weightMethod = weightMethod;
+	public WordModelFeatureExtractionFileNameAddedWeight(FileInput[] input, WeightMethod weightMethod, WordModel wordModel, int fileNameWeight) {
+		super(input, new NoWeight(), wordModel);
+		this.weight = weightMethod;
 		this.fileNameWeight = fileNameWeight;
 	}
 	
 	protected float[][] createOccurenceTable() {
-
-		float[][] occurence;
-		occurence = super.createOccurenceTable();
+		float[][] occurence = super.createOccurenceTable();
 		int fileNumber = input.length;
-		int index = featureIds.size();
+		int index;
 		boolean additionalFeatures = false;
 		for (int i=0; i<fileNumber; i++) {
 			String[] words = wordModel.getSentenceFeatures(input[i].getFileName());
@@ -46,7 +46,7 @@ public class WordModelFeatureExtractionFileNameAddedWeight extends WordModelFeat
 				}
 			}	
 		}
-		occurence = weightMethod.weightOccurenceTable(occurence);
+		occurence = weight.weightOccurenceTable(occurence);
 		return occurence;
 	}
 

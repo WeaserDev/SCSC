@@ -12,13 +12,9 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 	protected HashMap<String, Integer> featureIds;
 	protected HashMap<Integer, String> idFeatures;
 	
-	public WordModelFeatureExtraction(FileInput[] input,WeightMethod weightMethod, String method) {
+	public WordModelFeatureExtraction(FileInput[] input,WeightMethod weightMethod, WordModel wordModel) {
 		super(input,weightMethod);
-		wordModel = WordModel.commonBagOfWords;
-		switch(method) {
-		case "WordNet": wordModel = WordModel.commonWordNet;
-		break;
-		}
+		this.wordModel = wordModel;
 	}
 	
 	private void createFeatureIds(){
@@ -83,5 +79,10 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 			createFeatureIds();
 		}		
 		return featureIds.size();
+	}
+	
+	public String unstemFeature(String feature){
+		feature = ((auth.eng.textManager.stemmers.InvertibleStemmer) wordModel.getStemmer()).getBestInterpretation(feature);	
+		return feature;
 	}
 }

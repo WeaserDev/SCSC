@@ -2,6 +2,7 @@ package clustering.labeling;
 
 import featureExtraction.FeatureExtraction;
 import featureExtraction.featureWeight.WeightMethod;
+import auth.eng.textManager.*;
 
 public class MostFrequentFeaturesLabeling extends Labeling {
 	int labelsNumber;
@@ -22,10 +23,17 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 			for (int j=0; j<labelsNumber; j++) {
 				labels[i][j] = features.getIdFeature(mostFrequentIds[j]);
 			}
-		}		
+		}
+		for (int i=0; i<labels.length; i++) {
+			for (int k=0; k<labels[0].length; k++) {
+				labels[i][k] = features.unstemFeature(labels[i][k]);		
+			}
+		}
 		return labels;
 		
-	}	
+	}
+	
+	
 	
 	protected int clusterNumber() {
 		int max = clusters[0];

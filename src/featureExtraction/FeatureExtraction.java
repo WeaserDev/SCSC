@@ -16,7 +16,7 @@ public abstract class FeatureExtraction {
 		this.input = input;
 		this.weightMethod=weightMethod;
 	}
-	
+	public abstract String unstemFeature(String feature);
 	public abstract int getFeatureId(String feature);
 	public abstract String getIdFeature(int i);
 	public abstract int getFeatureNumber();

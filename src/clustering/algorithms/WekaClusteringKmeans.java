@@ -1,14 +1,15 @@
 package clustering.algorithms;
 import weka.clusterers.*;
 import weka.core.SelectedTag;
+import weka.core.DistanceFunction;
 import weka.core.ManhattanDistance;
 import clustering.distance.*;
 
 public class WekaClusteringKmeans extends WekaClustering {
 	int clusterNumber;
-	String distanceFunction;
+	DistanceFunction distanceFunction;
 	
-	public WekaClusteringKmeans(float[][] occurenceTable,int clusterNumber, String distanceFunction){
+	public WekaClusteringKmeans(float[][] occurenceTable,int clusterNumber, DistanceFunction distanceFunction){
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;
 		this.distanceFunction = distanceFunction;
@@ -23,16 +24,7 @@ public class WekaClusteringKmeans extends WekaClustering {
         clusterer.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
 
 		try {
-			switch(distanceFunction) {
-			case "cosine": 	clusterer.setDistanceFunction(new WekaCosineDistance());											
-			break;
-			case "modifiedCosine": clusterer.setDistanceFunction(new WekaModifiedCosineDistance());
-			break;
-			case "manhattan" : clusterer.setDistanceFunction(new ManhattanDistance());
-			break;
-			case "dot" : clusterer.setDistanceFunction(new WekaDotDistance());
-			break;
-			}
+			clusterer.setDistanceFunction(distanceFunction);
 	        clusterer.setMaxIterations(1000);
 			clusterer.setNumClusters(clusterNumber);
         	clusterer.buildClusterer(wekaDataset);

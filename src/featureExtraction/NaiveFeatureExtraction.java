@@ -83,6 +83,11 @@ public class NaiveFeatureExtraction extends FeatureExtraction {
 		}		
 		return featureIds.size();
 	}
+
+
+	public String unstemFeature(String feature) {
+		return feature;
+	}
 }
 	
 

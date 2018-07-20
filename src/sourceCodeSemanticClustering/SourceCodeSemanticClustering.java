@@ -3,14 +3,18 @@ package sourceCodeSemanticClustering;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
+
+import auth.eng.textManager.WordModel;
 import clustering.DBSCAN.*;
 import clustering.labeling.*;
 import dataImport.FileInput;
+import dataImport.ProjectInput;
 import featureExtraction.*;
 import featureExtraction.featureWeight.*;
 import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
 import clustering.algorithms.*;
+import clustering.distance.*;
 
 public class SourceCodeSemanticClustering {
 
@@ -20,6 +24,7 @@ public class SourceCodeSemanticClustering {
 		
 		File projectDir=new File(("C:\\Users\\Aris\\eclipse-workspace\\Ergasia"));
 		FileInput[] fileIn = FileInput.createFileInput(projectDir);
+		ProjectInput project= new ProjectInput( FileInput.createFileInput(projectDir));
 		int size = fileIn.length;
 		BinaryInverseDocumentFrequencyWeight bwidf = new BinaryInverseDocumentFrequencyWeight();
 		BinaryWeight bw = new BinaryWeight();
@@ -28,7 +33,8 @@ public class SourceCodeSemanticClustering {
 		TermFrequencyInverseDocumentFrequencyWeight tfidf = new TermFrequencyInverseDocumentFrequencyWeight();
 		WeightMethod nw = new NormalizedWeight();
 		WeightMethod nwidf = new NormalizedInverseDocumentFrequencyWeight();
-		WordModelFeatureExtractionFileNameAddedWeight features = new WordModelFeatureExtractionFileNameAddedWeight(fileIn, tfidf , "", 30);
+		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
+		WordModelFeatureExtractionFunctionsAddedWeight features = new WordModelFeatureExtractionFunctionsAddedWeight(project.getInput(), tfidf ,wordModel , 0,0);
 		//NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn,tfidf);
 		int featureNumber = features.getFeatureNumber();
 		int fileNumber = features.getFileNumber();
@@ -52,12 +58,12 @@ public class SourceCodeSemanticClustering {
 		
 		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
 		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
-		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8,"modifiedCosine");
+		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8,new WekaModifiedCosineDistance());
 		//WekaClusteringDBSCAN clusterer = new WekaClusteringDBSCAN(features.getOccurenceTable());
 		//WekaClusteringXmeans clusterer = new WekaClusteringXmeans(features.getOccurenceTable(),12 , 8);
 
 		int clusters[] = clusterer.returnClusters();
-		Labeling labels = new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionFileNameAddedWeight(fileIn, new NoWeight(),"",100),clusters,3,tfidf);
+		Labeling labels = new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionFileNameAddedWeight(fileIn, new NoWeight(),wordModel,100),clusters,3,tfidf);
 		
 		//for (int i=0; i<labelTable.length; i++) {	
 			//for (int k=0; k<labelTable[0].length ; k++) {
