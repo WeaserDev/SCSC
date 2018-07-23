@@ -28,15 +28,14 @@ public class SourceCodeSemanticClustering {
 	public static void main(String[] args) throws IOException {
 		String fileName = "experiment.txt";
 		String projectPath = "C:\\Users\\Aris\\eclipse-workspace";
-		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(),new TermFrequencyWeight()};
 		DistanceFunction[] distance = {new WekaCosineDistance(), new WekaModifiedCosineDistance()};
 		int maxFileWeight = 50;
 		int fileWeightStep = 10;
 		int maxFunctionWeight = 10;
 		int functionWeightStep = 2;
-		File projectInput = new File(projectPath);
-		ProjectInput[] projectIn = ProjectInput.createProjectInput(projectInput);
+		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
+		ProjectInput[] projectIn = ProjectInput.createProjectInput(new File(projectPath));
 		BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
 		Evaluation entropy = new NormalizedEntropy();
 		for (int project=0; project<projectIn.length; project++) {
@@ -45,8 +44,8 @@ public class SourceCodeSemanticClustering {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
 						if (projectIn[project].getInput().length>0) {	
 							for (DistanceFunction dist:distance) {
-								WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel, fileWeight, functionWeight);
-								WekaClusteringKmeansDynamic clusterer = new WekaClusteringKmeansDynamic(features.getOccurenceTable(), new NormalizedEntropy(), dist);
+								WordModelFeatureExtraction features = new WordModelFeatureExtraction(projectIn[project].getInput(), weight, wordModel);
+								WekaClusteringKmeansDynamic clusterer = new WekaClusteringKmeansDynamic(features.getOccurenceTable(), entropy, dist);
 								int clusters[] = clusterer.returnClusters();				
 								writer.write(projectIn[project].getProjectName() +" " + weight.getClass()+" "+dist.getClass() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  +  entropy.evaluate(clusters, null));
 								writer.newLine();					
@@ -57,5 +56,5 @@ public class SourceCodeSemanticClustering {
 			}			
 		}	
 	writer.close();		
-	}	
+	}
 }
