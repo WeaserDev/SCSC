@@ -17,7 +17,7 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 		this.wordModel = wordModel;
 	}
 	
-	private void createFeatureIds(){
+	protected void createFeatureIds(){
 		int fileNumber = input.length;
 		int wordNumber = 0;
 		HashMap<Integer, String> idFeatures = new HashMap<Integer, String>();
@@ -81,8 +81,7 @@ public class WordModelFeatureExtraction extends FeatureExtraction {
 		return featureIds.size();
 	}
 	
-	public String unstemFeature(String feature){
-		feature = ((auth.eng.textManager.stemmers.InvertibleStemmer) wordModel.getStemmer()).getBestInterpretation(feature);	
-		return feature;
+	public String describeFeature(int featureId){		
+		return ((auth.eng.textManager.stemmers.InvertibleStemmer) wordModel.getStemmer()).getBestInterpretation(this.getIdFeature(featureId));
 	}
 }

@@ -25,7 +25,7 @@ public class WekaClusteringKmeans extends WekaClustering {
 
 		try {
 			clusterer.setDistanceFunction(distanceFunction);
-	        clusterer.setMaxIterations(1000);
+	        clusterer.setMaxIterations(100);
 			clusterer.setNumClusters(clusterNumber);
         	clusterer.buildClusterer(wekaDataset);
         	result = clusterer.getAssignments();

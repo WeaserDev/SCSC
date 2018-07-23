@@ -26,7 +26,7 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 		}
 		for (int i=0; i<labels.length; i++) {
 			for (int k=0; k<labels[0].length; k++) {
-				labels[i][k] = features.unstemFeature(labels[i][k]);		
+				labels[i][k] = features.describeFeature(features.getFeatureId(labels[i][k]));		
 			}
 		}
 		return labels;

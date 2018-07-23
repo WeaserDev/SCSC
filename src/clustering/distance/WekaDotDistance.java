@@ -10,10 +10,15 @@ public class WekaDotDistance
   extends EuclideanDistance {
 
     /** for serialization. */
-    private static final long serialVersionUID = 5861235595466795518L;
+
   
 
   /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1724317885454850424L;
+
+/**
    * Constructs an Cosine Distance object, Instances must be still set.
    */
   public WekaDotDistance() {
@@ -150,8 +155,11 @@ public class WekaDotDistance
 	}
 
 	distance = 1/(1 + distance);
+	
 	if(distance < 0)
 	    distance = 0;
+	else if(distance > 1)
+	    distance = 1;
 	
 	return distance;
   }

@@ -85,8 +85,8 @@ public class NaiveFeatureExtraction extends FeatureExtraction {
 	}
 
 
-	public String unstemFeature(String feature) {
-		return feature;
+	public String describeFeature(int featureId) {
+		return this.getIdFeature(featureId);
 	}
 }
 	

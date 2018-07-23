@@ -6,7 +6,7 @@ import weka.core.DistanceFunction;
 public class WekaClusteringKmeansDynamic extends WekaClusteringKmeans {
 	Evaluation evaluation;
 		
-	WekaClusteringKmeansDynamic(float[][] occurenceTable,Evaluation evaluation, DistanceFunction distanceFunction){
+	public WekaClusteringKmeansDynamic(float[][] occurenceTable,Evaluation evaluation, DistanceFunction distanceFunction){
 		super(occurenceTable,0 , distanceFunction);
 		this.evaluation = evaluation;
 	}

@@ -1,6 +1,9 @@
 package sourceCodeSemanticClustering;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -13,68 +16,46 @@ import featureExtraction.*;
 import featureExtraction.featureWeight.*;
 import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
+import weka.core.DistanceFunction;
+import weka.core.EuclideanDistance;
 import clustering.algorithms.*;
 import clustering.distance.*;
+import clustering.evaluation.Evaluation;
+import clustering.evaluation.NormalizedEntropy;
 
 public class SourceCodeSemanticClustering {
 
-	public static void main(String[] args) {
-		long startTime = System.nanoTime();
-		HashMap<Integer, String> idFiles = new HashMap<Integer, String>();
-		
-		File projectDir=new File(("C:\\Users\\Aris\\eclipse-workspace\\Ergasia"));
-		FileInput[] fileIn = FileInput.createFileInput(projectDir);
-		ProjectInput project= new ProjectInput( FileInput.createFileInput(projectDir));
-		int size = fileIn.length;
-		BinaryInverseDocumentFrequencyWeight bwidf = new BinaryInverseDocumentFrequencyWeight();
-		BinaryWeight bw = new BinaryWeight();
-		WeightMethod ntfidf = new NormalizedTermFrequencyInverseDocumentFrequencyWeight();
-		TermFrequencyWeight tf = new TermFrequencyWeight();
-		TermFrequencyInverseDocumentFrequencyWeight tfidf = new TermFrequencyInverseDocumentFrequencyWeight();
-		WeightMethod nw = new NormalizedWeight();
-		WeightMethod nwidf = new NormalizedInverseDocumentFrequencyWeight();
+	public static void main(String[] args) throws IOException {
+		String fileName = "experiment.txt";
+		String projectPath = "C:\\Users\\Aris\\eclipse-workspace";
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
-		WordModelFeatureExtractionFunctionsAddedWeight features = new WordModelFeatureExtractionFunctionsAddedWeight(project.getInput(), tfidf ,wordModel , 0,0);
-		//NaiveFeatureExtraction features = new NaiveFeatureExtraction(fileIn,tfidf);
-		int featureNumber = features.getFeatureNumber();
-		int fileNumber = features.getFileNumber();
-		System.out.println(featureNumber + " x " + fileNumber);
-		
-		//for (int k=0;k<featureNumber;k++) {
-		//	System.out.println("feature: " + features.getIdFeature(k));
-		//}
-		
-		for (int i=0;i<fileNumber;i++) {
-			idFiles.put(i, features.getIdFile(i));
-		}
-		
-		//for (int i=0; i<size; i++) {	
-			//System.out.println("file name: " + features.getIdFile(i));
-			//for (int k=0; k<featureNumber ; k++) {
-				//System.out.println("word: " + features.getIdFeature(k) + " :" + features.getOccurenceTable()[i][k]);
-				
-			//}
-		//}
-		
-		//WekaClusteringCanopy clusterer = new WekaClusteringCanopy(features.getOccurenceTable());
-		//WekaClusteringHierarchical clusterer = new WekaClusteringHierarchical(features.getOccurenceTable());
-		WekaClusteringKmeans clusterer = new WekaClusteringKmeans(features.getOccurenceTable(),8,new WekaModifiedCosineDistance());
-		//WekaClusteringDBSCAN clusterer = new WekaClusteringDBSCAN(features.getOccurenceTable());
-		//WekaClusteringXmeans clusterer = new WekaClusteringXmeans(features.getOccurenceTable(),12 , 8);
-
-		int clusters[] = clusterer.returnClusters();
-		Labeling labels = new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionFileNameAddedWeight(fileIn, new NoWeight(),wordModel,100),clusters,3,tfidf);
-		
-		//for (int i=0; i<labelTable.length; i++) {	
-			//for (int k=0; k<labelTable[0].length ; k++) {
-				//System.out.println(labelTable[i][k]);
-			//}
-		//}
-		PrintFile print=new PrintFile(clusters, idFiles,labels.getLabels());
-		print.visualize("results\\kmodcosC8newLabelsnewFE.txt");
-		long endTime = System.nanoTime();
-		System.out.println("Took "+((endTime - startTime)/1000000) + " ms"); 
-	
-	
+		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(),new TermFrequencyWeight()};
+		DistanceFunction[] distance = {new WekaCosineDistance(), new WekaModifiedCosineDistance()};
+		int maxFileWeight = 50;
+		int fileWeightStep = 10;
+		int maxFunctionWeight = 10;
+		int functionWeightStep = 2;
+		File projectInput = new File(projectPath);
+		ProjectInput[] projectIn = ProjectInput.createProjectInput(projectInput);
+		BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+		Evaluation entropy = new NormalizedEntropy();
+		for (int project=0; project<projectIn.length; project++) {
+			for (WeightMethod weight:weights) {
+				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
+					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
+						if (projectIn[project].getInput().length>0) {	
+							for (DistanceFunction dist:distance) {
+								WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel, fileWeight, functionWeight);
+								WekaClusteringKmeansDynamic clusterer = new WekaClusteringKmeansDynamic(features.getOccurenceTable(), new NormalizedEntropy(), dist);
+								int clusters[] = clusterer.returnClusters();				
+								writer.write(projectIn[project].getProjectName() +" " + weight.getClass()+" "+dist.getClass() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  +  entropy.evaluate(clusters, null));
+								writer.newLine();					
+							}
+						}
+					}
+				}
+			}			
+		}	
+	writer.close();		
 	}	
 }
