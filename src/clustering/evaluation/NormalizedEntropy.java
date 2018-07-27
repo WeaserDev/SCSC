@@ -15,7 +15,10 @@ public class NormalizedEntropy extends Evaluation {
 			}
 			double temp = (double)clusterPoints/(double)clusters.length;
 			if (temp!=0) {
-				entropy += temp * Math.log(temp)/Math.log(1/(double)clusterNumber);
+				if (clusterNumber>1) {
+					entropy += temp * Math.log(temp)/Math.log(1/(double)clusterNumber);
+				}
+				else entropy = -1;
 			}
 		}
 		return (float)entropy;

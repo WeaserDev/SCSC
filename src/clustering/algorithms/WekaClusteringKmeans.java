@@ -17,8 +17,7 @@ public class WekaClusteringKmeans extends WekaClustering {
 	
 	
 	protected int[] createClusters() {
-		wekaDataset = createWekaData();
-		int[] result = null;	
+		wekaDataset = createWekaData();	
 		SimpleKMeans clusterer = new SimpleKMeans();
         clusterer.setPreserveInstancesOrder(true);
         clusterer.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
@@ -28,12 +27,12 @@ public class WekaClusteringKmeans extends WekaClustering {
 	        clusterer.setMaxIterations(100);
 			clusterer.setNumClusters(clusterNumber);
         	clusterer.buildClusterer(wekaDataset);
-        	result = clusterer.getAssignments();
+        	
 		} 	
 		catch (
 			Exception e) {e.printStackTrace();
 		}
-		
+		int[] result = createClusterAssignments(clusterer);
         return result;
 	}
 }

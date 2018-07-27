@@ -6,11 +6,11 @@ import java.util.List;
 import weka.clusterers.Clusterer;
 import weka.core.*;
 
-abstract class WekaClustering extends Clustering {
+abstract public class WekaClustering extends Clustering {
 	protected Instances wekaDataset;
 
 	
-	WekaClustering(float[][] occurenceTable) {
+	public WekaClustering(float[][] occurenceTable) {
 		super(occurenceTable);	
 	}
 	
@@ -57,11 +57,11 @@ abstract class WekaClustering extends Clustering {
 		for(Instance instance: wekaDataset) {
 			try {
 				clusters[i] = clusterer.clusterInstance(instance);
+				i+=1;
 			} 
 			catch (Exception e) {
 				e.printStackTrace();
 			}
-			i+=1;
 		}
 
 		return clusters;

@@ -70,5 +70,12 @@ public abstract class FeatureExtraction {
 		}
 		return idFiles.size();
 	}
+	
+	public HashMap<Integer, String> getIdFiles(){
+		if (idFiles==null) {
+			idFiles=createIdFiles();
+		}
+		return idFiles;
+	}
 
 }

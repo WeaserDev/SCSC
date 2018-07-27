@@ -1,11 +1,11 @@
 package clustering.algorithms;
 
-abstract class Clustering {
+public abstract class Clustering {
 	protected float occurenceTable[][];
 	protected int[] clusters;
 
 	
-	Clustering(float[][] occurenceTable){
+	public Clustering(float[][] occurenceTable){
 		this.occurenceTable = occurenceTable;
 	}
 	
