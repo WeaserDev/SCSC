@@ -14,7 +14,7 @@ public class KmeansDynamic extends Kmeans {
 	
 	protected int[] createClusters() { 
 		int[] result; 
-		this.clusterNumber = 6;
+		this.clusterNumber = 10;
 		float previousEvaluation = 0; 
 		float currentEvaluation = 0; 
 		while(true) { 
