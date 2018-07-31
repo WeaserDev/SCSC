@@ -2,24 +2,34 @@ package clustering.algorithms;
 
 import java.util.Arrays;
 
+import clustering.algorithms.kmeansUtils.*;
 import clustering.distance.DistanceFunction;
 
 public class Kmeans extends Clustering {
-	int clusterNumber;	
-	int maxIterations = 100;
-	DistanceFunction distance;
+	protected int clusterNumber;	
+	protected int maxIterations = 100;
+	protected DistanceFunction distance;
+	protected KmeansInitialization initialize;
 	
 	
 	public Kmeans(float[][] occurenceTable, int clusterNumber, DistanceFunction distance) {
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;
 		this.distance = distance;
+		this.initialize = new KmeansInitializationPlusPlus();
+	}
+	
+	public Kmeans(float[][] occurenceTable, int clusterNumber, DistanceFunction distance, KmeansInitialization initialize) {
+		super(occurenceTable);
+		this.clusterNumber = clusterNumber;
+		this.distance = distance;
+		this.initialize = initialize;
 	}
 
 	protected int[] createClusters() {
 		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];
 		this.clusters = new int[occurenceTable.length];
-		clusterCentroids = initializeCentroids();
+		clusterCentroids = initialize.initializeCentroids(occurenceTable, clusterNumber, distance);
 		int iteration = 0;
 		int[] oldClusters = new int[occurenceTable.length];
 		
@@ -52,28 +62,7 @@ public class Kmeans extends Clustering {
 		
 		return clusters;
 	}
-	
-	private float[][] initializeCentroids(){
-		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];
-		int[] randomElements = new int[clusterNumber];
-		for (int i = 0; i < clusterNumber; i++) {
-			randomElements[i] = (int)(Math.random()*occurenceTable.length);
-		    for (int j = 0; j < i; j++) {
-		        if (randomElements[i] == randomElements[j]) {
-		            i--; 
-		            break;
-		        }
-		    }  
-		}
-		for (int i=0;i<clusterNumber;i++) {
-			for (int k=0; k<occurenceTable[0].length; k++) {
-				clusterCentroids[i][k] = occurenceTable[randomElements[i]][k];
-			}	
-		}
-		
-		return clusterCentroids;
-		
-	}
+
 	
 	private float[][] calculateCentroids(){
 		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];

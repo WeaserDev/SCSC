@@ -28,6 +28,7 @@ import clustering.evaluation.NormalizedEntropy;
 public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
+		long startTime = System.nanoTime();
 		String fileName = "results\\experiment.txt";
 		String projectPath = "C:\\projects";
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(),new TermFrequencyWeight()};
@@ -47,14 +48,14 @@ public class SourceCodeSemanticClustering {
 				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
 						if (projectIn[project].getInput().length>0) {	
+							WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight);
 							for (DistanceFunction dist:distance) {
-								WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight);
-								Clustering clusterer = new Kmeans(features.getOccurenceTable(), 6, dist);
+								Clustering clusterer = new KmeansDynamic(features.getOccurenceTable(),new NormalizedEntropy(), dist);
 								int clusters[] = clusterer.returnClusters();				
 								writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "entropy: " +  entropy.evaluate(clusters, null));
 								writer.newLine();
 								String S = i + ".txt";
-								PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionFileNameAddedWeight(projectIn[project].getInput(), new NoWeight(),wordModel,100),clusters,3,new TermFrequencyInverseDocumentFrequencyWeight()).getLabels());
+								PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), new NoWeight(),wordModel,40,0),clusters,3,new TermFrequencyInverseDocumentFrequencyWeight()).getLabels());
 								print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results\\" + S);
 								i+=1;
 							}
@@ -64,5 +65,7 @@ public class SourceCodeSemanticClustering {
 			}			
 		}	
 	writer.close();		
+	long endTime = System.nanoTime();
+	System.out.println("Took "+((endTime - startTime)/1000000) + " ms");
 	}
 }
