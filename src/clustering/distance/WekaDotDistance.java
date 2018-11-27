@@ -3,6 +3,7 @@ package clustering.distance;
 import weka.core.*;
 import weka.core.TechnicalInformation.Field;
 import weka.core.TechnicalInformation.Type;
+import weka.core.EuclideanDistance;
 
 import weka.core.neighboursearch.PerformanceStats;
 

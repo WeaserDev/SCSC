@@ -8,7 +8,7 @@ public class DotDistance extends DistanceFunction {
 		for (int i=0; i<firstVector.length; i++) {
 			distance += firstVector[i]*secondVector[i];
 		}
-		distance = 1/(1 + distance);		
+		distance = 1 - Math.exp(-distance/firstVector.length);	
 		return distance;
 	}
 

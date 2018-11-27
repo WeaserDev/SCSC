@@ -20,7 +20,7 @@ public class WekaClusteringKmeans extends WekaClustering {
 		wekaDataset = createWekaData();	
 		SimpleKMeans clusterer = new SimpleKMeans();
         clusterer.setPreserveInstancesOrder(true);
-        clusterer.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
+        //clusterer.setInitializationMethod(new SelectedTag(SimpleKMeans.KMEANS_PLUS_PLUS, SimpleKMeans.TAGS_SELECTION));
 
 		try {
 			clusterer.setDistanceFunction(distanceFunction);

@@ -16,23 +16,22 @@ import featureExtraction.*;
 import featureExtraction.featureWeight.*;
 import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
-
-import weka.core.EuclideanDistance;
 import clustering.algorithms.*;
 import clustering.distance.*;
-import clustering.distance.DistanceFunction;
+import clustering.distance.WekaCosineDistance;
 import clustering.evaluation.Evaluation;
 import clustering.evaluation.NormalizedEntropy;
+import clustering.evaluation.PackagesToClusters;
 
 
 public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\experiment.txt";
-		String projectPath = "C:\\projects";
-		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(),new TermFrequencyWeight()};
-		//DistanceFunction[] distance = {new WekaCosineDistance(), new WekaModifiedCosineDistance()};
+		String fileName = "results4\\experiment.txt";
+		String projectPath = "C:\\Users\\Aris\\eclipse-workspace\\";
+		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(),new TermFrequencyWeight(),new BinaryWeight()};
+		//DistanceFunction[] distance = {new WekaCosineDistance()};
 		DistanceFunction[] distance = {new CosineDistance()};
 		int maxFileWeight = 21;
 		int fileWeightStep = 10;
@@ -43,6 +42,8 @@ public class SourceCodeSemanticClustering {
 		ProjectInput[] projectIn = ProjectInput.createProjectInput(new File(projectPath));
 		BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
 		Evaluation entropy = new NormalizedEntropy();
+		PackagesToClusters pack = new PackagesToClusters();
+		int[] packageClusters = pack.Clusters(new File(projectPath));
 		for (int project=0; project<projectIn.length; project++) {
 			for (WeightMethod weight:weights) {
 				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
@@ -50,13 +51,13 @@ public class SourceCodeSemanticClustering {
 						if (projectIn[project].getInput().length>0) {	
 							WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight);
 							for (DistanceFunction dist:distance) {
-								Clustering clusterer = new KmeansDynamic(features.getOccurenceTable(),new NormalizedEntropy(), dist);
+								Clustering clusterer = new Kmeans(features.getOccurenceTable(),13, dist);
 								int clusters[] = clusterer.returnClusters();				
 								writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "entropy: " +  entropy.evaluate(clusters, null));
 								writer.newLine();
 								String S = i + ".txt";
 								PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), new NoWeight(),wordModel,40,0),clusters,3,new TermFrequencyInverseDocumentFrequencyWeight()).getLabels());
-								print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results\\" + S);
+								print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results4\\" + S);
 								i+=1;
 							}
 						}

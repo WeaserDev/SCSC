@@ -57,8 +57,6 @@ public class Kmeans extends Clustering {
 			}	
 			iteration+=1;
 		}
-		System.out.println(iteration);
-		
 		
 		return clusters;
 	}
@@ -76,7 +74,7 @@ public class Kmeans extends Clustering {
 		
 		for (int i=0; i<clusterNumber; i++) {
 			for (int k=0; k<clusterCentroids[0].length; k++) {
-				clusterCentroids[clusters[i]][k] = clusterCentroids[clusters[i]][k]/clusterElements[i];
+				clusterCentroids[i][k] = clusterCentroids[i][k]/clusterElements[i];
 			}
 		}
 		
