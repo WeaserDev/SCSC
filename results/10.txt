@@ -1,54 +1,54 @@
-entropy: 0.91798407
+entropy: 0.92517793
 
 Cluster 1
-MostFrequentFeaturesLabeling.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
-labels: table, occurence, feature, 
+Example.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, WordModel.java, 
+labels: sentence, stem, word, 
 
 Cluster 2
-LovinsStemmer.java, PorterStemmer.java, 
-labels: put, word, el, 
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: dynamic, previous, evaluation, 
 
 Cluster 3
-WekaClustering.java, 
-labels: attribute, weka, instances, 
+LovinsStemmer.java, PorterStemmer.java, 
+labels: word, put, el, 
 
 Cluster 4
-CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, 
-labels: distance, second, first, 
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: document, frequency, feature, 
 
 Cluster 5
-PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
-labels: queue, priority, object, 
+WekaClustering.java, 
+labels: instances, attribute, weka, 
 
 Cluster 6
-Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, NormalizedEntropy.java, PrintFile.java, 
-labels: cluster, weka, wr, 
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: the, database, object, 
 
 Cluster 7
-XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, 
-labels: object, the, centers, 
+Labeling.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, Visualization.java, 
+labels: feature, word, id, 
 
 Cluster 8
-Labeling.java, Visualization.java, 
-labels: visualization, feature, labels, 
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: distance, weka, cluster, 
 
 Cluster 9
-KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
-labels: dynamic, evaluation, previous, 
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, Precision.java, 
+labels: random, centroids, distance, 
 
 Cluster 10
-InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
-labels: stem, stemmer, word, 
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, 
+labels: the, first, distance, 
 
 Cluster 11
-Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, 
-labels: distance, centroids, random, 
+PackagesToClusters.java, FileInput.java, ProjectInput.java, SourceCodeSemanticClustering.java, 
+labels: file, project, input, 
 
 Cluster 12
-LevenshteinDistance.java, 
-labels: lhs, rhs, levenshtein, 
+XMeans.java, 
+labels: centers, inst, the, 
 
 Cluster 13
-Example.java, WordModel.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
-labels: sentence, stemmer, word, 
+NormalizedEntropy.java, PrintFile.java, 
+labels: entropy, line, wr, 
 
