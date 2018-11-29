@@ -1,0 +1,54 @@
+entropy: 0.9322323
+
+Cluster 1
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: rhs, distance, lhs, 
+
+Cluster 2
+FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: project, file, input, 
+
+Cluster 3
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, occurence, document, 
+
+Cluster 4
+PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, priority, queue, 
+
+Cluster 5
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, WordModel.java, 
+labels: sentence, word, stem, 
+
+Cluster 6
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, NormalizedEntropy.java, PrintFile.java, 
+labels: weka, wr, cluster, 
+
+Cluster 7
+Example.java, 
+labels: args, v2, word, 
+
+Cluster 8
+LovinsStemmer.java, PorterStemmer.java, 
+labels: put, word, el, 
+
+Cluster 9
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: evaluation, previous, result, 
+
+Cluster 10
+Labeling.java, MostFrequentFeaturesLabeling.java, Visualization.java, 
+labels: feature, labels, temp, 
+
+Cluster 11
+Clustering.java, Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, PackagesToClusters.java, 
+labels: random, cluster, centroids, 
+
+Cluster 12
+Precision.java, 
+labels: intrapairs, clusters1, clusters2, 
+
+Cluster 13
+XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: object, the, centers, 
+

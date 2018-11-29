@@ -1,0 +1,54 @@
+entropy: 0.91731757
+
+Cluster 1
+Labeling.java, 
+labels: labels, feature, cluster, 
+
+Cluster 2
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, Evaluation.java, NormalizedEntropy.java, PrintFile.java, 
+labels: cluster, entropy, wr, 
+
+Cluster 3
+IteratedLovinsStemmer.java, 
+labels: str, lovins, stem, 
+
+Cluster 4
+Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClustering.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, 
+labels: cluster, distance, centroids, 
+
+Cluster 5
+Example.java, InvertibleStemmer.java, LovinsStemmer.java, Stemmer.java, WordModel.java, 
+labels: word, el, put, 
+
+Cluster 6
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, document, table, 
+
+Cluster 7
+PorterStemmer.java, Precision.java, 
+labels: ends, case, break, 
+
+Cluster 8
+ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: feature, id, word, 
+
+Cluster 9
+MostFrequentFeaturesLabeling.java, SourceCodeSemanticClustering.java, 
+labels: project, labels, weight, 
+
+Cluster 10
+XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: instances, the, centers, 
+
+Cluster 11
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: distance, rhs, lhs, 
+
+Cluster 12
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: the, database, object, 
+
+Cluster 13
+PackagesToClusters.java, FileInput.java, Visualization.java, 
+labels: extensions, file, collection, 
+

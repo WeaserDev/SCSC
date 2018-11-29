@@ -1,0 +1,54 @@
+entropy: 0.9523677
+
+Cluster 1
+BinaryInverseDocumentFrequencyWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: document, occurence, table, 
+
+Cluster 2
+XMeans.java, 
+labels: centers, cent, inst, 
+
+Cluster 3
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, BinaryWeight.java, NormalizedWeight.java, NoWeight.java, 
+labels: centroids, table, occurence, 
+
+Cluster 4
+PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: queue, heap, priority, 
+
+Cluster 5
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, 
+labels: the, second, first, 
+
+Cluster 6
+WekaClustering.java, Database.java, DataObject.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, 
+labels: the, data, object, 
+
+Cluster 7
+PackagesToClusters.java, FileInput.java, ProjectInput.java, SourceCodeSemanticClustering.java, 
+labels: project, file, input, 
+
+Cluster 8
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, NormalizedEntropy.java, Precision.java, 
+labels: intrapairs, clusters1, evaluation, 
+
+Cluster 9
+DBSCAN.java, 
+labels: type, object, database, 
+
+Cluster 10
+IteratedLovinsStemmer.java, LovinsStemmer.java, PorterStemmer.java, Stemmer.java, 
+labels: word, put, el, 
+
+Cluster 11
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: canopy, weka, cluster, 
+
+Cluster 12
+Example.java, InvertibleStemmer.java, WordModel.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: sentence, word, stem, 
+
+Cluster 13
+Labeling.java, PrintFile.java, Visualization.java, 
+labels: visualization, wr, labels, 
+

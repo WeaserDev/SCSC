@@ -1,0 +1,54 @@
+entropy: 0.9587752
+
+Cluster 1
+Example.java, LovinsStemmer.java, WordModel.java, 
+labels: el, put, word, 
+
+Cluster 2
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: cluster, distance, weka, 
+
+Cluster 3
+BinaryInverseDocumentFrequencyWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: document, frequency, table, 
+
+Cluster 4
+Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: evaluation, centroids, cluster, 
+
+Cluster 5
+InvertibleStemmer.java, IteratedLovinsStemmer.java, PorterStemmer.java, Stemmer.java, 
+labels: the, stem, ends, 
+
+Cluster 6
+Labeling.java, MostFrequentFeaturesLabeling.java, Visualization.java, 
+labels: feature, labels, temp, 
+
+Cluster 7
+PackagesToClusters.java, FileInput.java, ProjectInput.java, PrintFile.java, 
+labels: wr, file, project, 
+
+Cluster 8
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, database, the, 
+
+Cluster 9
+FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: id, feature, word, 
+
+Cluster 10
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, 
+labels: first, vector, distance, 
+
+Cluster 11
+LevenshteinDistance.java, WekaClustering.java, XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, NormalizedEntropy.java, 
+labels: centers, the, instances, 
+
+Cluster 12
+Precision.java, 
+labels: clusters1, intrapairs, clusters2, 
+
+Cluster 13
+BinaryWeight.java, NormalizedWeight.java, NoWeight.java, SourceCodeSemanticClustering.java, 
+labels: project, weight, file, 
+

@@ -1,0 +1,54 @@
+entropy: 0.9182734
+
+Cluster 1
+WekaClustering.java, XMeans.java, DBSCAN.java, EuclideanDataObject.java, SequentialDatabase.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: centers, the, instances, 
+
+Cluster 2
+Precision.java, 
+labels: clusters1, intrapairs, clusters2, 
+
+Cluster 3
+PackagesToClusters.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, SourceCodeSemanticClustering.java, 
+labels: input, project, file, 
+
+Cluster 4
+Database.java, DataObject.java, EpsilonRange_ListElement.java, PriorityQueueElement.java, UpdateQueueElement.java, 
+labels: the, object, data, 
+
+Cluster 5
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: distance, first, vector, 
+
+Cluster 6
+MostFrequentFeaturesLabeling.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, feature, occurence, 
+
+Cluster 7
+Example.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, PrintFile.java, Visualization.java, 
+labels: word, feature, id, 
+
+Cluster 8
+PriorityQueue.java, UpdateQueue.java, 
+labels: queue, priority, heap, 
+
+Cluster 9
+LevenshteinDistance.java, 
+labels: lhs, rhs, levenshtein, 
+
+Cluster 10
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: previous, result, evaluation, 
+
+Cluster 11
+LovinsStemmer.java, PorterStemmer.java, WordModel.java, 
+labels: put, el, word, 
+
+Cluster 12
+Clustering.java, Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, NormalizedEntropy.java, Labeling.java, 
+labels: centroids, cluster, table, 
+
+Cluster 13
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: entries, stemmer, stem, 
+

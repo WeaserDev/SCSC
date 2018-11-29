@@ -1,0 +1,54 @@
+entropy: 0.91469395
+
+Cluster 1
+Example.java, PackagesToClusters.java, FileInput.java, ProjectInput.java, 
+labels: project, input, file, 
+
+Cluster 2
+XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: the, object, centers, 
+
+Cluster 3
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: frequency, occurence, feature, 
+
+Cluster 4
+WordModel.java, 
+labels: string, word, sentence, 
+
+Cluster 5
+LovinsStemmer.java, PorterStemmer.java, Stemmer.java, 
+labels: put, el, word, 
+
+Cluster 6
+IteratedLovinsStemmer.java, WekaModifiedCosineDistance.java, 
+labels: distance, str, stem, 
+
+Cluster 7
+Evaluation.java, NormalizedEntropy.java, Precision.java, 
+labels: intrapairs, entropy, clusters1, 
+
+Cluster 8
+WekaClustering.java, 
+labels: attribute, weka, instances, 
+
+Cluster 9
+Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, 
+labels: occurence, centroids, evaluation, 
+
+Cluster 10
+LevenshteinDistance.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: value, first, the, 
+
+Cluster 11
+InvertibleStemmer.java, Labeling.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, PrintFile.java, Visualization.java, 
+labels: weight, id, feature, 
+
+Cluster 12
+WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: weka, dataset, cluster, 
+
+Cluster 13
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, 
+labels: vector, first, distance, 
+

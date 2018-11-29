@@ -1,0 +1,54 @@
+entropy: 0.90547675
+
+Cluster 1
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, 
+labels: cluster, centroids, random, 
+
+Cluster 2
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: entries, stemmer, stem, 
+
+Cluster 3
+Clustering.java, WekaClusteringDBSCAN.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: weka, means, cluster, 
+
+Cluster 4
+PackagesToClusters.java, MostFrequentFeaturesLabeling.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, PrintFile.java, Visualization.java, 
+labels: feature, file, id, 
+
+Cluster 5
+WekaClustering.java, XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: the, centers, object, 
+
+Cluster 6
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: file, feature, weight, 
+
+Cluster 7
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: vector, rhs, lhs, 
+
+Cluster 8
+LovinsStemmer.java, PorterStemmer.java, 
+labels: put, el, word, 
+
+Cluster 9
+WekaCosineDistance.java, WekaDotDistance.java, 
+labels: value, the, first, 
+
+Cluster 10
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, NormalizedEntropy.java, Labeling.java, 
+labels: cluster, previous, evaluation, 
+
+Cluster 11
+Precision.java, 
+labels: intrapairs, clusters1, cluster1, 
+
+Cluster 12
+Example.java, WordModel.java, 
+labels: sentence, word, stemmer, 
+
+Cluster 13
+WekaClusteringCanopy.java, WekaClusteringHierarchical.java, 
+labels: hierarchical, canopy, cluster, 
+

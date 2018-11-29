@@ -1,0 +1,54 @@
+entropy: 0.905408
+
+Cluster 1
+Kmeans.java, KmeansDynamic.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, PackagesToClusters.java, 
+labels: evaluation, centroids, cluster, 
+
+Cluster 2
+InvertibleStemmer.java, Stemmer.java, 
+labels: stem, entries, word, 
+
+Cluster 3
+IteratedLovinsStemmer.java, 
+labels: lovins, str, stem, 
+
+Cluster 4
+Example.java, SourceCodeSemanticClustering.java, 
+labels: weight, project, model, 
+
+Cluster 5
+Labeling.java, MostFrequentFeaturesLabeling.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, PrintFile.java, Visualization.java, 
+labels: feature, file, id, 
+
+Cluster 6
+LevenshteinDistance.java, 
+labels: rhs, levenshtein, lhs, 
+
+Cluster 7
+WekaModifiedCosineDistance.java, 
+labels: stats, distance, cut, 
+
+Cluster 8
+LovinsStemmer.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, the, put, 
+
+Cluster 9
+PorterStemmer.java, WordModel.java, XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, instances, centers, 
+
+Cluster 10
+Clustering.java, KmeansInitialization.java, Evaluation.java, NormalizedEntropy.java, Precision.java, 
+labels: intrapairs, clusters1, cluster, 
+
+Cluster 11
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, 
+labels: distance, vector, first, 
+
+Cluster 12
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, FileInput.java, 
+labels: file, weka, cluster, 
+
+Cluster 13
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, feature, table, 
+

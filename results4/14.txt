@@ -1,0 +1,54 @@
+entropy: 0.92345244
+
+Cluster 1
+PrintFile.java, 
+labels: line, entropy, wr, 
+
+Cluster 2
+Clustering.java, KmeansDynamic.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, Evaluation.java, NormalizedEntropy.java, 
+labels: weka, evaluation, cluster, 
+
+Cluster 3
+Example.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, WordModel.java, 
+labels: stem, word, sentence, 
+
+Cluster 4
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: weight, table, occurence, 
+
+Cluster 5
+XMeans.java, DBSCAN.java, EuclideanDataObject.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, centers, instances, 
+
+Cluster 6
+PorterStemmer.java, Precision.java, 
+labels: ends, cons, break, 
+
+Cluster 7
+Database.java, DataObject.java, EpsilonRange_ListElement.java, PriorityQueueElement.java, UpdateQueueElement.java, 
+labels: data, object, the, 
+
+Cluster 8
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: lhs, rhs, distance, 
+
+Cluster 9
+PriorityQueue.java, SequentialDatabase.java, UpdateQueue.java, 
+labels: object, queue, priority, 
+
+Cluster 10
+PackagesToClusters.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: weight, file, input, 
+
+Cluster 11
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, MostFrequentFeaturesLabeling.java, 
+labels: table, occurence, centroids, 
+
+Cluster 12
+LovinsStemmer.java, 
+labels: el, put, word, 
+
+Cluster 13
+Labeling.java, Visualization.java, 
+labels: visualization, feature, labels, 
+

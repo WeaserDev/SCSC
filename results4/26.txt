@@ -1,0 +1,54 @@
+entropy: 0.9026908
+
+Cluster 1
+WordModel.java, 
+labels: sentence, word, builder, 
+
+Cluster 2
+PackagesToClusters.java, FileInput.java, ProjectInput.java, PrintFile.java, 
+labels: file, input, wr, 
+
+Cluster 3
+Clustering.java, KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, Labeling.java, Visualization.java, 
+labels: evaluation, cluster, previous, 
+
+Cluster 4
+WekaModifiedCosineDistance.java, 
+labels: distance, stats, cut, 
+
+Cluster 5
+XMeans.java, DBSCAN.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, instances, centers, 
+
+Cluster 6
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: weight, file, feature, 
+
+Cluster 7
+LovinsStemmer.java, PorterStemmer.java, 
+labels: el, word, put, 
+
+Cluster 8
+IteratedLovinsStemmer.java, Stemmer.java, 
+labels: stemmer, str, stem, 
+
+Cluster 9
+Database.java, DataObject.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, queue, priority, 
+
+Cluster 10
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, Precision.java, 
+labels: intrapairs, first, vector, 
+
+Cluster 11
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: cluster, dataset, weka, 
+
+Cluster 12
+Example.java, LevenshteinDistance.java, InvertibleStemmer.java, 
+labels: rhs, lhs, stem, 
+
+Cluster 13
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, NormalizedEntropy.java, 
+labels: cluster, centroids, occurence, 
+

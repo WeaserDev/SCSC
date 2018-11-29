@@ -1,0 +1,54 @@
+entropy: 0.94319266
+
+Cluster 1
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, occurence, feature, 
+
+Cluster 2
+XMeans.java, Database.java, DataObject.java, DBSCAN.java, EuclideanDataObject.java, SequentialDatabase.java, 
+labels: centers, the, instances, 
+
+Cluster 3
+Clustering.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, NormalizedEntropy.java, MostFrequentFeaturesLabeling.java, PrintFile.java, 
+labels: temp, wr, cluster, 
+
+Cluster 4
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, 
+labels: second, instances, first, 
+
+Cluster 5
+PorterStemmer.java, Precision.java, 
+labels: ends, break, cons, 
+
+Cluster 6
+PackagesToClusters.java, FileInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, Visualization.java, 
+labels: file, feature, id, 
+
+Cluster 7
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: stem, stemmer, entries, 
+
+Cluster 8
+Labeling.java, ProjectInput.java, SourceCodeSemanticClustering.java, 
+labels: file, input, project, 
+
+Cluster 9
+EpsilonRange_ListElement.java, PriorityQueueElement.java, UpdateQueueElement.java, 
+labels: object, priority, the, 
+
+Cluster 10
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: dynamic, evaluation, previous, 
+
+Cluster 11
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, 
+labels: random, table, centroids, 
+
+Cluster 12
+PriorityQueue.java, UpdateQueue.java, 
+labels: queue, priority, heap, 
+
+Cluster 13
+Example.java, LovinsStemmer.java, WordModel.java, 
+labels: el, put, word, 
+

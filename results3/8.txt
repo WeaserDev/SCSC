@@ -1,0 +1,54 @@
+entropy: 0.8983927
+
+Cluster 1
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: stem, stemmer, word, 
+
+Cluster 2
+BinaryWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyWeight.java, 
+labels: file, weight, feature, 
+
+Cluster 3
+LevenshteinDistance.java, CosineDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, NormalizedEntropy.java, 
+labels: the, instances, first, 
+
+Cluster 4
+Example.java, WordModel.java, PackagesToClusters.java, MostFrequentFeaturesLabeling.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, Visualization.java, 
+labels: sentence, file, word, 
+
+Cluster 5
+WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: distance, weka, hierarchical, 
+
+Cluster 6
+Clustering.java, KmeansDynamic.java, WekaClusteringDBSCAN.java, WekaClusteringKmeansDynamic.java, Labeling.java, 
+labels: evaluation, previous, current, 
+
+Cluster 7
+LovinsStemmer.java, PorterStemmer.java, UpdateQueue.java, 
+labels: el, put, word, 
+
+Cluster 8
+WekaClustering.java, XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueueElement.java, 
+labels: object, the, centers, 
+
+Cluster 9
+Evaluation.java, Precision.java, 
+labels: intrapairs, clusters2, clusters1, 
+
+Cluster 10
+DistanceFunction.java, DotDistance.java, 
+labels: distance, vector, first, 
+
+Cluster 11
+PrintFile.java, 
+labels: wr, entropy, line, 
+
+Cluster 12
+WekaClusteringCanopy.java, 
+labels: weka, canopy, cluster, 
+
+Cluster 13
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, BinaryInverseDocumentFrequencyWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, WeightMethod.java, 
+labels: inverse, document, centroids, 
+

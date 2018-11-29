@@ -1,0 +1,54 @@
+entropy: 0.91318136
+
+Cluster 1
+DataObject.java, DBSCAN.java, EuclideanDataObject.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: database, the, object, 
+
+Cluster 2
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, FileInput.java, 
+labels: cluster, weka, file, 
+
+Cluster 3
+Example.java, 
+labels: args, model, v2, 
+
+Cluster 4
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, Precision.java, 
+labels: first, distance, vector, 
+
+Cluster 5
+NormalizedEntropy.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, weight, table, 
+
+Cluster 6
+LovinsStemmer.java, Database.java, EpsilonRange_ListElement.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, el, put, 
+
+Cluster 7
+Labeling.java, PrintFile.java, Visualization.java, 
+labels: visualization, labels, wr, 
+
+Cluster 8
+PorterStemmer.java, 
+labels: break, ends, case, 
+
+Cluster 9
+WordModel.java, XMeans.java, 
+labels: centers, split, the, 
+
+Cluster 10
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: stem, stemmer, entries, 
+
+Cluster 11
+MostFrequentFeaturesLabeling.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: feature, id, weight, 
+
+Cluster 12
+Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, Evaluation.java, PackagesToClusters.java, 
+labels: centroids, occurence, cluster, 
+
+Cluster 13
+LevenshteinDistance.java, 
+labels: lhs, levenshtein, rhs, 
+

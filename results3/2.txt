@@ -1,0 +1,54 @@
+entropy: 0.9348235
+
+Cluster 1
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, NormalizedEntropy.java, 
+labels: distance, first, second, 
+
+Cluster 2
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, Precision.java, 
+labels: evaluation, intrapairs, clusters1, 
+
+Cluster 3
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, Labeling.java, 
+labels: cluster, dataset, weka, 
+
+Cluster 4
+Database.java, EpsilonRange_ListElement.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, priority, queue, 
+
+Cluster 5
+LovinsStemmer.java, 
+labels: el, put, word, 
+
+Cluster 6
+PackagesToClusters.java, FileInput.java, FeatureExtraction.java, PrintFile.java, Visualization.java, 
+labels: id, wr, file, 
+
+Cluster 7
+MostFrequentFeaturesLabeling.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: document, feature, weight, 
+
+Cluster 8
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: stem, stemmer, entries, 
+
+Cluster 9
+PorterStemmer.java, 
+labels: break, cons, ends, 
+
+Cluster 10
+WekaClustering.java, XMeans.java, DataObject.java, DBSCAN.java, EuclideanDataObject.java, 
+labels: instances, inst, centers, 
+
+Cluster 11
+ProjectInput.java, SourceCodeSemanticClustering.java, 
+labels: project, file, input, 
+
+Cluster 12
+Example.java, WordModel.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: model, word, sentence, 
+
+Cluster 13
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, 
+labels: centroids, cluster, random, 
+

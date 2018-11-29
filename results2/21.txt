@@ -1,0 +1,54 @@
+entropy: 0.94383085
+
+Cluster 1
+LevenshteinDistance.java, IteratedLovinsStemmer.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, 
+labels: id, lhs, rhs, 
+
+Cluster 2
+LovinsStemmer.java, PorterStemmer.java, Database.java, EpsilonRange_ListElement.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: word, el, put, 
+
+Cluster 3
+DistanceFunction.java, Evaluation.java, 
+labels: vector, float, abstract, 
+
+Cluster 4
+PackagesToClusters.java, FileInput.java, ProjectInput.java, 
+labels: file, project, input, 
+
+Cluster 5
+NormalizedEntropy.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: frequency, inverse, occurence, 
+
+Cluster 6
+WordModel.java, XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: word, the, centers, 
+
+Cluster 7
+Labeling.java, PrintFile.java, Visualization.java, 
+labels: visualization, labels, wr, 
+
+Cluster 8
+WekaClustering.java, 
+labels: instances, weka, attribute, 
+
+Cluster 9
+Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, 
+labels: centroids, kmeans, occurence, 
+
+Cluster 10
+Example.java, InvertibleStemmer.java, Stemmer.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: model, word, feature, 
+
+Cluster 11
+CosineDistance.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, Precision.java, 
+labels: first, distance, vector, 
+
+Cluster 12
+DataObject.java, DBSCAN.java, EuclideanDataObject.java, 
+labels: database, object, the, 
+
+Cluster 13
+WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: weka, canopy, set, 
+

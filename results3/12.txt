@@ -1,0 +1,54 @@
+entropy: 0.91607153
+
+Cluster 1
+Labeling.java, MostFrequentFeaturesLabeling.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, Visualization.java, 
+labels: file, id, feature, 
+
+Cluster 2
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: evaluation, dynamic, previous, 
+
+Cluster 3
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: first, distance, vector, 
+
+Cluster 4
+KmeansInitialization.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, SourceCodeSemanticClustering.java, 
+labels: project, weight, cluster, 
+
+Cluster 5
+PorterStemmer.java, 
+labels: the, ends, break, 
+
+Cluster 6
+LevenshteinDistance.java, Kmeans.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, 
+labels: rhs, lhs, centroids, 
+
+Cluster 7
+LovinsStemmer.java, 
+labels: put, word, el, 
+
+Cluster 8
+Clustering.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, NormalizedEntropy.java, PackagesToClusters.java, PrintFile.java, 
+labels: cluster, wr, file, 
+
+Cluster 9
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: database, object, the, 
+
+Cluster 10
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, table, feature, 
+
+Cluster 11
+XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, centers, inst, 
+
+Cluster 12
+Example.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, WordModel.java, 
+labels: sentence, word, stem, 
+
+Cluster 13
+Precision.java, 
+labels: clusters1, intrapairs, clusters2, 
+

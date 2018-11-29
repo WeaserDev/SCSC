@@ -1,0 +1,54 @@
+entropy: 0.9410388
+
+Cluster 1
+Clustering.java, Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, NormalizedEntropy.java, 
+labels: centroids, table, cluster, 
+
+Cluster 2
+PackagesToClusters.java, Labeling.java, MostFrequentFeaturesLabeling.java, SourceCodeSemanticClustering.java, PrintFile.java, 
+labels: weight, feature, labels, 
+
+Cluster 3
+XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: centers, inst, the, 
+
+Cluster 4
+LevenshteinDistance.java, IteratedLovinsStemmer.java, 
+labels: lhs, levenshtein, rhs, 
+
+Cluster 5
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, feature, table, 
+
+Cluster 6
+PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: queue, the, priority, 
+
+Cluster 7
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, 
+labels: object, the, database, 
+
+Cluster 8
+FileInput.java, ProjectInput.java, 
+labels: project, input, file, 
+
+Cluster 9
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: vector, distance, first, 
+
+Cluster 10
+Example.java, InvertibleStemmer.java, LovinsStemmer.java, PorterStemmer.java, Stemmer.java, WordModel.java, 
+labels: put, el, word, 
+
+Cluster 11
+WekaClustering.java, 
+labels: weka, instances, attribute, 
+
+Cluster 12
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, Precision.java, 
+labels: evaluation, intrapairs, clusters1, 
+
+Cluster 13
+FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, Visualization.java, 
+labels: feature, word, id, 
+

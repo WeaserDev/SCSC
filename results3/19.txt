@@ -1,0 +1,54 @@
+entropy: 0.8945092
+
+Cluster 1
+KmeansDynamic.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, 
+labels: evaluation, cluster, weka, 
+
+Cluster 2
+InvertibleStemmer.java, Stemmer.java, 
+labels: entries, ret, stem, 
+
+Cluster 3
+PackagesToClusters.java, Precision.java, FileInput.java, 
+labels: file, clusters1, intrapairs, 
+
+Cluster 4
+WordModel.java, 
+labels: sentence, builder, word, 
+
+Cluster 5
+IteratedLovinsStemmer.java, 
+labels: stem, str, lovins, 
+
+Cluster 6
+LovinsStemmer.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: database, el, object, 
+
+Cluster 7
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, 
+labels: occurence, feature, id, 
+
+Cluster 8
+Example.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, PrintFile.java, 
+labels: weight, feature, project, 
+
+Cluster 9
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: first, distance, vector, 
+
+Cluster 10
+PorterStemmer.java, XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, num, centers, 
+
+Cluster 11
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, Evaluation.java, NormalizedEntropy.java, 
+labels: centroids, occurence, cluster, 
+
+Cluster 12
+LevenshteinDistance.java, 
+labels: rhs, levenshtein, lhs, 
+
+Cluster 13
+Clustering.java, Labeling.java, ProjectInput.java, Visualization.java, 
+labels: directories, project, input, 
+

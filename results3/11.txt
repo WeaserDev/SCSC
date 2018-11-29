@@ -1,0 +1,54 @@
+entropy: 0.90240633
+
+Cluster 1
+Clustering.java, Kmeans.java, KmeansDynamic.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, Evaluation.java, NormalizedEntropy.java, 
+labels: weka, evaluation, cluster, 
+
+Cluster 2
+InvertibleStemmer.java, PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, priority, queue, 
+
+Cluster 3
+Example.java, LovinsStemmer.java, WordModel.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: word, put, el, 
+
+Cluster 4
+KmeansInitialization.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, 
+labels: instances, the, first, 
+
+Cluster 5
+IteratedLovinsStemmer.java, Stemmer.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, 
+labels: database, epsilon, object, 
+
+Cluster 6
+WekaClustering.java, XMeans.java, 
+labels: centers, inst, instances, 
+
+Cluster 7
+PorterStemmer.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, Precision.java, 
+labels: ends, cons, break, 
+
+Cluster 8
+PackagesToClusters.java, FileInput.java, 
+labels: file, extensions, collection, 
+
+Cluster 9
+Labeling.java, Visualization.java, 
+labels: labels, visualization, feature, 
+
+Cluster 10
+LevenshteinDistance.java, 
+labels: rhs, lhs, levenshtein, 
+
+Cluster 11
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: feature, occurence, table, 
+
+Cluster 12
+ProjectInput.java, SourceCodeSemanticClustering.java, 
+labels: project, file, weight, 
+
+Cluster 13
+PrintFile.java, 
+labels: entropy, line, wr, 
+

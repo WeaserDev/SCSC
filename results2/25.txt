@@ -1,0 +1,54 @@
+entropy: 0.9191301
+
+Cluster 1
+WekaCosineDistance.java, WekaDotDistance.java, 
+labels: first, instances, the, 
+
+Cluster 2
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: database, object, the, 
+
+Cluster 3
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: first, vector, distance, 
+
+Cluster 4
+Example.java, LevenshteinDistance.java, 
+labels: args, lhs, rhs, 
+
+Cluster 5
+PackagesToClusters.java, FileInput.java, 
+labels: extensions, file, collection, 
+
+Cluster 6
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, PrintFile.java, Visualization.java, 
+labels: feature, weight, id, 
+
+Cluster 7
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, occurence, weight, 
+
+Cluster 8
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: entries, stemmer, stem, 
+
+Cluster 9
+WordModel.java, XMeans.java, 
+labels: word, split, centers, 
+
+Cluster 10
+Kmeans.java, KmeansDynamic.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, 
+labels: cluster, weka, occurence, 
+
+Cluster 11
+LovinsStemmer.java, PorterStemmer.java, 
+labels: el, put, word, 
+
+Cluster 12
+Labeling.java, ProjectInput.java, 
+labels: input, directories, project, 
+
+Cluster 13
+Clustering.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, Evaluation.java, NormalizedEntropy.java, Precision.java, 
+labels: cluster, occurence, random, 
+

@@ -1,0 +1,54 @@
+entropy: 0.87161964
+
+Cluster 1
+PackagesToClusters.java, FileInput.java, ProjectInput.java, 
+labels: project, input, file, 
+
+Cluster 2
+Precision.java, 
+labels: intrapairs, clusters1, clusters2, 
+
+Cluster 3
+XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, object, centers, 
+
+Cluster 4
+WordModel.java, 
+labels: sentence, stem, word, 
+
+Cluster 5
+WordModelFeatureExtractionAddedWeight.java, 
+labels: feature, word, weight, 
+
+Cluster 6
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, 
+labels: weight, feature, occurence, 
+
+Cluster 7
+LovinsStemmer.java, PorterStemmer.java, 
+labels: put, word, el, 
+
+Cluster 8
+Kmeans.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, NormalizedEntropy.java, 
+labels: cluster, distance, centroids, 
+
+Cluster 9
+Example.java, SourceCodeSemanticClustering.java, 
+labels: args, project, weight, 
+
+Cluster 10
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: weka, dataset, cluster, 
+
+Cluster 11
+Clustering.java, KmeansDynamic.java, KmeansInitialization.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: cluster, evaluation, previous, 
+
+Cluster 12
+Labeling.java, PrintFile.java, Visualization.java, 
+labels: wr, labels, visualization, 
+
+Cluster 13
+LevenshteinDistance.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: lhs, stem, rhs, 
+

@@ -1,0 +1,54 @@
+entropy: 0.9197011
+
+Cluster 1
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, feature, document, 
+
+Cluster 2
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: id, feature, word, 
+
+Cluster 3
+XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: centers, object, the, 
+
+Cluster 4
+Labeling.java, ProjectInput.java, Visualization.java, 
+labels: project, input, directories, 
+
+Cluster 5
+NormalizedEntropy.java, PackagesToClusters.java, Precision.java, 
+labels: clusters1, cluster, intrapairs, 
+
+Cluster 6
+LovinsStemmer.java, PorterStemmer.java, 
+labels: put, word, el, 
+
+Cluster 7
+Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, 
+labels: centroids, distance, cluster, 
+
+Cluster 8
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, FileInput.java, PrintFile.java, 
+labels: weka, wr, cluster, 
+
+Cluster 9
+CosineDistance.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: distance, first, vector, 
+
+Cluster 10
+LevenshteinDistance.java, InvertibleStemmer.java, WordModel.java, 
+labels: stem, word, sentence, 
+
+Cluster 11
+Example.java, SourceCodeSemanticClustering.java, 
+labels: args, project, weight, 
+
+Cluster 12
+DistanceFunction.java, Evaluation.java, 
+labels: evaluation, abstract, float, 
+
+Cluster 13
+IteratedLovinsStemmer.java, Stemmer.java, 
+labels: str, stemmer, stem, 
+

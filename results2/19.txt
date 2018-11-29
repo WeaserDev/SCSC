@@ -1,0 +1,54 @@
+entropy: 0.9044405
+
+Cluster 1
+Evaluation.java, Precision.java, 
+labels: intrapairs, clusters2, clusters1, 
+
+Cluster 2
+PorterStemmer.java, WordModel.java, 
+labels: sentence, stem, word, 
+
+Cluster 3
+XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: num, the, centers, 
+
+Cluster 4
+LovinsStemmer.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: the, put, object, 
+
+Cluster 5
+Example.java, 
+labels: args, model, v2, 
+
+Cluster 6
+PrintFile.java, Visualization.java, 
+labels: visualization, wr, line, 
+
+Cluster 7
+Clustering.java, Labeling.java, 
+labels: feature, labels, cluster, 
+
+Cluster 8
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, table, frequency, 
+
+Cluster 9
+Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, 
+labels: weka, cluster, distance, 
+
+Cluster 10
+KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, NormalizedEntropy.java, 
+labels: random, first, distance, 
+
+Cluster 11
+PackagesToClusters.java, FileInput.java, ProjectInput.java, 
+labels: file, input, project, 
+
+Cluster 12
+InvertibleStemmer.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: word, weight, id, 
+
+Cluster 13
+LevenshteinDistance.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: lhs, levenshtein, rhs, 
+

@@ -1,0 +1,54 @@
+entropy: 0.9095585
+
+Cluster 1
+PorterStemmer.java, WekaClustering.java, XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: instances, inst, centers, 
+
+Cluster 2
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, feature, occurence, 
+
+Cluster 3
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: lhs, distance, rhs, 
+
+Cluster 4
+LovinsStemmer.java, 
+labels: word, put, el, 
+
+Cluster 5
+KmeansDynamic.java, KmeansInitialization.java, WekaClusteringKmeansDynamic.java, Evaluation.java, Precision.java, 
+labels: intrapairs, clusters1, evaluation, 
+
+Cluster 6
+PriorityQueueElement.java, UpdateQueueElement.java, 
+labels: priority, object, revision, 
+
+Cluster 7
+FileInput.java, ProjectInput.java, 
+labels: project, file, input, 
+
+Cluster 8
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, 
+labels: object, database, data, 
+
+Cluster 9
+Labeling.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, Visualization.java, 
+labels: file, id, feature, 
+
+Cluster 10
+IteratedLovinsStemmer.java, 
+labels: str, stem, lovins, 
+
+Cluster 11
+Example.java, InvertibleStemmer.java, Stemmer.java, WordModel.java, 
+labels: sentence, word, ret, 
+
+Cluster 12
+PriorityQueue.java, UpdateQueue.java, 
+labels: priority, heap, queue, 
+
+Cluster 13
+Clustering.java, Kmeans.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, NormalizedEntropy.java, PackagesToClusters.java, SourceCodeSemanticClustering.java, PrintFile.java, 
+labels: weight, file, cluster, 
+

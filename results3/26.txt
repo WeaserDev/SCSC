@@ -1,0 +1,54 @@
+entropy: 0.95277536
+
+Cluster 1
+Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: kmeans, evaluation, centroids, 
+
+Cluster 2
+Example.java, InvertibleStemmer.java, 
+labels: entries, stem, ret, 
+
+Cluster 3
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: first, distance, vector, 
+
+Cluster 4
+PorterStemmer.java, DBSCAN.java, PriorityQueue.java, SequentialDatabase.java, UpdateQueue.java, 
+labels: database, queue, object, 
+
+Cluster 5
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: id, file, feature, 
+
+Cluster 6
+PackagesToClusters.java, FileInput.java, SourceCodeSemanticClustering.java, PrintFile.java, 
+labels: weight, project, file, 
+
+Cluster 7
+WekaCosineDistance.java, WekaDotDistance.java, 
+labels: first, second, the, 
+
+Cluster 8
+NormalizedEntropy.java, Precision.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, document, table, 
+
+Cluster 9
+LevenshteinDistance.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: levenshtein, rhs, lhs, 
+
+Cluster 10
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: cluster, dataset, weka, 
+
+Cluster 11
+LovinsStemmer.java, Database.java, DataObject.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueueElement.java, UpdateQueueElement.java, 
+labels: el, object, put, 
+
+Cluster 12
+WordModel.java, XMeans.java, 
+labels: split, the, centers, 
+
+Cluster 13
+Clustering.java, Labeling.java, ProjectInput.java, Visualization.java, 
+labels: project, directories, input, 
+

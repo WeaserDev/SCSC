@@ -1,0 +1,54 @@
+entropy: 0.92693937
+
+Cluster 1
+Clustering.java, KmeansDynamic.java, KmeansInitialization.java, WekaClusteringKmeansDynamic.java, Evaluation.java, Precision.java, 
+labels: evaluation, intrapairs, cluster, 
+
+Cluster 2
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: distance, vector, first, 
+
+Cluster 3
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: frequency, table, occurence, 
+
+Cluster 4
+LovinsStemmer.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, put, el, 
+
+Cluster 5
+Example.java, InvertibleStemmer.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, PrintFile.java, 
+labels: file, feature, id, 
+
+Cluster 6
+PorterStemmer.java, 
+labels: case, break, ends, 
+
+Cluster 7
+WordModel.java, XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: instances, the, centers, 
+
+Cluster 8
+LevenshteinDistance.java, IteratedLovinsStemmer.java, 
+labels: rhs, lhs, levenshtein, 
+
+Cluster 9
+PackagesToClusters.java, Labeling.java, FileInput.java, ProjectInput.java, Visualization.java, 
+labels: project, file, input, 
+
+Cluster 10
+Kmeans.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, NormalizedEntropy.java, 
+labels: cluster, centroids, occurence, 
+
+Cluster 11
+Stemmer.java, 
+labels: the, stem, word, 
+
+Cluster 12
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: instances, weka, cluster, 
+
+Cluster 13
+NormalizedWeight.java, NoWeight.java, 
+labels: table, weight, occurence, 
+

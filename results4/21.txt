@@ -1,0 +1,54 @@
+entropy: 0.923683
+
+Cluster 1
+InvertibleStemmer.java, PackagesToClusters.java, Labeling.java, MostFrequentFeaturesLabeling.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, PrintFile.java, Visualization.java, 
+labels: file, id, feature, 
+
+Cluster 2
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: the, database, object, 
+
+Cluster 3
+Clustering.java, Kmeans.java, KmeansDynamic.java, WekaClusteringKmeansDynamic.java, 
+labels: cluster, evaluation, centroids, 
+
+Cluster 4
+NormalizedEntropy.java, Precision.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, WeightMethod.java, 
+labels: intrapairs, occurence, float, 
+
+Cluster 5
+SourceCodeSemanticClustering.java, 
+labels: file, project, weight, 
+
+Cluster 6
+Example.java, 
+labels: args, model, v2, 
+
+Cluster 7
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: cluster, weka, instances, 
+
+Cluster 8
+LevenshteinDistance.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: lhs, rhs, levenshtein, 
+
+Cluster 9
+LovinsStemmer.java, PorterStemmer.java, 
+labels: el, put, word, 
+
+Cluster 10
+NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, 
+labels: table, weight, occurence, 
+
+Cluster 11
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: distance, vector, first, 
+
+Cluster 12
+WordModel.java, XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: centers, instances, the, 
+
+Cluster 13
+KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, Evaluation.java, 
+labels: occurence, random, centroids, 
+

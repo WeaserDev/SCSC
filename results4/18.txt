@@ -1,0 +1,54 @@
+entropy: 0.9180007
+
+Cluster 1
+LovinsStemmer.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, put, el, 
+
+Cluster 2
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, 
+labels: weight, table, occurence, 
+
+Cluster 3
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, Precision.java, 
+labels: first, distance, vector, 
+
+Cluster 4
+WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, instances, first, 
+
+Cluster 5
+Example.java, Labeling.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, PrintFile.java, Visualization.java, 
+labels: weight, id, feature, 
+
+Cluster 6
+Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, 
+labels: occurence, centroids, cluster, 
+
+Cluster 7
+Clustering.java, Evaluation.java, NormalizedEntropy.java, WeightMethod.java, 
+labels: occurence, float, table, 
+
+Cluster 8
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: dataset, cluster, weka, 
+
+Cluster 9
+PackagesToClusters.java, FileInput.java, ProjectInput.java, 
+labels: input, project, file, 
+
+Cluster 10
+InvertibleStemmer.java, Stemmer.java, 
+labels: stem, entries, word, 
+
+Cluster 11
+WordModel.java, 
+labels: builder, word, sentence, 
+
+Cluster 12
+LevenshteinDistance.java, IteratedLovinsStemmer.java, 
+labels: levenshtein, lhs, rhs, 
+
+Cluster 13
+PorterStemmer.java, XMeans.java, 
+labels: the, centers, inst, 
+

@@ -1,0 +1,54 @@
+entropy: 0.9164999
+
+Cluster 1
+Clustering.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, NormalizedEntropy.java, 
+labels: dataset, cluster, weka, 
+
+Cluster 2
+PorterStemmer.java, Precision.java, 
+labels: break, ends, the, 
+
+Cluster 3
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, weight, occurence, 
+
+Cluster 4
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, database, the, 
+
+Cluster 5
+Example.java, 
+labels: args, v2, word, 
+
+Cluster 6
+PackagesToClusters.java, MostFrequentFeaturesLabeling.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: weight, id, file, 
+
+Cluster 7
+Labeling.java, Visualization.java, 
+labels: labels, feature, visualization, 
+
+Cluster 8
+PrintFile.java, 
+labels: line, entropy, wr, 
+
+Cluster 9
+XMeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: the, instances, centers, 
+
+Cluster 10
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: rhs, lhs, distance, 
+
+Cluster 11
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, 
+labels: occurence, table, centroids, 
+
+Cluster 12
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, 
+labels: dynamic, evaluation, previous, 
+
+Cluster 13
+InvertibleStemmer.java, IteratedLovinsStemmer.java, LovinsStemmer.java, Stemmer.java, WordModel.java, 
+labels: el, put, word, 
+

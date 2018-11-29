@@ -1,0 +1,54 @@
+entropy: 0.9343279
+
+Cluster 1
+PackagesToClusters.java, Labeling.java, FileInput.java, ProjectInput.java, 
+labels: file, project, input, 
+
+Cluster 2
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: dataset, weka, cluster, 
+
+Cluster 3
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: first, distance, vector, 
+
+Cluster 4
+LovinsStemmer.java, EpsilonRange_ListElement.java, PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: put, el, word, 
+
+Cluster 5
+LevenshteinDistance.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, WordModel.java, 
+labels: stem, sentence, word, 
+
+Cluster 6
+Example.java, 
+labels: args, v2, v1, 
+
+Cluster 7
+Evaluation.java, NormalizedEntropy.java, Precision.java, 
+labels: entropy, intrapairs, clusters1, 
+
+Cluster 8
+Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, 
+labels: evaluation, centroids, occurence, 
+
+Cluster 9
+Database.java, DataObject.java, EuclideanDataObject.java, SequentialDatabase.java, 
+labels: data, the, object, 
+
+Cluster 10
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, 
+labels: occurence, feature, file, 
+
+Cluster 11
+XMeans.java, DBSCAN.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: centers, the, instances, 
+
+Cluster 12
+PorterStemmer.java, 
+labels: the, break, ends, 
+
+Cluster 13
+WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, PrintFile.java, Visualization.java, 
+labels: file, project, weight, 
+

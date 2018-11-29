@@ -1,0 +1,54 @@
+entropy: 0.9116864
+
+Cluster 1
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, SequentialDatabase.java, 
+labels: object, data, database, 
+
+Cluster 2
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: weka, cluster, dataset, 
+
+Cluster 3
+Kmeans.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: occurence, feature, table, 
+
+Cluster 4
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: word, stemmer, stem, 
+
+Cluster 5
+KmeansInitialization.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaModifiedCosineDistance.java, 
+labels: first, distance, instances, 
+
+Cluster 6
+PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, priority, queue, 
+
+Cluster 7
+PorterStemmer.java, 
+labels: cons, ends, break, 
+
+Cluster 8
+Example.java, LovinsStemmer.java, WordModel.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
+labels: put, el, word, 
+
+Cluster 9
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, NormalizedEntropy.java, Precision.java, 
+labels: evaluation, clusters1, intrapairs, 
+
+Cluster 10
+PrintFile.java, 
+labels: entropy, line, wr, 
+
+Cluster 11
+LevenshteinDistance.java, 
+labels: lhs, rhs, levenshtein, 
+
+Cluster 12
+Labeling.java, MostFrequentFeaturesLabeling.java, Visualization.java, 
+labels: labels, temp, feature, 
+
+Cluster 13
+WekaClustering.java, XMeans.java, WekaDotDistance.java, PackagesToClusters.java, 
+labels: centers, inst, instances, 
+
