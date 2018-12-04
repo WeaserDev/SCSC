@@ -1,0 +1,54 @@
+entropy: 0.7030043
+
+Cluster 1
+Example.java, 
+labels: args, v2, v1, 
+
+Cluster 2
+FileInput.java, SourceCodeSemanticClustering.java, PrintFile.java, 
+labels: project, weight, file, 
+
+Cluster 3
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: first, cluster, instances, 
+
+Cluster 4
+PriorityQueue.java, UpdateQueue.java, 
+labels: queue, heap, priority, 
+
+Cluster 5
+DBSCAN.java, 
+labels: type, database, object, 
+
+Cluster 6
+WordModel.java, 
+labels: builder, sentence, word, 
+
+Cluster 7
+MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
+labels: file, id, feature, 
+
+Cluster 8
+Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringDBSCAN.java, WekaClusteringKmeansDynamic.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, Evaluation.java, MojoDistance.java, MojoFM.java, NormalizedEntropy.java, PackagesToClusters.java, Precision.java, Recall.java, SupervisedEvaluation.java, Labeling.java, ProjectInput.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, Visualization.java, 
+labels: float, occurence, cluster, 
+
+Cluster 9
+XMeans.java, 
+labels: inst, centers, cent, 
+
+Cluster 10
+PorterStemmer.java, 
+labels: ends, break, cons, 
+
+Cluster 11
+Database.java, DataObject.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueueElement.java, 
+labels: epsilon, data, object, 
+
+Cluster 12
+LevenshteinDistance.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: lhs, stem, rhs, 
+
+Cluster 13
+LovinsStemmer.java, 
+labels: l5, put, el, 
+

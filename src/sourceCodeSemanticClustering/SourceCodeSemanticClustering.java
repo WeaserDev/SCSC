@@ -18,11 +18,12 @@ import featureExtraction.NaiveFeatureExtraction;
 import visualization.PrintFile;
 import clustering.algorithms.*;
 import clustering.distance.*;
+//import weka.core.*;
 import clustering.distance.WekaCosineDistance;
 import clustering.evaluation.Evaluation;
 import clustering.evaluation.NormalizedEntropy;
 import clustering.evaluation.PackagesToClusters;
-import clustering.evaluation.Precision;
+import clustering.evaluation.*;
 
 
 public class SourceCodeSemanticClustering {
@@ -42,10 +43,15 @@ public class SourceCodeSemanticClustering {
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput[] projectIn = ProjectInput.createProjectInput(new File(projectPath));
 		BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-		Evaluation entropy = new NormalizedEntropy();
-		PackagesToClusters pack = new PackagesToClusters();
-		Precision precision = new Precision();
+		PackagesToClusters pack = new PackagesToClusters();		
 		int[] packageClusters = pack.Clusters(new File(projectPath));
+		int[] cluster1 = {1, 1, 1, 1, 2,2,2,2,3,3,3,3,4,4,4,4};
+		int[] cluster2 = {1,1,4,2,2,2,1,1,3,3,2,2,2,2,3,3};
+		int[] cluster3 = {1, 1, 1, 2, 2, 2,3,3,3};
+		Precision precision = new Precision(packageClusters);
+		Recall recall = new Recall(packageClusters);
+		MojoFM mojo = new MojoFM(packageClusters);
+
 		for (int project=0; project<projectIn.length; project++) {
 			for (WeightMethod weight:weights) {
 				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
@@ -55,7 +61,7 @@ public class SourceCodeSemanticClustering {
 							for (DistanceFunction dist:distance) {
 								Clustering clusterer = new Kmeans(features.getOccurenceTable(),13, dist);
 								int clusters[] = clusterer.returnClusters();				
-								writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, packageClusters) + " recall:" + precision.evaluate(packageClusters, clusters));
+								writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, null) + " recall:" + recall.evaluate(clusters, null) + " mojo:" + mojo.evaluate(clusters, null));
 								writer.newLine();
 								String S = i + ".txt";
 								PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), new NoWeight(),wordModel,40,0),clusters,3,new TermFrequencyInverseDocumentFrequencyWeight()).getLabels());

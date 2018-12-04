@@ -10,7 +10,6 @@ public class EuclideanDistance extends DistanceFunction {
 			distance += difference*difference;
 		}
 		distance = Math.sqrt(distance);
-		System.out.println(distance);
 		return distance;
 	}
 

@@ -1,0 +1,54 @@
+entropy: 0.79021853
+
+Cluster 1
+Example.java, LevenshteinDistance.java, IteratedLovinsStemmer.java, Stemmer.java, Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, Evaluation.java, PackagesToClusters.java, SupervisedEvaluation.java, Labeling.java, ProjectInput.java, 
+labels: lhs, centroids, rhs, 
+
+Cluster 2
+LovinsStemmer.java, 
+labels: el, put, word, 
+
+Cluster 3
+WordModel.java, 
+labels: builder, sentence, word, 
+
+Cluster 4
+MojoDistance.java, MojoFM.java, NormalizedEntropy.java, Precision.java, Recall.java, MostFrequentFeaturesLabeling.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, occurence, float, 
+
+Cluster 5
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, FileInput.java, 
+labels: file, weka, cluster, 
+
+Cluster 6
+WekaCosineDistance.java, WekaDotDistance.java, 
+labels: p1, second, first, 
+
+Cluster 7
+DataObject.java, DBSCAN.java, EuclideanDataObject.java, 
+labels: type, database, object, 
+
+Cluster 8
+Database.java, EpsilonRange_ListElement.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueueElement.java, 
+labels: priority, epsilon, object, 
+
+Cluster 9
+XMeans.java, 
+labels: centers, cent, inst, 
+
+Cluster 10
+InvertibleStemmer.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, PrintFile.java, Visualization.java, 
+labels: feature, id, file, 
+
+Cluster 11
+PorterStemmer.java, 
+labels: ends, cons, break, 
+
+Cluster 12
+SourceCodeSemanticClustering.java, 
+labels: project, weight, file, 
+
+Cluster 13
+PriorityQueue.java, UpdateQueue.java, 
+labels: priority, queue, heap, 
+
