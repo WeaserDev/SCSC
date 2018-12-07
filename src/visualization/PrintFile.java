@@ -16,14 +16,9 @@ public class PrintFile extends Visualization {
 	}
 	
 	public void visualize(String fileName) {
-		NormalizedEntropy entropy = new NormalizedEntropy();
-
 		try {
 			BufferedWriter wr = new BufferedWriter(new FileWriter(fileName));
 			int clusterNumber=clusterNumber();
-			wr.write("entropy: " + entropy.evaluate(clusters, null));
-			wr.newLine();
-			wr.newLine();
 			for (int i=0; i<clusterNumber; i++) {
 			wr.write("Cluster " + (i+1));
 			wr.newLine();

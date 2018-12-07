@@ -15,6 +15,7 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 	}
 	
 	protected String[][] createLabels() {
+		//long startTime2=System.nanoTime();
 		String[][] labels = new String[clusterNumber()][labelsNumber];
 		float[][] clusterTable = createClusterTable();
 		clusterTable = weightMethod.weightOccurenceTable(clusterTable);
@@ -29,6 +30,8 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 				labels[i][k] = features.describeFeature(features.getFeatureId(labels[i][k]));		
 			}
 		}
+		//long endTime2 = System.nanoTime();
+		//System.out.println("Took "+((endTime2 - startTime2)/1000000) + " ms");
 		return labels;
 		
 	}
@@ -50,12 +53,11 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 		float [][] occurenceTable = features.getOccurenceTable();
 		float[][] clusterTable = new float[clusterNumber()][features.getFeatureNumber()];
 
-		for (int cluster=0; cluster<clusterNumber();cluster++) {
-			for (int i=0; i<features.getFileNumber();i++) {
-				for (int k=0; k<features.getFeatureNumber();k++) {
-					clusterTable[clusters[i]][k] += occurenceTable[i][k];					
-				}								
-			}
+
+		for (int i=0; i<features.getFileNumber();i++) {
+			for (int k=0; k<features.getFeatureNumber();k++) {
+				clusterTable[clusters[i]][k] += occurenceTable[i][k];					
+			}								
 		}
 		return clusterTable;
 	}

@@ -1,54 +1,436 @@
-entropy: 0.8769124
-
 Cluster 1
-Visualization.java, 
-labels: labels, visualization, id, 
+JMatrix.java, LU.java, PageRank.java, QR.java, ARPACK.java, LU.java, QR.java, 
+labels: qr, matrix, nn, nrows, ncols, 
 
 Cluster 2
-Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationRandomElements.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, NormalizedEntropy.java, PrintFile.java, 
-labels: distance, cluster, weka, 
+GeneticAlgorithmTest.java, AccuracyTest.java, AdjustedRandIndexTest.java, FalloutTest.java, FDRTest.java, FMeasureTest.java, MSETest.java, PrecisionTest.java, RandIndexTest.java, RecallTest.java, RMSETest.java, RSSTest.java, SensitivityTest.java, SpecificityTest.java, ChebyshevDistanceTest.java, CorrelationDistanceTest.java, HammingDistanceTest.java, JaccardDistanceTest.java, LeeDistanceTest.java, MahalanobisDistanceTest.java, ManhattanDistanceTest.java, MinkowskiDistanceTest.java, KernelDensityTest.java, ChiSqTestTest.java, KSTestTest.java, CooccurrenceKeywordExtractorTest.java, BM25Test.java, TFIDFTest.java, LancasterStemmerTest.java, PorterStemmerTest.java, 
+labels: junit, consol, test, assert, before, 
 
 Cluster 3
-XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueueElement.java, UpdateQueueElement.java, 
-labels: object, centers, the, 
+KNNDemo.java, NearestNeighborDemo.java, RNNSearchDemo.java, SmileDemo.java, BernoulliDistributionDemo.java, BetaDistributionDemo.java, BinomialDistributionDemo.java, ChiSquareDistributionDemo.java, ExponentialDistributionDemo.java, FDistributionDemo.java, GammaDistributionDemo.java, GaussianDistributionDemo.java, GeometricDistributionDemo.java, HyperGeometricDistributionDemo.java, LogisticDistributionDemo.java, LogNormalDistributionDemo.java, MultivariateGaussianDistributionDemo.java, NegativeBinomialDistributionDemo.java, PoissonDistributionDemo.java, ShiftedGeometricDistributionDemo.java, TDistributionDemo.java, WeibullDistributionDemo.java, 
+labels: plot, mutable, canvas, demo, slider, 
 
 Cluster 4
-MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, SourceCodeSemanticClustering.java, 
-labels: feature, weight, id, 
+NeuralNetworkDemo.java, SVMDemo.java, CLARANSDemo.java, DBScanDemo.java, DENCLUEDemo.java, DeterministicAnnealingDemo.java, GMeansDemo.java, MECDemo.java, SOMDemo.java, SpectralClusteringDemo.java, XMeansDemo.java, LaplacianEigenmapDemo.java, BIRCHDemo.java, NeuralMapDemo.java, 
+labels: field, pane, cluster, option, demo, 
 
 Cluster 5
-PriorityQueue.java, SequentialDatabase.java, UpdateQueue.java, 
-labels: object, priority, queue, 
+BinarySparseHyperbolicTangentKernel.java, HyperbolicTangentKernel.java, SparseHyperbolicTangentKernel.java, 
+labels: hyperbolic, kernel, scale, tangent, offset, 
 
 Cluster 6
-BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
-labels: table, weight, occurence, 
+ShellSort.java, 
+labels: insert, inc, while, shell, sort, 
 
 Cluster 7
-LevenshteinDistance.java, KmeansInitializationPlusPlus.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, 
-labels: second, distance, first, 
+CompleteLinkage.java, Linkage.java, SingleLinkage.java, UPGMALinkage.java, UPGMCLinkage.java, WardLinkage.java, WPGMALinkage.java, WPGMCLinkage.java, 
+labels: linkage, proximity, cluster, nij, merge, 
 
 Cluster 8
-InvertibleStemmer.java, LovinsStemmer.java, Stemmer.java, WordModel.java, 
-labels: put, word, el, 
+MissingValueImputationTest.java, BKTreeSpeedTest.java, CoverTreeSpeedTest.java, CoverTreeStringSpeedTest.java, KDTreeSpeedTest.java, LinearSearchSpeedTest.java, LSHSpeedTest.java, LSHTest.java, MPLSHSpeedTest.java, MPLSHTest.java, TaxonomyTest.java, ApproximateStringSearchDemo.java, ParameterParser.java, BigramCollocationFinderTest.java, 
+labels: time, imputation, lsh, millis, testx, 
 
 Cluster 9
-PackagesToClusters.java, FileInput.java, ProjectInput.java, 
-labels: project, file, input, 
+ARMTest.java, CoverTreeTest.java, KDTreeTest.java, LibsvmParserTest.java, SparseDatasetTest.java, AdjacencyListTest.java, AdjacencyMatrixTest.java, ComplexTest.java, MathTest.java, JMatrixTest.java, SparseMatrixTest.java, GammaTest.java, CorTestTest.java, FTestTest.java, TTestTest.java, NDMatrixTest.java, NLMatrixTest.java, SimpleCorpusTest.java, CalculusTest.java, 
+labels: graph, test, assert, 1e, edge, 
 
 Cluster 10
-Example.java, 
-labels: args, v2, word, 
+DiscreteMixture.java, Mixture.java, MultivariateMixture.java, 
+labels: component, builder, mixture, priori, empty, 
 
 Cluster 11
-IteratedLovinsStemmer.java, 
-labels: str, lovins, stem, 
+TaxonomicDistance.java, SparseChebyshevDistance.java, SparseEuclideanDistance.java, SparseManhattanDistance.java, SparseMinkowskiDistance.java, SparseThinPlateSplineKernel.java, MersenneTwister.java, MersenneTwister64.java, RandomNumberGenerator.java, Random.java, 
+labels: mti, twister, mt, next, iter, 
 
 Cluster 12
-PorterStemmer.java, Evaluation.java, Precision.java, 
-labels: break, ends, case, 
+Interpolation1Demo.java, Interpolation2Demo.java, LaplaceInterpolationDemo.java, ScatterDataInterpolationDemo.java, ContourDemo.java, HeatmapDemo.java, HexmapDemo.java, EmpiricalDistributionDemo.java, 
+labels: interpolation, plot, frame, canvas, ww, 
 
 Cluster 13
-Labeling.java, 
-labels: labels, cluster, feature, 
+RBFNetwork.java, RBFNetwork.java, SmileUtils.java, RBFInterpolation.java, RBFInterpolation1D.java, 
+labels: network, centers, function, rbf, radial, 
+
+Cluster 14
+LogisticRegression.java, Maxent.java, DENCLUE.java, DeterministicAnnealing.java, GMeans.java, KMeans.java, PartitionClustering.java, SIB.java, XMeans.java, TSNE.java, IsotonicMDS.java, Bagging.java, AdjustedRandIndex.java, RandIndex.java, SOM.java, SparseMatrix.java, CooccurrenceKeywordExtractor.java, 
+labels: distortion, task, cluster, centroids, iter, 
+
+Cluster 15
+BIRCH.java, CLARANS.java, DBScan.java, FastPair.java, MEC.java, BKTree.java, KDTree.java, LinearSearch.java, LSH.java, MPLSH.java, SNLSH.java, NeuralMap.java, 
+labels: radius, hash, neighbor, bucket, neuron, 
+
+Cluster 16
+SimpleNormalizer.java, PennTreebankTokenizer.java, SimpleParagraphSplitter.java, SimpleTokenizer.java, 
+labels: pattern, text, compile, contraction, matcher, 
+
+Cluster 17
+KNN.java, SparseOneHotEncoder.java, RLS.java, Concept.java, Accuracy.java, Fallout.java, FDR.java, MeanAbsoluteDeviation.java, MSE.java, Precision.java, Recall.java, RMSE.java, RSS.java, Sensitivity.java, Specificity.java, BestLocalizedWavelet.java, CoifletWavelet.java, SymletWavelet.java, ExponentialVariogram.java, SphericalVariogram.java, ChebyshevDistance.java, CorrelationDistance.java, EuclideanDistance.java, HammingDistance.java, LeeDistance.java, MahalanobisDistance.java, ManhattanDistance.java, MinkowskiDistance.java, 
+labels: concept, distance, dist, truth, keyword, 
+
+Cluster 18
+GaussianRadialBasis.java, InverseMultiquadricRadialBasis.java, MultiquadricRadialBasis.java, ThinPlateRadialBasis.java, 
+labels: omitting, r0, multiquadric, radial, sub, 
+
+Cluster 19
+MulticoreExecutor.java, 
+labels: pool, task, thread, future, nprocs, 
+
+Cluster 20
+MurmurHash.java, Trie.java, TableCopyPasteAdapter.java, Product.java, 
+labels: offset, 0xff, key, h64, child, 
+
+Cluster 21
+Erf.java, 
+labels: erfccheb, cof, ty, erfc, erf, 
+
+Cluster 22
+HeapSortTest.java, QuickSortTest.java, ShellSortTest.java, 
+labels: data4, data2, data1, data3, sort, 
+
+Cluster 23
+DBScanTest.java, DENCLUETest.java, GaussianMixtureDemo.java, MultivariateGaussianMixtureDemo.java, GaussianMixtureTest.java, 
+labels: 24, rand, gaussian, mixture, multivariate, 
+
+Cluster 24
+RegexPOSTaggerTest.java, 
+labels: regex, tagger, pos, treebank, tag, 
+
+Cluster 25
+FPGrowthTest.java, TotalSupportTreeTest.java, PCATest.java, EVDTest.java, LanczosTest.java, SVDTest.java, ARPACKTest.java, EVDTest.java, SVDTest.java, 
+labels: result, assert, decompose, svd, eigen, 
+
+Cluster 26
+HierarchicalClusteringDemo.java, KMeansDemo.java, NeuralGasDemo.java, IsoMapDemo.java, LLEDemo.java, GrowingNeuralGasDemo.java, 
+labels: cluster, plot, linkage, demo, gas, 
+
+Cluster 27
+AverageImputation.java, KMeansImputation.java, KNNImputation.java, LLSImputation.java, MissingValueImputation.java, MissingValueImputationException.java, SVDImputation.java, 
+labels: na, data, svd, imputation, missing, 
+
+Cluster 28
+AdaBoost.java, DecisionTree.java, GradientTreeBoost.java, RandomForest.java, BBDTree.java, GradientTreeBoost.java, RandomForest.java, RegressionTree.java, CRF.java, Bootstrap.java, CrossValidation.java, Validation.java, Histogram.java, 
+labels: ntrees, node, split, trellis, tree, 
+
+Cluster 29
+NeuralNetwork.java, SVM.java, NeuralNetwork.java, SVR.java, Base.java, Contour.java, ExpressionParser.java, 
+labels: units, net, svm, layer, activation, 
+
+Cluster 30
+NumberCellRenderer.java, 
+labels: number, renderer, cell, format, percent, 
+
+Cluster 31
+CubicSplineInterpolation1D.java, CubicSplineInterpolation2D.java, KrigingInterpolation.java, ShepardInterpolation.java, ShepardInterpolation1D.java, PowerVariogram.java, 
+labels: spline, variogram, nugget, kriging, interpolation, 
+
+Cluster 32
+KrigingInterpolation1D.java, PearsonKernel.java, 
+labels: rb, yvi, vstar, omega, sigma, 
+
+Cluster 33
+ArffParser.java, BinarySparseDatasetParser.java, DelimitedTextParser.java, LibsvmParser.java, GCTParser.java, PCLParser.java, RESParser.java, TXTParser.java, SparseDatasetParser.java, SparseMatrixParser.java, 
+labels: tokenizer, parse, uri, stream, attribute, 
+
+Cluster 34
+Corpus.java, BM25.java, Relevance.java, RelevanceRanker.java, TFIDF.java, Text.java, 
+labels: term, tf, corpus, doc, document, 
+
+Cluster 35
+OnlineClassifier.java, SoftClassifier.java, Clustering.java, ClusteringDistance.java, package-info.java, FeatureGenerator.java, FeatureRanking.java, SequenceFeature.java, FitnessMeasure.java, OnlineRegression.java, package-info.java, package-info.java, SequenceLabeler.java, package-info.java, package-info.java, SimpleDeamonThreadFactory.java, ClassificationMeasure.java, ClusterMeasure.java, package-info.java, RegressionMeasure.java, package-info.java, package-info.java, MathDemo.java, Visitor.java, Interpolation2D.java, LinearInterpolation.java, package-info.java, AbstractDifferentiableMultivariateFunction.java, DifferentiableFunction.java, DifferentiableMultivariateFunction.java, Distance.java, Metric.java, package-info.java, Function.java, KernelMatrix.java, LinearSolver.java, MatrixMultiplication.java, package-info.java, Preconditioner.java, MultivariateFunction.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, Abbreviations.java, Dictionary.java, package-info.java, Punctuations.java, StopWords.java, package-info.java, Normalizer.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, Stemmer.java, TextTerms.java, package-info.java, ParagraphSplitter.java, SentenceSplitter.java, Tokenizer.java, package-info.java, package-info.java, package-info.java, Evaluation.java, ReductionRules.java, InvalidExpressionException.java, package-info.java, 
+labels: github, interface, dictionary, fommil, netlib, 
+
+Cluster 36
+JensenShannonDistance.java, 
+labels: middot, kullback, jensen, shannon, divergence, 
+
+Cluster 37
+ToyData.java, 
+labels: multivariate, gauss, print, stream, toy, 
+
+Cluster 38
+Button.java, FontChooser.java, ButtonCellRenderer.java, DateCellEditor.java, DateCellRenderer.java, DoubleArrayCellEditor.java, DoubleCellEditor.java, FontCellEditor.java, FontCellRenderer.java, IntegerCellEditor.java, PageTableModel.java, 
+labels: font, action, field, editor, page, 
+
+Cluster 39
+Palette.java, Shape.java, ColorCellEditor.java, 
+labels: color, palette, float, 0f, hsv, 
+
+Cluster 40
+LancasterStemmer.java, PorterStemmer.java, 
+labels: words, stem, stemmer, ruleok, rule, 
+
+Cluster 41
+IsoMapTest.java, IsotonicMDSTest.java, SammonMappingTest.java, 
+labels: 23, 17, 96, 93, 92, 
+
+Cluster 42
+AdaBoostTest.java, DecisionTreeTest.java, FLDTest.java, KNNTest.java, LDATest.java, LogisticRegressionTest.java, RandomForestTest.java, RBFNetworkTest.java, SVMTest.java, BIRCHTest.java, CLARANSTest.java, DeterministicAnnealingTest.java, GMeansTest.java, HierarchicalClusteringTest.java, KMeansTest.java, MECTest.java, SIBTest.java, SpectralClusteringTest.java, XMeansTest.java, GAFeatureSelectionTest.java, OneHotEncoderTest.java, SparseOneHotEncoderTest.java, SumSquaresRatioTest.java, GrowingNeuralGasTest.java, NeuralGasTest.java, NeuralMapTest.java, SOMTest.java, 
+labels: testx, arff, usps, rand, parser, 
+
+Cluster 43
+LaplacianEigenmapTest.java, LLETest.java, 
+labels: 0391, 0408, 0390, 0344, 0446, 
+
+Cluster 44
+QuickSelectTest.java, 
+labels: median, data5, quick, data6, assert, 
+
+Cluster 45
+DefaultTableHeaderCellRenderer.java, MultiColumnSortTableHeaderCellRenderer.java, TableColumnSettings.java, Table.java, 
+labels: table, renderer, column, cell, header, 
+
+Cluster 46
+BagTest.java, BKTreeTest.java, SNLSHTest.java, HMMPOSTagger.java, HMMPOSTaggerTest.java, 
+labels: pos, penn, tagger, snlsh, sentence, 
+
+Cluster 47
+FLDDemo.java, KNNDemo.java, LDADemo.java, LogisticRegressionDemo.java, QDADemo.java, RBFNetworkDemo.java, RDADemo.java, ClusteringDemo.java, SIBDemo.java, ManifoldDemo.java, TSNEDemo.java, VQDemo.java, PlotPanel.java, 
+labels: option, button, box, pane, dataset, 
+
+Cluster 48
+Factory.java, NLMatrix.java, 
+labels: nlmatrix, nl, lapack, info, lwork, 
+
+Cluster 49
+BarPlotDemo.java, QQPlotDemo.java, SparseMatrixPlotDemo.java, StaircasePlotDemo.java, BestLocalizedWaveletDemo.java, CoifletWaveletDemo.java, D4WaveletDemo.java, DaubechiesWaveletDemo.java, HaarWaveletDemo.java, SymletWaveletDemo.java, 
+labels: wavelet, canvas, 1092, frame, plot, 
+
+Cluster 50
+PriorityQueue.java, QuickSelect.java, SortUtils.java, 
+labels: priority, ir, arr, heap, swap, 
+
+Cluster 51
+Cosecant.java, Cosine.java, Cotangent.java, Difference.java, Exponent.java, Logarithm.java, NaturalLogarithm.java, Negation.java, Secant.java, Sine.java, Sum.java, Tangent.java, 
+labels: derive, negation, unary, exp, constant, 
+
+Cluster 52
+Graphics.java, Projection.java, Projection2D.java, 
+labels: sc, projection, g2d, coord, screen, 
+
+Cluster 53
+Calculus.java, ExpressionParserTest.java, ExpressionTreeTest.java, 
+labels: tree, actual, sin, query, parser, 
+
+Cluster 54
+NaiveBayesTest.java, NeuralNetworkTest.java, QDATest.java, RDATest.java, KPCATest.java, GaussianProcessRegressionTest.java, LASSOTest.java, OLSTest.java, RandomForestTest.java, RBFNetworkTest.java, RidgeRegressionTest.java, RLSTest.java, SVRTest.java, ValidationTest.java, 
+labels: datax, parser, cv, loocv, arff, 
+
+Cluster 55
+package-info.java, package-info.java, 
+labels: mcar, income, missing, dt, imputation, 
+
+Cluster 56
+BarPlot.java, Grid.java, Histogram.java, Histogram3D.java, Line.java, LinePlot.java, Plot.java, QQPlot.java, ScatterPlot.java, StaircasePlot.java, Surface.java, Wireframe.java, 
+labels: canvas, color, bound, histogram, plot, 
+
+Cluster 57
+Printer.java, 
+labels: printer, print, job, request, printable, 
+
+Cluster 58
+Bigram.java, BigramCollocation.java, BigramCollocationFinder.java, 
+labels: corpus, w1, collocation, w2, bigram, 
+
+Cluster 59
+GradientTreeBoostTest.java, GradientTreeBoostTest.java, NeuralNetworkTest.java, RegressionTreeTest.java, 
+labels: gradient, parser, arff, weka, boost, 
+
+Cluster 60
+AprioriPhraseExtractorTest.java, SimpleNormalizerTest.java, BreakIteratorSentenceSplitterTest.java, BreakIteratorTokenizerTest.java, PennTreebankTokenizerTest.java, SimpleParagraphSplitterTest.java, SimpleSentenceSplitterTest.java, SimpleTokenizerTest.java, 
+labels: tokenizer, ve, result, ll, exp, 
+
+Cluster 61
+FLD.java, LDA.java, NaiveBayes.java, QDA.java, RDA.java, SpectralClustering.java, SignalNoiseRatio.java, SumSquaresRatio.java, SammonMapping.java, LASSO.java, HMM.java, AUC.java, NeuralGas.java, Wavelet.java, Math.java, BandMatrix.java, BiconjugateGradient.java, 
+labels: priori, argument, tol, iter, matrix, 
+
+Cluster 62
+Axis.java, BaseGrid.java, 
+labels: base, grid, axis, label, slice, 
+
+Cluster 63
+AssociationRule.java, ItemSet.java, MaxAbsScaler.java, RobustStandardizer.java, Scaler.java, Standardizer.java, WinsorScaler.java, ConfusionMatrix.java, AttributeDataset.java, AttributeVector.java, NGram.java, 
+labels: append, sb, datum, attribute, name, 
+
+Cluster 64
+OLS.java, RidgeRegression.java, GaussianVariogram.java, BinarySparseGaussianKernel.java, BinarySparseLaplacianKernel.java, BinarySparsePolynomialKernel.java, BinarySparseThinPlateSplineKernel.java, GaussianKernel.java, HellingerKernel.java, LaplacianKernel.java, PolynomialKernel.java, SparseGaussianKernel.java, SparseLaplacianKernel.java, SparsePolynomialKernel.java, ThinPlateSplineKernel.java, 
+labels: sup, coefficients, residual, kernel, sigma, 
+
+Cluster 65
+RegexPOSTagger.java, 
+labels: pos, compile, regex, z0, penn, 
+
+Cluster 66
+Classifier.java, package-info.java, package-info.java, package-info.java, Chromosome.java, LamarckianChromosome.java, package-info.java, package-info.java, package-info.java, KNNSearch.java, NearestNeighborSearch.java, Neighbor.java, package-info.java, RNNSearch.java, SimpleNeighbor.java, package-info.java, Projection.java, package-info.java, Regression.java, FMeasure.java, LOOCV.java, package-info.java, DaubechiesWavelet.java, Interpolation.java, package-info.java, MercerKernel.java, package-info.java, AbstractMultivariateDistribution.java, BIC.java, DiscreteExponentialFamily.java, Distribution.java, ExponentialFamily.java, MultivariateDistribution.java, MultivariateExponentialFamily.java, package-info.java, package-info.java, AnchorText.java, PennTreebankPOS.java, POSTagger.java, 
+labels: feature, neighbor, tag, solution, category, 
+
+Cluster 67
+BreakIteratorSentenceSplitter.java, BreakIteratorTokenizer.java, SimpleSentenceSplitter.java, 
+labels: boundary, sentence, matcher, stuff, words, 
+
+Cluster 68
+MDSTest.java, GHATest.java, RandomProjectionTest.java, PowerIterationTest.java, IQAgentTest.java, 
+labels: junit, eigen, arrests, gha, mds, 
+
+Cluster 69
+Bag.java, FeatureTransform.java, 
+labels: feature, words, attribute, bag, transform, 
+
+Cluster 70
+BootstrapTest.java, CrossValidationTest.java, LOOCVTest.java, RandomTest.java, 
+labels: trainhit, assert, test, junit, hit, 
+
+Cluster 71
+HierarchicalClustering.java, Dendrogram.java, Headless.java, AlphaIcon.java, 
+labels: icon, linkage, merge, height, cluster, 
+
+Cluster 72
+IOUtils.java, EnglishDictionary.java, EnglishPunctuations.java, EnglishStopWords.java, SimpleDictionary.java, EnglishPOSLexicon.java, EnglishAbbreviations.java, 
+labels: reader, pos, dictionary, english, dict, 
+
+Cluster 73
+Normalizer.java, AbstractInterpolation.java, Lanczos.java, Beta.java, Gamma.java, AbstractDistribution.java, BernoulliDistribution.java, BetaDistribution.java, BinomialDistribution.java, DiscreteDistribution.java, EmpiricalDistribution.java, ExponentialDistribution.java, FDistribution.java, GaussianDistribution.java, GeometricDistribution.java, HyperGeometricDistribution.java, KernelDensity.java, LogisticDistribution.java, LogNormalDistribution.java, NegativeBinomialDistribution.java, PoissonDistribution.java, ShiftedGeometricDistribution.java, TDistribution.java, WeibullDistribution.java, KSTest.java, 
+labels: dk, k2, wptr, mode, k4, 
+
+Cluster 74
+Datum.java, 
+labels: response, transactions, timestamp, weight, datum, 
+
+Cluster 75
+BoxPlot.java, Heatmap.java, Hexmap.java, PlotCanvas.java, SparseMatrixPlot.java, 
+labels: bound, action, plot, color, canvas, 
+
+Cluster 76
+BestLocalizedWaveletTest.java, CoifletWaveletTest.java, D4WaveletTest.java, DaubechiesWaveletTest.java, HaarWaveletTest.java, SymletWaveletTest.java, 
+labels: filter, junit, wavelet, before, test, 
+
+Cluster 77
+GrowingNeuralGas.java, AdjacencyList.java, AdjacencyMatrix.java, Graph.java, 
+labels: edge, source, cc, vertex, graph, 
+
+Cluster 78
+PlattScaling.java, D4Wavelet.java, HaarWavelet.java, BicubicInterpolation.java, LaplaceInterpolation.java, DynamicTimeWarping.java, EditDistance.java, UniversalGenerator.java, IQAgent.java, 
+labels: fkp, table, yv, x2, x1, 
+
+Cluster 79
+HeapSelectTest.java, BernoulliDistributionTest.java, BetaDistributionTest.java, BinomialDistributionTest.java, ChiSquareDistributionTest.java, ExponentialDistributionTest.java, FDistributionTest.java, GammaDistributionTest.java, GaussianDistributionTest.java, GeometricDistributionTest.java, HyperGeometricDistributionTest.java, LogisticDistributionTest.java, LogNormalDistributionTest.java, MultivariateGaussianDistributionTest.java, NegativeBinomialDistributionTest.java, PoissonDistributionTest.java, ShiftedGeometricDistributionTest.java, TDistributionTest.java, WeibullDistributionTest.java, 
+labels: cdf, instance, equals, assert, 1e, 
+
+Cluster 80
+BoxPlotDemo.java, GridDemo.java, Histogram3Demo.java, HistogramDemo.java, LinePlotDemo.java, ScatterPlotDemo.java, SurfaceDemo.java, 
+labels: canvas, demo, data, frame, plot, 
+
+Cluster 81
+package-info.java, RadialBasisFunction.java, 
+labels: radial, phi, function, approximation, sub, 
+
+Cluster 82
+package-info.java, package-info.java, 
+labels: dna, microarray, incidence, edge, graph, 
+
+Cluster 83
+CoverTree.java, BaseLabel.java, BaseLine.java, Point.java, ColorCellRenderer.java, 
+labels: node, cover, dist, idx, points, 
+
+Cluster 84
+IsoMap.java, LaplacianEigenmap.java, LLE.java, MDS.java, EVD.java, PowerIteration.java, 
+labels: eigenvalues, eigen, matrix, graph, neighbor, 
+
+Cluster 85
+ClassifierTrainer.java, DateFeature.java, OneHotEncoder.java, RegressionTrainer.java, Attribute.java, DateAttribute.java, NominalAttribute.java, NumericAttribute.java, StringAttribute.java, 
+labels: description, nominal, attribute, name, date, 
+
+Cluster 86
+Complex.java, 
+labels: complex, image, re, im, real, 
+
+Cluster 87
+BitStringTest.java, 
+labels: bit, mother, father, crossover, son, 
+
+Cluster 88
+WaveletShrinkage.java, ChiSqTest.java, CorTest.java, FTest.java, TTest.java, 
+labels: chisq, wavelet, correlation, df, td, 
+
+Cluster 89
+EuclideanDistanceTest.java, Label.java, ByteArrayCellRenderer.java, DoubleArrayCellRenderer.java, FloatArrayCellRenderer.java, IntegerArrayCellEditor.java, IntegerArrayCellRenderer.java, LongArrayCellRenderer.java, ShortArrayCellRenderer.java, 
+labels: builder, renderer, append, cell, text, 
+
+Cluster 90
+DateFeatureTest.java, SignalNoiseRatioTest.java, ArffParserTest.java, BinarySparseDatasetParserTest.java, DelimitedTextParserTest.java, GCTParserTest.java, PCLParserTest.java, RESParserTest.java, TXTParserTest.java, SparseDatasetParserTest.java, SparseMatrixParserTest.java, 
+labels: equals, arff, assert, parser, attribute, 
+
+Cluster 91
+ClassificationDemo.java, IsotonicMDSDemo.java, MDSDemo.java, SammonMappingDemo.java, GHADemo.java, KPCADemo.java, LDADemo.java, PCADemo.java, PPCADemo.java, ProjectionDemo.java, RandomProjectionDemo.java, 
+labels: pane, box, button, dataset, plot, 
+
+Cluster 92
+DynamicTimeWarpingTest.java, 
+labels: warping, 57181, assert, dynamic, junit, 
+
+Cluster 93
+EditDistanceTest.java, 
+labels: levenshtein, edit, distance, assert, damerau, 
+
+Cluster 94
+GeneticAlgorithm.java, BinarySparseDataset.java, Dataset.java, SparseDataset.java, DoubleArrayList.java, IntArrayList.java, 
+labels: population, datum, response, tournament, chromosome, 
+
+Cluster 95
+GHA.java, KPCA.java, PCA.java, PPCA.java, RandomProjection.java, GaussianProcessRegression.java, Array2D.java, Cholesky.java, DenseMatrix.java, Matrix.java, SVD.java, NDMatrix.java, Cholesky.java, 
+labels: nd, ncols, dense, nrows, matrix, 
+
+Cluster 96
+Projection3D.java, 
+labels: sin, xyz, cos, theta, phi, 
+
+Cluster 97
+BinarySparseLinearKernel.java, LinearKernel.java, SparseLinearKernel.java, 
+labels: p2, sparse, p1, kernel, linear, 
+
+Cluster 98
+ConfusionMatrixTest.java, BandMatrixTest.java, BiconjugateGradientTest.java, CholeskyTest.java, LUTest.java, QRTest.java, CholeskyTest.java, LUTest.java, QRTest.java, 
+labels: lu, cholesky, solve, junit, matrix, 
+
+Cluster 99
+ExponentialFamilyMixtureDemo.java, DiscreteExponentialFamilyMixture.java, ExponentialFamilyMixture.java, GaussianMixture.java, MultivariateExponentialFamilyMixture.java, MultivariateGaussianDistribution.java, MultivariateGaussianMixture.java, ExponentialFamilyMixtureTest.java, 
+labels: em, mixture, priori, component, exponential, 
+
+Cluster 100
+MaxentTest.java, CRFTest.java, HMMTest.java, NeuralGasData.java, 
+labels: sy, hmm, sx, kx, ky, 
+
+Cluster 101
+SparseArray.java, 
+labels: capacity, entry, nonzero, array, iter, 
+
+Cluster 102
+ARM.java, FPGrowth.java, FPTree.java, package-info.java, TotalSupportTree.java, JaccardDistance.java, 
+labels: item, support, itemset, fp, header, 
+
+Cluster 103
+Taxonomy.java, AprioriPhraseExtractor.java, SimpleCorpus.java, SimpleText.java, FileChooser.java, 
+labels: description, gram, concept, filter, anchor, 
+
+Cluster 104
+GAFeatureSelection.java, BitString.java, 
+labels: measure, crossover, rate, mutation, bit, 
+
+Cluster 105
+ExpressionTree.java, BinaryNode.java, Constant.java, Expression.java, Quotient.java, UnaryNode.java, Variable.java, 
+labels: right, root, quotient, str, child, 
+
+Cluster 106
+BilinearInterpolation.java, BicubicInterpolationTest.java, BilinearInterpolationTest.java, CubicSplineInterpolation1DTest.java, CubicSplineInterpolation2DTest.java, KrigingInterpolationTest.java, LaplaceInterpolationTest.java, LinearInterpolationTest.java, RBFInterpolationTest.java, ShepardInterpolationTest.java, 
+labels: interpolation, x1, 1e, assert, junit, 
+
+Cluster 107
+DoubleHeapSelect.java, FloatHeapSelect.java, HeapSelect.java, HeapSort.java, IntHeapSelect.java, QuickSort.java, 
+labels: istack, ir, jstack, arr, brr, 
+
+Cluster 108
+EnglishPunctuationsTest.java, EnglishPOSLexiconTest.java, 
+labels: lexicon, contains, punctuations, english, assert, 
+
+Cluster 109
+package-info.java, Variogram.java, ChiSquareDistribution.java, GammaDistribution.java, 
+labels: variogram, theta, nu, gamma, chi, 
 

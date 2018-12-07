@@ -30,11 +30,11 @@ public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\experiment.txt";
+		String fileName = "results\\experiment7.txt";
 		String projectPath = "C:\\Users\\Aris\\eclipse-workspace\\";
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(),new TermFrequencyWeight(),new BinaryWeight()};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
-		DistanceFunction[] distance = {new CosineDistance()};
+		DistanceFunction[] distance = {new CosineDistance(), new EuclideanDistance(), new DotDistance()};
 		int maxFileWeight = 21;
 		int fileWeightStep = 10;
 		int maxFunctionWeight = 5;
@@ -51,22 +51,41 @@ public class SourceCodeSemanticClustering {
 		Precision precision = new Precision(packageClusters);
 		Recall recall = new Recall(packageClusters);
 		MojoFM mojo = new MojoFM(packageClusters);
+		int clusterNumber = clusterNumber(packageClusters);
 
 		for (int project=0; project<projectIn.length; project++) {
 			for (WeightMethod weight:weights) {
 				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
-						if (projectIn[project].getInput().length>0) {	
+						if (projectIn[project].getInput().length>0) {
 							WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight);
 							for (DistanceFunction dist:distance) {
-								Clustering clusterer = new Kmeans(features.getOccurenceTable(),13, dist);
-								int clusters[] = clusterer.returnClusters();				
-								writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, null) + " recall:" + recall.evaluate(clusters, null) + " mojo:" + mojo.evaluate(clusters, null));
+								int times=200;
+								float averagePrecision = 0;
+								float averageRecall = 0;
+								float averageMojoFM = 0;
+								float averageTime = 0;
+								for (int repeat=0;repeat<times;repeat++) {
+									long startTime2=System.nanoTime();	
+									Clustering clusterer = new Kmeans(features.getOccurenceTable(),clusterNumber, dist);
+									int clusters[] = clusterer.returnClusters();
+									long endTime2 = System.nanoTime();
+									//writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, null) + " recall:" + recall.evaluate(clusters, null) + " mojoFM:" + mojo.evaluate(clusters, null) + " time:" + ((endTime2 - startTime2)/1000000) + " ms" );							
+									//writer.newLine();
+									averagePrecision+=precision.evaluate(clusters, null);
+									averageRecall+=recall.evaluate(clusters, null);
+									averageMojoFM+=mojo.evaluate(clusters, null);
+									averageTime += ((endTime2 - startTime2)/1000000);
+									//String S = i + ".txt";
+									//WordModelFeatureExtraction features2=new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight,wordModel,40,0);
+									//PrintFile print = new PrintFile(clusters,features2.getIdFiles(),new MostFrequentFeaturesLabeling(features,clusters,5,new TermFrequencyInverseDocumentFrequencyWeight()).getLabels());
+									//print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results\\" + S);
+									i+=1;
+								}
 								writer.newLine();
-								String S = i + ".txt";
-								PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), new NoWeight(),wordModel,40,0),clusters,3,new TermFrequencyInverseDocumentFrequencyWeight()).getLabels());
-								print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results\\" + S);
-								i+=1;
+								writer.write("Total: "+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "repeated "+ times+" times:" + " Average Precision: " +  averagePrecision/times + " Average Recall:" + averageRecall/times + " Average mojoFM:" + averageMojoFM/times + " Average time:" + averageTime/times + " ms" );							
+								writer.newLine();
+								writer.newLine();
 							}
 						}
 					}
@@ -76,5 +95,15 @@ public class SourceCodeSemanticClustering {
 	writer.close();		
 	long endTime = System.nanoTime();
 	System.out.println("Took "+((endTime - startTime)/1000000) + " ms");
+	}
+	private static int clusterNumber(int[] clusters) {
+		int max = clusters[0];
+		for (int i=1; i < clusters.length ; i++) {
+			if (clusters[i]>max) {
+				max=clusters[i];
+			}
+		}
+		max+=1;
+		return max;
 	}
 }

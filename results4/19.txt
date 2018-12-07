@@ -1,54 +1,436 @@
-entropy: 0.9197011
-
 Cluster 1
-BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
-labels: occurence, feature, document, 
+SignalNoiseRatio.java, SumSquaresRatio.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 2
-MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, 
-labels: id, feature, word, 
+BestLocalizedWaveletDemo.java, CoifletWaveletDemo.java, D4WaveletDemo.java, DaubechiesWaveletDemo.java, HaarWaveletDemo.java, SymletWaveletDemo.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 3
-XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, WekaCosineDistance.java, WekaDotDistance.java, 
-labels: centers, object, the, 
+Bootstrap.java, CrossValidation.java, WaveletShrinkage.java, MersenneTwister64.java, PorterStemmer.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 4
-Labeling.java, ProjectInput.java, Visualization.java, 
-labels: project, input, directories, 
+KernelDensityTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 5
-NormalizedEntropy.java, PackagesToClusters.java, Precision.java, 
-labels: clusters1, cluster, intrapairs, 
+package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 6
-LovinsStemmer.java, PorterStemmer.java, 
-labels: put, word, el, 
+FLDDemo.java, KNNDemo.java, LDADemo.java, LogisticRegressionDemo.java, NeuralNetworkDemo.java, QDADemo.java, RBFNetworkDemo.java, RDADemo.java, SVMDemo.java, CLARANSDemo.java, DBScanDemo.java, DENCLUEDemo.java, DeterministicAnnealingDemo.java, GMeansDemo.java, HierarchicalClusteringDemo.java, KMeansDemo.java, MECDemo.java, NeuralGasDemo.java, SOMDemo.java, SpectralClusteringDemo.java, XMeansDemo.java, IsoMapDemo.java, LaplacianEigenmapDemo.java, LLEDemo.java, HexmapDemo.java, GHADemo.java, KPCADemo.java, PCADemo.java, PPCADemo.java, RandomProjectionDemo.java, SmileDemo.java, BIRCHDemo.java, GrowingNeuralGasDemo.java, NeuralMapDemo.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 7
-Clustering.java, Kmeans.java, KmeansDynamic.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, WekaClusteringKmeansDynamic.java, 
-labels: centroids, distance, cluster, 
+IQAgent.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 8
-WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, FileInput.java, PrintFile.java, 
-labels: weka, wr, cluster, 
+BernoulliDistribution.java, BetaDistribution.java, ChiSquareDistribution.java, DiscreteMixture.java, EmpiricalDistribution.java, ExponentialDistribution.java, FDistribution.java, GammaDistribution.java, GaussianDistribution.java, GaussianMixture.java, GeometricDistribution.java, KernelDensity.java, LogisticDistribution.java, LogNormalDistribution.java, Mixture.java, MultivariateGaussianDistribution.java, MultivariateGaussianMixture.java, MultivariateMixture.java, NegativeBinomialDistribution.java, ShiftedGeometricDistribution.java, TDistribution.java, WeibullDistribution.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 9
-CosineDistance.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
-labels: distance, first, vector, 
+SVDTest.java, SVDTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 10
-LevenshteinDistance.java, InvertibleStemmer.java, WordModel.java, 
-labels: stem, word, sentence, 
+KNNImputation.java, LLSImputation.java, SVDImputation.java, SVD.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 11
-Example.java, SourceCodeSemanticClustering.java, 
-labels: args, project, weight, 
+AlphaIcon.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 12
-DistanceFunction.java, Evaluation.java, 
-labels: evaluation, abstract, float, 
+CompleteLinkage.java, Linkage.java, SingleLinkage.java, UPGMALinkage.java, UPGMCLinkage.java, WardLinkage.java, WPGMALinkage.java, WPGMCLinkage.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
 Cluster 13
-IteratedLovinsStemmer.java, Stemmer.java, 
-labels: str, stemmer, stem, 
+Interpolation1Demo.java, Interpolation2Demo.java, LaplaceInterpolationDemo.java, ScatterDataInterpolationDemo.java, BarPlotDemo.java, BoxPlotDemo.java, ContourDemo.java, GridDemo.java, HeatmapDemo.java, Histogram3Demo.java, HistogramDemo.java, LinePlotDemo.java, QQPlotDemo.java, ScatterPlotDemo.java, SparseMatrixPlotDemo.java, StaircasePlotDemo.java, SurfaceDemo.java, BernoulliDistributionDemo.java, BetaDistributionDemo.java, BinomialDistributionDemo.java, ChiSquareDistributionDemo.java, EmpiricalDistributionDemo.java, ExponentialDistributionDemo.java, ExponentialFamilyMixtureDemo.java, FDistributionDemo.java, GammaDistributionDemo.java, GaussianDistributionDemo.java, GaussianMixtureDemo.java, GeometricDistributionDemo.java, HyperGeometricDistributionDemo.java, LogisticDistributionDemo.java, LogNormalDistributionDemo.java, MultivariateGaussianDistributionDemo.java, MultivariateGaussianMixtureDemo.java, NegativeBinomialDistributionDemo.java, PoissonDistributionDemo.java, ShiftedGeometricDistributionDemo.java, TDistributionDemo.java, WeibullDistributionDemo.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 14
+PageTableModel.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 15
+SVM.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 16
+FPGrowth.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 17
+ExpressionParser.java, ExpressionTree.java, CalculusTest.java, ExpressionParserTest.java, ExpressionTreeTest.java, 
+labels: copyright, under, the, apache, license, 
+
+Cluster 18
+DBScan.java, DENCLUE.java, DeterministicAnnealing.java, GMeans.java, MEC.java, SpectralClustering.java, XMeans.java, NeuralGas.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 19
+BernoulliDistributionTest.java, BetaDistributionTest.java, BinomialDistributionTest.java, ChiSquareDistributionTest.java, ExponentialDistributionTest.java, FDistributionTest.java, GammaDistributionTest.java, GaussianDistributionTest.java, GeometricDistributionTest.java, HyperGeometricDistributionTest.java, LogisticDistributionTest.java, LogNormalDistributionTest.java, NegativeBinomialDistributionTest.java, PoissonDistributionTest.java, ShiftedGeometricDistributionTest.java, TDistributionTest.java, WeibullDistributionTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 20
+Beta.java, Erf.java, Gamma.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 21
+Histogram.java, Histogram.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 22
+BandMatrix.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 23
+Classifier.java, LaplacianEigenmap.java, Neighbor.java, Bagging.java, HaarWavelet.java, MersenneTwister.java, Random.java, BIC.java, TFIDF.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 24
+GCTParser.java, PCLParser.java, RESParser.java, TXTParser.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 25
+SmileUtils.java, Validation.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 26
+Interpolation.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 27
+AbstractInterpolation.java, DoubleHeapSelect.java, FloatHeapSelect.java, HeapSelect.java, IntHeapSelect.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 28
+LLE.java, DenseMatrix.java, SparseMatrix.java, NDMatrix.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 29
+SparseMatrixParser.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 30
+KPCATest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 31
+PriorityQueue.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 32
+package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 33
+GAFeatureSelection.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 34
+EVD.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 35
+PlotCanvas.java, FontChooser.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 36
+AbstractDistribution.java, AbstractMultivariateDistribution.java, DiscreteDistribution.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 37
+RBFNetwork.java, RBFNetwork.java, RBFInterpolation.java, RBFInterpolation1D.java, package-info.java, RadialBasisFunction.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 38
+BitString.java, GeneticAlgorithm.java, package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 39
+LaplacianEigenmapTest.java, LLETest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 40
+IsoMap.java, MDS.java, KPCA.java, PCA.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 41
+GHA.java, RandomProjection.java, ChebyshevDistance.java, CorrelationDistance.java, DynamicTimeWarping.java, EditDistance.java, EuclideanDistance.java, HammingDistance.java, JaccardDistance.java, JensenShannonDistance.java, LeeDistance.java, MahalanobisDistance.java, ManhattanDistance.java, MinkowskiDistance.java, SparseChebyshevDistance.java, SparseEuclideanDistance.java, SparseManhattanDistance.java, SparseMinkowskiDistance.java, DoubleArrayList.java, IntArrayList.java, BinarySparseGaussianKernel.java, BinarySparseHyperbolicTangentKernel.java, BinarySparseLaplacianKernel.java, BinarySparseLinearKernel.java, BinarySparsePolynomialKernel.java, BinarySparseThinPlateSplineKernel.java, GaussianKernel.java, HellingerKernel.java, HyperbolicTangentKernel.java, LaplacianKernel.java, LinearKernel.java, PearsonKernel.java, PolynomialKernel.java, SparseGaussianKernel.java, SparseHyperbolicTangentKernel.java, SparseLaplacianKernel.java, SparseLinearKernel.java, SparsePolynomialKernel.java, SparseThinPlateSplineKernel.java, ThinPlateSplineKernel.java, GaussianRadialBasis.java, InverseMultiquadricRadialBasis.java, MultiquadricRadialBasis.java, ThinPlateRadialBasis.java, SparseArray.java, 
+labels: copyright, under, the, apache, license, 
+
+Cluster 42
+NeuralNetwork.java, NeuralNetwork.java, Math.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 43
+ValidationTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 44
+CRF.java, HMM.java, HMMPOSTagger.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 45
+BinomialDistribution.java, HyperGeometricDistribution.java, PoissonDistribution.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 46
+DBScanTest.java, DENCLUETest.java, BitStringTest.java, GeneticAlgorithmTest.java, CoverTreeTest.java, KDTreeTest.java, RandomProjectionTest.java, HMMTest.java, TaxonomyTest.java, AccuracyTest.java, AdjustedRandIndexTest.java, BootstrapTest.java, ConfusionMatrixTest.java, CrossValidationTest.java, FalloutTest.java, FDRTest.java, FMeasureTest.java, LOOCVTest.java, MSETest.java, PrecisionTest.java, RandIndexTest.java, RecallTest.java, RMSETest.java, RSSTest.java, SensitivityTest.java, SpecificityTest.java, BestLocalizedWaveletTest.java, CoifletWaveletTest.java, D4WaveletTest.java, DaubechiesWaveletTest.java, HaarWaveletTest.java, SymletWaveletTest.java, BinarySparseDatasetParserTest.java, GCTParserTest.java, PCLParserTest.java, RESParserTest.java, TXTParserTest.java, SparseDatasetParserTest.java, SparseMatrixParserTest.java, SparseDatasetTest.java, AdjacencyListTest.java, AdjacencyMatrixTest.java, BicubicInterpolationTest.java, BilinearInterpolationTest.java, CubicSplineInterpolation1DTest.java, CubicSplineInterpolation2DTest.java, KrigingInterpolationTest.java, LaplaceInterpolationTest.java, LinearInterpolationTest.java, RBFInterpolationTest.java, ShepardInterpolationTest.java, ComplexTest.java, ChebyshevDistanceTest.java, CorrelationDistanceTest.java, DynamicTimeWarpingTest.java, EuclideanDistanceTest.java, HammingDistanceTest.java, JaccardDistanceTest.java, LeeDistanceTest.java, MahalanobisDistanceTest.java, ManhattanDistanceTest.java, MinkowskiDistanceTest.java, MathTest.java, BandMatrixTest.java, BiconjugateGradientTest.java, CholeskyTest.java, LUTest.java, QRTest.java, SparseMatrixTest.java, RandomTest.java, GammaTest.java, HeapSelectTest.java, HeapSortTest.java, IQAgentTest.java, QuickSelectTest.java, QuickSortTest.java, ShellSortTest.java, ExponentialFamilyMixtureTest.java, GaussianMixtureTest.java, MultivariateGaussianDistributionTest.java, ChiSqTestTest.java, CorTestTest.java, FTestTest.java, TTestTest.java, CholeskyTest.java, LUTest.java, QRTest.java, AprioriPhraseExtractorTest.java, EnglishPunctuationsTest.java, CooccurrenceKeywordExtractorTest.java, SimpleNormalizerTest.java, EnglishPOSLexiconTest.java, RegexPOSTaggerTest.java, BM25Test.java, TFIDFTest.java, BreakIteratorSentenceSplitterTest.java, SimpleParagraphSplitterTest.java, SimpleSentenceSplitterTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 47
+package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 48
+QuickSort.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 49
+IsotonicMDSTest.java, SammonMappingTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 50
+KSTest.java, TTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 51
+BreakIteratorTokenizerTest.java, PennTreebankTokenizerTest.java, SimpleTokenizerTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 52
+package-info.java, package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 53
+ItemSet.java, SoftClassifier.java, Clustering.java, FeatureGenerator.java, FeatureRanking.java, SequenceFeature.java, Chromosome.java, FitnessMeasure.java, AverageImputation.java, MissingValueImputation.java, MissingValueImputationException.java, KNNSearch.java, NearestNeighborSearch.java, package-info.java, RNNSearch.java, SimpleNeighbor.java, Projection.java, Regression.java, SequenceLabeler.java, SimpleDeamonThreadFactory.java, ClassificationMeasure.java, ClusterMeasure.java, LOOCV.java, RegressionMeasure.java, BestLocalizedWavelet.java, D4Wavelet.java, Datum.java, NumericAttribute.java, ToyData.java, MathDemo.java, Visitor.java, BicubicInterpolation.java, BilinearInterpolation.java, CubicSplineInterpolation2D.java, Interpolation2D.java, KrigingInterpolation1D.java, LinearInterpolation.java, ShepardInterpolation1D.java, MurmurHash.java, AbstractDifferentiableMultivariateFunction.java, DifferentiableFunction.java, DifferentiableMultivariateFunction.java, Distance.java, Function.java, KernelMatrix.java, Factory.java, LinearSolver.java, Preconditioner.java, MultivariateFunction.java, package-info.java, RandomNumberGenerator.java, QuickSelect.java, SortUtils.java, DiscreteExponentialFamily.java, Distribution.java, ExponentialFamily.java, MultivariateDistribution.java, MultivariateExponentialFamily.java, FTest.java, AnchorText.java, Bigram.java, BigramCollocation.java, Corpus.java, Abbreviations.java, Dictionary.java, EnglishPunctuations.java, NGram.java, SimpleNormalizer.java, Relevance.java, RelevanceRanker.java, Text.java, TextTerms.java, SimpleParagraphSplitter.java, Point.java, Projection.java, Projection2D.java, Shape.java, 
+labels: copyright, under, the, apache, license, 
+
+Cluster 54
+CubicSplineInterpolation1D.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 55
+FLD.java, LDA.java, LogisticRegression.java, Maxent.java, NaiveBayes.java, QDA.java, RDA.java, PPCA.java, LASSO.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 56
+LibsvmParserTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 57
+CorTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 58
+EVDTest.java, JMatrixTest.java, PowerIterationTest.java, NDMatrixTest.java, ARPACKTest.java, EVDTest.java, NLMatrixTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 59
+package-info.java, Variogram.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 60
+GHATest.java, PCATest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 61
+HeapSort.java, ShellSort.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 62
+package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 63
+Punctuations.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 64
+IsoMapTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 65
+GaussianProcessRegression.java, OLS.java, RidgeRegression.java, RLS.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 66
+GaussianProcessRegressionTest.java, LASSOTest.java, OLSTest.java, RandomForestTest.java, RBFNetworkTest.java, RegressionTreeTest.java, RidgeRegressionTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 67
+EditDistanceTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 68
+Calculus.java, Evaluation.java, BinaryNode.java, Constant.java, Cosecant.java, Cosine.java, Cotangent.java, Difference.java, Exponent.java, Expression.java, Logarithm.java, NaturalLogarithm.java, Negation.java, Product.java, Quotient.java, ReductionRules.java, Secant.java, Sine.java, Sum.java, Tangent.java, UnaryNode.java, Variable.java, InvalidExpressionException.java, 
+labels: copyright, under, the, apache, license, 
+
+Cluster 69
+CoifletWavelet.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 70
+LancasterStemmerTest.java, PorterStemmerTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 71
+AdaBoost.java, GradientTreeBoost.java, KNN.java, RandomForest.java, GradientTreeBoost.java, RandomForest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 72
+LanczosTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 73
+SVR.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 74
+BBDTree.java, BIRCH.java, HierarchicalClustering.java, GrowingNeuralGas.java, NeuralMap.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 75
+AdjacencyList.java, AdjacencyMatrix.java, Graph.java, Array2D.java, Axis.java, BarPlot.java, Base.java, BaseGrid.java, BaseLabel.java, BaseLine.java, BoxPlot.java, Contour.java, Dendrogram.java, Graphics.java, Grid.java, Heatmap.java, Hexmap.java, Histogram3D.java, Label.java, Line.java, LinePlot.java, Palette.java, Projection3D.java, QQPlot.java, ScatterPlot.java, SparseMatrixPlot.java, StaircasePlot.java, Surface.java, Wireframe.java, FileChooser.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 76
+Attribute.java, AttributeDataset.java, AttributeVector.java, Dataset.java, SparseDataset.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 77
+BKTree.java, CoverTree.java, KDTree.java, LinearSearch.java, LSH.java, MPLSH.java, SNLSH.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 78
+KSTestTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 79
+SOM.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 80
+NeuralGasData.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 81
+MaxAbsScaler.java, OneHotEncoder.java, RobustStandardizer.java, Scaler.java, SparseOneHotEncoder.java, Standardizer.java, WinsorScaler.java, BinarySparseDataset.java, NominalAttribute.java, StringAttribute.java, DiscreteExponentialFamilyMixture.java, ExponentialFamilyMixture.java, MultivariateExponentialFamilyMixture.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 82
+Matrix.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 83
+DateCellEditor.java, DoubleArrayCellEditor.java, DoubleCellEditor.java, IntegerArrayCellEditor.java, IntegerCellEditor.java, TableCopyPasteAdapter.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 84
+CLARANS.java, KMeans.java, PartitionClustering.java, SIB.java, TSNE.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 85
+ARM.java, AssociationRule.java, FPTree.java, package-info.java, TotalSupportTree.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 86
+package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 87
+DecisionTree.java, RegressionTree.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 88
+SymletWavelet.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 89
+RegexPOSTagger.java, PennTreebankTokenizer.java, SimpleTokenizer.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 90
+ClusteringDistance.java, package-info.java, package-info.java, LamarckianChromosome.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, Metric.java, package-info.java, MercerKernel.java, package-info.java, MatrixMultiplication.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, package-info.java, StopWords.java, package-info.java, Normalizer.java, package-info.java, package-info.java, package-info.java, POSTagger.java, package-info.java, package-info.java, Stemmer.java, package-info.java, ParagraphSplitter.java, SentenceSplitter.java, Tokenizer.java, package-info.java, package-info.java, package-info.java, package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 91
+PennTreebankPOS.java, SimpleSentenceSplitter.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 92
+SVMTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 93
+ClassifierTrainer.java, OnlineClassifier.java, Bag.java, FeatureTransform.java, Normalizer.java, OnlineRegression.java, RegressionTrainer.java, package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 94
+package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 95
+ClassificationDemo.java, ClusteringDemo.java, SIBDemo.java, ManifoldDemo.java, TSNEDemo.java, IsotonicMDSDemo.java, MDSDemo.java, SammonMappingDemo.java, ApproximateStringSearchDemo.java, KNNDemo.java, NearestNeighborDemo.java, RNNSearchDemo.java, LDADemo.java, ProjectionDemo.java, VQDemo.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 96
+ParameterParser.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 97
+IsotonicMDS.java, SammonMapping.java, LaplaceInterpolation.java, BiconjugateGradient.java, Lanczos.java, PageRank.java, PowerIteration.java, ARPACK.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 98
+Concept.java, Taxonomy.java, ArffParser.java, BinarySparseDatasetParser.java, DelimitedTextParser.java, IOUtils.java, LibsvmParser.java, SparseDatasetParser.java, AprioriPhraseExtractor.java, EnglishDictionary.java, EnglishStopWords.java, SimpleDictionary.java, CooccurrenceKeywordExtractor.java, EnglishPOSLexicon.java, SimpleCorpus.java, SimpleText.java, LancasterStemmer.java, BreakIteratorSentenceSplitter.java, BreakIteratorTokenizer.java, EnglishAbbreviations.java, Trie.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 99
+Headless.java, 
+labels: the, not, use, this, file, 
+
+Cluster 100
+FastPair.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 101
+MulticoreExecutor.java, DateAttribute.java, Plot.java, PlotPanel.java, Button.java, Printer.java, ButtonCellRenderer.java, ByteArrayCellRenderer.java, ColorCellEditor.java, ColorCellRenderer.java, DateCellRenderer.java, DefaultTableHeaderCellRenderer.java, DoubleArrayCellRenderer.java, FloatArrayCellRenderer.java, FontCellEditor.java, FontCellRenderer.java, IntegerArrayCellRenderer.java, LongArrayCellRenderer.java, MultiColumnSortTableHeaderCellRenderer.java, NumberCellRenderer.java, ShortArrayCellRenderer.java, TableColumnSettings.java, Table.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 102
+PlattScaling.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 103
+AdaBoostTest.java, DecisionTreeTest.java, FLDTest.java, GradientTreeBoostTest.java, KNNTest.java, LDATest.java, LogisticRegressionTest.java, NaiveBayesTest.java, NeuralNetworkTest.java, QDATest.java, RandomForestTest.java, RBFNetworkTest.java, RDATest.java, BIRCHTest.java, CLARANSTest.java, DeterministicAnnealingTest.java, GMeansTest.java, HierarchicalClusteringTest.java, KMeansTest.java, MECTest.java, SIBTest.java, SpectralClusteringTest.java, XMeansTest.java, DateFeatureTest.java, GAFeatureSelectionTest.java, OneHotEncoderTest.java, SignalNoiseRatioTest.java, SparseOneHotEncoderTest.java, SumSquaresRatioTest.java, MissingValueImputationTest.java, CoverTreeSpeedTest.java, KDTreeSpeedTest.java, LinearSearchSpeedTest.java, LSHSpeedTest.java, LSHTest.java, MPLSHSpeedTest.java, MPLSHTest.java, GradientTreeBoostTest.java, NeuralNetworkTest.java, RLSTest.java, SVRTest.java, GrowingNeuralGasTest.java, NeuralGasTest.java, NeuralMapTest.java, SOMTest.java, ArffParserTest.java, DelimitedTextParserTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 104
+Cholesky.java, JMatrix.java, LU.java, QR.java, Cholesky.java, LU.java, NLMatrix.java, QR.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 105
+DateFeature.java, KMeansImputation.java, TaxonomicDistance.java, Accuracy.java, AdjustedRandIndex.java, AUC.java, ConfusionMatrix.java, Fallout.java, FDR.java, FMeasure.java, MeanAbsoluteDeviation.java, MSE.java, Precision.java, RandIndex.java, Recall.java, RMSE.java, RSS.java, Sensitivity.java, Specificity.java, DaubechiesWavelet.java, Wavelet.java, KrigingInterpolation.java, ShepardInterpolation.java, ExponentialVariogram.java, GaussianVariogram.java, PowerVariogram.java, SphericalVariogram.java, UniversalGenerator.java, ChiSqTest.java, BigramCollocationFinder.java, BM25.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 106
+Complex.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 107
+ARMTest.java, FPGrowthTest.java, TotalSupportTreeTest.java, MaxentTest.java, BagTest.java, BKTreeSpeedTest.java, BKTreeTest.java, CoverTreeStringSpeedTest.java, SNLSHTest.java, CRFTest.java, BigramCollocationFinderTest.java, HMMPOSTaggerTest.java, SimpleCorpusTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 108
+package-info.java, 
+labels: copyright, 2010, haifeng, li, license, 
+
+Cluster 109
+MDSTest.java, 
+labels: copyright, 2010, haifeng, li, license, 
 
