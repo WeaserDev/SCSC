@@ -1,6 +1,6 @@
 package clustering.evaluation;
 
-public class Precision extends SupervisedEvaluation{
+public class Precision extends SupervisedEvaluation {
 
 	public Precision(int[] authoritativeClusters) {
 		super(authoritativeClusters);

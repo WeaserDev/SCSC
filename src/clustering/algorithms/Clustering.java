@@ -9,6 +9,10 @@ public abstract class Clustering {
 		this.occurenceTable = occurenceTable;
 	}
 	
+	public void clear() {
+		clusters = null;
+	}
+	
 	protected abstract int[] createClusters();
 	
 	public int[] returnClusters() {

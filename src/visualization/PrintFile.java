@@ -5,9 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 
-import clustering.evaluation.NormalizedEntropy;
-import featureExtraction.FeatureExtraction;
-
 public class PrintFile extends Visualization {
 	
 	

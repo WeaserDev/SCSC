@@ -1,7 +1,6 @@
 package visualization;
 
 import java.util.HashMap;
-import featureExtraction.*;
 
 abstract class Visualization {
 	protected int[] clusters;
@@ -15,10 +14,6 @@ abstract class Visualization {
 	}
 	
 	abstract void visualize(String description);
-	
-
-	
-	
 	
 }
 

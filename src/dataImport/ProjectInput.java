@@ -26,6 +26,7 @@ public class ProjectInput {
 		
 		for (int i=0; i<directories.length; i++) {	
 			input[i] = new ProjectInput(FileInput.createFileInput(directories[i]),directories[i].getName());
+			System.out.println("Imported project "+directories[i].getPath());
 		}
 		return input;
 	}

@@ -7,23 +7,26 @@ import clustering.evaluation.Evaluation;
 public class KmeansDynamic extends Kmeans {
 	Evaluation evaluation;
 	
-	public KmeansDynamic(float[][] occurenceTable,Evaluation evaluation, DistanceFunction distanceFunction){
+	public KmeansDynamic(float[][] occurenceTable, Evaluation evaluation, DistanceFunction distanceFunction){
 		super(occurenceTable, 0 , distanceFunction);
 		this.evaluation = evaluation;
 	}
 	
 	protected int[] createClusters() { 
-		int[] result; 
-		this.clusterNumber = 2;
-		float previousEvaluation = 0; 
-		float currentEvaluation = 0; 
-		while(true) { 
-		result = super.createClusters(); 
-		currentEvaluation = evaluation.evaluate(result, occurenceTable); 
-		if(previousEvaluation>currentEvaluation) break; 
-		previousEvaluation = currentEvaluation; 
-		this.clusterNumber++; 
+		int[] bestResult = null; 
+		float bestEvaluation = Float.NEGATIVE_INFINITY; 
+		int bestNum = 0;
+		for(int num=2;num<occurenceTable.length/2;num++){ 
+			this.clusterNumber = num;
+			int[] result = super.createClusters(); 
+			float currentEvaluation = evaluation.evaluate(result, occurenceTable);
+			if(currentEvaluation>bestEvaluation) {
+				bestEvaluation = currentEvaluation;
+				bestResult = result;
+				bestNum = num;
+			}
 		} 
-		return result; 
+		System.out.println(bestNum + " " + bestEvaluation);
+		return bestResult; 
 	}
 }
