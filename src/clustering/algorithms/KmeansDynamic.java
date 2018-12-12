@@ -1,5 +1,7 @@
 package clustering.algorithms;
 
+import java.util.Arrays;
+
 import clustering.distance.DistanceFunction;
 import clustering.evaluation.Evaluation;
 
@@ -20,6 +22,9 @@ public class KmeansDynamic extends Kmeans {
 			this.clusterNumber = num;
 			int[] result = super.createClusters(); 
 			float currentEvaluation = evaluation.evaluate(result, occurenceTable);
+			System.out.println(num + " " + currentEvaluation);
+			//if(currentEvaluation>bestEvaluation)
+				//break;
 			if(currentEvaluation>bestEvaluation) {
 				bestEvaluation = currentEvaluation;
 				bestResult = result;

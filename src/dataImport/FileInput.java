@@ -23,7 +23,8 @@ public class FileInput {
 		for (int i=0; i<size; i++) {	
 			inputArray[i] = new FileInput(filesArray[i].getName(),readFile(filesArray[i]));
 		}
-		
+
+		System.out.println(rootDir+" : found "+inputArray.length+" project files");
 		return inputArray;
 	}
 
