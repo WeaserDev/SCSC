@@ -37,16 +37,17 @@ public class Kmeans extends Clustering {
 			for (int i=0; i < occurenceTable.length; i++) {
 				double minDistance = distance.distance(occurenceTable[i],clusterCentroids[0]);
 				int cluster = 0; 
-				for (int k=0; k<clusterNumber; k++) {
+				for (int k=1; k<clusterNumber; k++) {
 					double currentDistance = distance.distance(occurenceTable[i],clusterCentroids[k]);
-					if (currentDistance<minDistance) {
+					if (currentDistance<=minDistance) {
 						minDistance = currentDistance;
-						cluster = k;
+						cluster = k;		
 					}
 				}
 				clusters[i] = cluster;
 			}
 			clusterCentroids = calculateCentroids();
+		
 			if (Arrays.equals(clusters, oldClusters)) {
 				break;
 			}

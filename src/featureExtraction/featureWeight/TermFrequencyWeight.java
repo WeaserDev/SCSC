@@ -7,8 +7,10 @@ public class TermFrequencyWeight extends WeightMethod {
 		int featuresNumber = occurenceTable[0].length;
 		int filesNumber = occurenceTable.length;
 		for (int i=0; i<filesNumber; i++) {
-			for (int k=0; k<featuresNumber; k++) {
-				occurenceTable[i][k] = occurenceTable[i][k]/fileFeaturesCount[i];
+			if(fileFeaturesCount[i]!=0) {
+				for (int k=0; k<featuresNumber; k++) {
+					occurenceTable[i][k] = occurenceTable[i][k]/fileFeaturesCount[i];
+				}
 			}
 		}	
 		return occurenceTable;

@@ -1,0 +1,36 @@
+Cluster 1
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: table, document, inverse, frequency, weight, 
+
+Cluster 2
+Example.java, PorterStemmer.java, WordModel.java, WekaClustering.java, XMeans.java, 
+labels: ends, instances, add, sentence, word, 
+
+Cluster 3
+LevenshteinDistance.java, KmeansInitializationPlusPlus.java, CosineDistance.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, NormalizedEntropy.java, 
+labels: distance, exp, math, sqrt, pow, 
+
+Cluster 4
+InvertibleStemmer.java, LovinsStemmer.java, Database.java, EpsilonRange_ListElement.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: priority, put, get, queue, object, 
+
+Cluster 5
+Kmeans.java, KmeansInitialization.java, KmeansInitializationRandomElements.java, DistanceFunction.java, 
+labels: random, centroids, kmeans, distance, initialize, 
+
+Cluster 6
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, Evaluation.java, MojoDistance.java, MojoFM.java, Precision.java, Recall.java, SupervisedEvaluation.java, 
+labels: bipartite, super, supervised, precision, evaluation, 
+
+Cluster 7
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, DataObject.java, DBSCAN.java, EuclideanDataObject.java, Labeling.java, 
+labels: create, weka, set, cluster, labels, 
+
+Cluster 8
+PackagesToClusters.java, MostFrequentFeaturesLabeling.java, FileInput.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, PrintFile.java, Visualization.java, 
+labels: id, feature, file, visualization, wr, 
+
+Cluster 9
+IteratedLovinsStemmer.java, Stemmer.java, ProjectInput.java, SourceCodeSemanticClustering.java, 
+labels: name, stem, suffixes, input, project, 
+

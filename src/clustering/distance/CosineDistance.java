@@ -12,9 +12,9 @@ public class CosineDistance extends DistanceFunction {
 			normFirst += Math.pow(firstVector[i], 2);
 			normSecond += Math.pow(secondVector[i], 2);	
 		}
-		distance = distance/( Math.sqrt(normFirst)*Math.sqrt(normSecond));
+		if (normFirst==0 || normSecond==0) distance = 1;
+		else distance = distance/( Math.sqrt(normFirst)*Math.sqrt(normSecond));
 		distance = 1 - distance;
-				
 		return distance;
 	}
 
