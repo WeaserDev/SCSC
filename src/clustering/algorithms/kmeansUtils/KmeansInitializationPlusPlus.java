@@ -16,26 +16,28 @@ public class KmeansInitializationPlusPlus extends KmeansInitialization {
 			for (int k=0;k<occurenceTable.length;k++) { 
 				double dist = distance.distance(occurenceTable[k], occurenceTable[selectedCentroids[i-1]]);
 				dist = Math.pow(dist, 2);
-				if (squaredDistances[k]>dist||i==1)
-					squaredDistances[k]=dist;	
+				if (squaredDistances[k]>dist||i==1) {
+					squaredDistances[k]=dist;
+				}
 				totalWeight += squaredDistances[k];	
 			}
 			double random = Math.random() * totalWeight;
+			
 			for (int j = 0; j < occurenceTable.length; j++){
 			    random -= squaredDistances[j];
 			    if (random <= 0)
 			    {
-			        selectedCentroids[i] = j;
+			        selectedCentroids[i] = j;					
 			        break;  
 			    }    
 			}
+			
 		}
 		for (int i=0;i<clusterNumber;i++) {
 			for (int k=0; k<occurenceTable[0].length; k++) {
 				clusterCentroids[i][k] = occurenceTable[selectedCentroids[i]][k];
 			}	
-		}
-		
+		}	
 		return clusterCentroids;
 	}
 
