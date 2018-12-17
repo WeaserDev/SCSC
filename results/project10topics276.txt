@@ -1,0 +1,56 @@
+Cluster 1
+Database.java, EpsilonRange_ListElement.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: priority, queue, get, object, next, 
+
+Cluster 2
+CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaCosineDistance.java, WekaDotDistance.java, WekaModifiedCosineDistance.java, 
+labels: if, value, math, sparse, distance, 
+
+Cluster 3
+IteratedLovinsStemmer.java, Stemmer.java, 
+labels: stem, name, str, word, super, 
+
+Cluster 4
+WordModel.java, 
+labels: word, sentence, for, get, string, 
+
+Cluster 5
+Kmeans.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, TopicsKmeans.java, IntraSimilarity.java, MojoDistance.java, MojoFM.java, NormalizedEntropy.java, Precision.java, Recall.java, MostFrequentFeaturesLabeling.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: if, cluster, feature, for, table, 
+
+Cluster 6
+PackagesToClusters.java, FileInput.java, ProjectInput.java, FeatureExtraction.java, SourceCodeSemanticClustering.java, JFrameVisualizer.java, 
+labels: input, id, project, get, file, 
+
+Cluster 7
+LovinsStemmer.java, 
+labels: at, char, word, put, if, 
+
+Cluster 8
+InvertibleStemmer.java, Evaluation.java, 
+labels: stem, interpretation, entries, best, get, 
+
+Cluster 9
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringKmeansDynamic.java, WekaClusteringXmeans.java, 
+labels: super, cluster, set, weka, create, 
+
+Cluster 10
+Example.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, WordModelFeatureExtractionReferenceAddedWeight.java, 
+labels: get, if, feature, word, id, 
+
+Cluster 11
+KmeansDynamic.java, WekaClustering.java, Test.java, PrintFile.java, 
+labels: instances, for, file, wr, cluster, 
+
+Cluster 12
+XMeans.java, DataObject.java, DBSCAN.java, EuclideanDataObject.java, 
+labels: if, get, centers, set, instances, 
+
+Cluster 13
+PorterStemmer.java, KmeansInitialization.java, AccumulativeEvaluation.java, SupervisedEvaluation.java, Labeling.java, NormalizedWeight.java, NoWeight.java, Visualization.java, 
+labels: cons, if, ends, result, get, 
+
+Cluster 14
+LevenshteinDistance.java, 
+labels: levenshtein, rhs, lhs, for, length, 
+

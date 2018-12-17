@@ -1,0 +1,56 @@
+Cluster 1
+BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: feature, occurence, table, weight, frequency, 
+
+Cluster 2
+LevenshteinDistance.java, Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, TopicsKmeans.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, NormalizedEntropy.java, 
+labels: first, centroids, distance, vector, second, 
+
+Cluster 3
+PackagesToClusters.java, FileInput.java, ProjectInput.java, JFrameVisualizer.java, 
+labels: project, pos, file, directories, input, 
+
+Cluster 4
+NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, 
+labels: input, feature, id, hash, word, 
+
+Cluster 5
+XMeans.java, Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: priority, the, instances, object, queue, 
+
+Cluster 6
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, AccumulativeEvaluation.java, Evaluation.java, MojoDistance.java, MojoFM.java, Precision.java, Recall.java, SupervisedEvaluation.java, 
+labels: evaluation, intersection, authoritative, intrapairs, clusters, 
+
+Cluster 7
+PrintFile.java, 
+labels: wr, io, line, writer, labels, 
+
+Cluster 8
+FeatureExtraction.java, 
+labels: map, file, hash, input, id, 
+
+Cluster 9
+Example.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, LovinsStemmer.java, PorterStemmer.java, Stemmer.java, WordModel.java, Test.java, 
+labels: put, stemmer, word, stem, str, 
+
+Cluster 10
+Clustering.java, WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: weka, canopy, create, clusters, dataset, 
+
+Cluster 11
+WordModelFeatureExtractionAddedWeight.java, WordModelFeatureExtractionReferenceAddedWeight.java, 
+labels: weight, word, file, feature, ends, 
+
+Cluster 12
+IntraSimilarity.java, 
+labels: m2, m1, count, sum, members, 
+
+Cluster 13
+Labeling.java, MostFrequentFeaturesLabeling.java, Visualization.java, 
+labels: feature, id, visualization, labels, abstract, 
+
+Cluster 14
+SourceCodeSemanticClustering.java, 
+labels: time, project, weight, average, writer, 
+
