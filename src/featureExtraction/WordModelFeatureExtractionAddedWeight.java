@@ -6,7 +6,7 @@ import featureExtraction.featureWeight.NoWeight;
 import featureExtraction.featureWeight.WeightMethod;
 
 public class WordModelFeatureExtractionAddedWeight extends WordModelFeatureExtraction {
-	int fileNameWeight;
+	private int fileNameWeight;
 	private WeightMethod weight;
 	private int functionWeight;
 	
@@ -14,27 +14,24 @@ public class WordModelFeatureExtractionAddedWeight extends WordModelFeatureExtra
 		super(input, new NoWeight(), wordModel);
 		this.weight = weightMethod;
 		this.functionWeight = functionWeight;
+		this.fileNameWeight = fileNameWeight;
 	}
 	
 	protected void createFeatureIds(){
 		super.createFeatureIds();
-		if (fileNameWeight>0) {
-			for (int i=0; i<input.length; i++) {
-				String[] words = wordModel.getSentenceFeatures(input[i].getFileName());
-				for (int k=0; k<words.length; k++) {
-					if (!featureIds.containsKey(words[k])){
-						featureIds.put(words[k],featureIds.size());
-						idFeatures.put(idFeatures.size(), words[k]);
-					}
-				}	
-			}
+		for (int i=0; i<input.length; i++) {
+			String[] words = wordModel.getSentenceFeatures(input[i].getFileName());
+			for (int k=0; k<words.length; k++) {
+				if (!featureIds.containsKey(words[k])){
+					featureIds.put(words[k],featureIds.size());
+					idFeatures.put(idFeatures.size(), words[k]);
+				}
+			}	
 		}
+		
 	}
 	
 	protected float[][] createOccurenceTable() {
-		if (featureIds==null) {
-		createFeatureIds(); 
-		}
 		float[][] occurence = super.createOccurenceTable();
 		if (fileNameWeight>0) {
 			for (int i=0; i<input.length; i++) {

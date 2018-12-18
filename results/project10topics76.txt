@@ -1,0 +1,56 @@
+Cluster 1
+KmeansInitializationPlusPlus.java, CosineDistance.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: weight, exp, math, sqrt, table, 
+
+Cluster 2
+PriorityQueue.java, PriorityQueueElement.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: queue, get, heap, priority, object, 
+
+Cluster 3
+LevenshteinDistance.java, InvertibleStemmer.java, LovinsStemmer.java, PorterStemmer.java, WordModel.java, 
+labels: ends, rhs, lhs, word, put, 
+
+Cluster 4
+KmeansDynamic.java, WekaClusteringKmeansDynamic.java, AccumulativeEvaluation.java, MojoFM.java, Precision.java, Recall.java, SupervisedEvaluation.java, 
+labels: precision, recall, supervised, evaluation, super, 
+
+Cluster 5
+Clustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: create, set, clear, weka, cluster, 
+
+Cluster 6
+DataObject.java, DBSCAN.java, EuclideanDataObject.java, 
+labels: set, get, reachability, database, instances, 
+
+Cluster 7
+DistanceFunction.java, WekaCosineDistance.java, WekaDotDistance.java, 
+labels: sparse, first, distance, value, difference, 
+
+Cluster 8
+Labeling.java, MostFrequentFeaturesLabeling.java, FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, WordModelFeatureExtractionReferenceAddedWeight.java, Visualization.java, 
+labels: feature, id, labels, visualization, create, 
+
+Cluster 9
+PrintFile.java, 
+labels: wr, file, writer, write, line, 
+
+Cluster 10
+WekaClustering.java, XMeans.java, IntraSimilarity.java, 
+labels: add, sim, members, instances, centers, 
+
+Cluster 11
+Database.java, EpsilonRange_ListElement.java, SequentialDatabase.java, 
+labels: epsilon, neighbours, object, range, query, 
+
+Cluster 12
+KmeansInitializationRandomElements.java, NormalizedEntropy.java, PackagesToClusters.java, FileInput.java, JFrameVisualizer.java, 
+labels: random, log, math, prev, file, 
+
+Cluster 13
+IteratedLovinsStemmer.java, Stemmer.java, 
+labels: name, word, str, stem, suffixes, 
+
+Cluster 14
+Example.java, Kmeans.java, KmeansInitialization.java, TopicsKmeans.java, Evaluation.java, MojoDistance.java, ProjectInput.java, SourceCodeSemanticClustering.java, Test.java, 
+labels: kmeans, bipartite, initialize, project, centroids, 
+

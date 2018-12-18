@@ -1,0 +1,56 @@
+Cluster 1
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: vector, int, distance, lhs, length, 
+
+Cluster 2
+MostFrequentFeaturesLabeling.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: feature, number, int, occurence, table, 
+
+Cluster 3
+XMeans.java, DBSCAN.java, 
+labels: centers, the, instances, of, clusters, 
+
+Cluster 4
+Clustering.java, MojoDistance.java, MojoFM.java, NormalizedEntropy.java, Precision.java, Recall.java, 
+labels: int, number, clusters, max, authoritative, 
+
+Cluster 5
+LovinsStemmer.java, WordModel.java, 
+labels: string, get, word, length, put, 
+
+Cluster 6
+Database.java, DataObject.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: data, queue, return, object, the, 
+
+Cluster 7
+PackagesToClusters.java, Labeling.java, FileInput.java, ProjectInput.java, SourceCodeSemanticClustering.java, Test.java, JFrameVisualizer.java, PrintFile.java, Visualization.java, 
+labels: file, import, new, clusters, input, 
+
+Cluster 8
+FeatureExtraction.java, NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, WordModelFeatureExtractionReferenceAddedWeight.java, 
+labels: file, id, feature, word, weight, 
+
+Cluster 9
+KmeansDynamic.java, AccumulativeEvaluation.java, Evaluation.java, 
+labels: evaluation, best, public, clusters, float, 
+
+Cluster 10
+Example.java, InvertibleStemmer.java, IteratedLovinsStemmer.java, PorterStemmer.java, Stemmer.java, 
+labels: if, break, string, stem, ends, 
+
+Cluster 11
+WekaCosineDistance.java, WekaDotDistance.java, 
+labels: value, distance, instances, the, double, 
+
+Cluster 12
+WekaClusteringKmeansDynamic.java, SupervisedEvaluation.java, 
+labels: clusters, float, public, evaluation, int, 
+
+Cluster 13
+Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, TopicsKmeans.java, IntraSimilarity.java, 
+labels: occurence, int, distance, table, clusters, 
+
+Cluster 14
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: int, number, distance, clusters, weka, 
+

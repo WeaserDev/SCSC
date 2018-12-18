@@ -2,6 +2,10 @@ package clustering.labeling;
 
 import featureExtraction.FeatureExtraction;
 import featureExtraction.featureWeight.WeightMethod;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import auth.eng.textManager.*;
 
 public class MostFrequentFeaturesLabeling extends Labeling {
@@ -15,9 +19,9 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 	}
 	
 	protected String[][] createLabels() {
-		//long startTime2=System.nanoTime();
 		String[][] labels = new String[clusterNumber()][labelsNumber];
 		float[][] clusterTable = createClusterTable();
+		//HashMap<Integer, ArrayList<String>> labelss = new HashMap<Integer, ArrayList<String>>();
 		clusterTable = weightMethod.weightOccurenceTable(clusterTable);
 		for (int i=0; i<clusterNumber();i++) {
 		int[] mostFrequentIds = kLargestElementsIndex(clusterTable[i],labelsNumber);
@@ -30,8 +34,6 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 				labels[i][k] = features.describeFeature(features.getFeatureId(labels[i][k]));		
 			}
 		}
-		//long endTime2 = System.nanoTime();
-		//System.out.println("Took "+((endTime2 - startTime2)/1000000) + " ms");
 		return labels;
 		
 	}

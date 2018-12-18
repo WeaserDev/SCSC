@@ -22,15 +22,16 @@ public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\smile900Topics.txt";
-		String projectPath = "C:\\projects\\";
-		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight(),new NoWeight()};
+		String fileName = "results\\ergasiaKmeans0RefWeight.txt";
+		String projectPath = "C:\\Users\\Aris\\eclipse-workspace\\";
+		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight(), new BinaryWeight()};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
 		DistanceFunction[] distance = {new CosineDistance()};
-		int maxFileWeight = 120;
-		int fileWeightStep = 50;
-		int maxFunctionWeight = 60;
-		int functionWeightStep = 40;
+		int maxFileWeight = 125;
+		int fileWeightStep = 40;
+		int maxFunctionWeight = 65;
+		int functionWeightStep = 20;
+		int maxTopics = 70;
 		int i=0;
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput[] projectIn = ProjectInput.createProjectInput(new File(projectPath));
@@ -47,34 +48,36 @@ public class SourceCodeSemanticClustering {
 				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
 						if (projectIn[project].getInput().length>0) {
-							WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight);
+							WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight, 0, 2);
 							for (DistanceFunction dist:distance) {
-								int times=5;
-								float averagePrecision = 0;
-								float averageRecall = 0;
-								float averageMojoFM = 0;
-								float averageTime = 0;
-								for (int repeat=0;repeat<times;repeat++) {
-									long startTime2=System.nanoTime();	
-									//Clustering clusterer = new Kmeans(features.getOccurenceTable(),9, dist);
-									Clustering clusterer = new TopicsKmeans(features.getOccurenceTable(),900,clusterNumber,dist);
-									int clusters[] = clusterer.returnClusters();
-									long endTime2 = System.nanoTime();
-									writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, null) + " recall:" + recall.evaluate(clusters, null) + " mojoFM:" + mojo.evaluate(clusters, null) + " time:" + ((endTime2 - startTime2)/1000000) + " ms" );							
+								//for (int topicsNumber=5; topicsNumber < maxTopics; topicsNumber+=5) {
+									int times=100;
+									float averagePrecision = 0;
+									float averageRecall = 0;
+									float averageMojoFM = 0;
+									float averageTime = 0;
+									for (int repeat=0;repeat<times;repeat++) {
+										long startTime2=System.nanoTime();	
+										//Clustering clusterer = new Kmeans(features.getOccurenceTable(),9, dist);
+										Clustering clusterer = new Kmeans(features.getOccurenceTable(),clusterNumber,dist);
+										int clusters[] = clusterer.returnClusters();
+										long endTime2 = System.nanoTime();
+										//writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, null) + " recall:" + recall.evaluate(clusters, null) + " mojoFM:" + mojo.evaluate(clusters, null) + " time:" + ((endTime2 - startTime2)/1000000) + " ms" );							
+										//writer.newLine();
+										averagePrecision+=precision.evaluate(clusters, null);
+										averageRecall+=recall.evaluate(clusters, null);
+										averageMojoFM+=mojo.evaluate(clusters, null);
+										averageTime += ((endTime2 - startTime2)/1000000);
+										//String S = i + ".txt";
+										//PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(features,clusters,5,new NoWeight()).getLabels());
+										//print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results\\" + "project60topics" + S);
+										i+=1;
+									}
 									writer.newLine();
-									averagePrecision+=precision.evaluate(clusters, null);
-									averageRecall+=recall.evaluate(clusters, null);
-									averageMojoFM+=mojo.evaluate(clusters, null);
-									averageTime += ((endTime2 - startTime2)/1000000);
-									String S = i + ".txt";
-									PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(features,clusters,5,new NoWeight()).getLabels());
-									print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results\\" + "smile900Topics" + S);
-									i+=1;
-								}
-								writer.newLine();
-								writer.write("Total: "+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "repeated "+ times+" times:" + " Average Precision: " +  averagePrecision/times + " Average Recall:" + averageRecall/times + " Average mojoFM:" + averageMojoFM/times + " Average time:" + averageTime/times + " ms" );							
-								writer.newLine();
-								writer.newLine();
+									writer.write("Total: "+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " topics number: " + "no topics" + " repeated "+ times+" times:" + " Average Precision: " +  averagePrecision/times + " Average Recall:" + averageRecall/times + " Average mojoFM:" + averageMojoFM/times + " Average time:" + averageTime/times + " ms" );							
+									writer.newLine();
+									writer.newLine();
+								//}
 							}
 						}
 					}

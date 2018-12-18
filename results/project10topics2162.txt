@@ -1,0 +1,56 @@
+Cluster 1
+PackagesToClusters.java, SourceCodeSemanticClustering.java, Test.java, PrintFile.java, 
+labels: clusters, import, weight, new, file, 
+
+Cluster 2
+Example.java, LovinsStemmer.java, PorterStemmer.java, WordModel.java, 
+labels: word, string, if, length, put, 
+
+Cluster 3
+WekaCosineDistance.java, WekaDotDistance.java, 
+labels: value, distance, instances, the, double, 
+
+Cluster 4
+Clustering.java, Kmeans.java, KmeansInitialization.java, KmeansInitializationPlusPlus.java, KmeansInitializationRandomElements.java, TopicsKmeans.java, WekaClusteringKmeansDynamic.java, IntraSimilarity.java, MojoDistance.java, MojoFM.java, NormalizedEntropy.java, Precision.java, Recall.java, SupervisedEvaluation.java, 
+labels: number, distance, clusters, int, table, 
+
+Cluster 5
+MostFrequentFeaturesLabeling.java, BinaryInverseDocumentFrequencyWeight.java, BinaryWeight.java, NormalizedInverseDocumentFrequencyWeight.java, NormalizedTermFrequencyInverseDocumentFrequencyWeight.java, NormalizedWeight.java, NoWeight.java, TermFrequencyInverseDocumentFrequencyWeight.java, TermFrequencyWeight.java, WeightMethod.java, 
+labels: feature, number, int, occurence, table, 
+
+Cluster 6
+XMeans.java, 
+labels: of, centers, the, num, instances, 
+
+Cluster 7
+LevenshteinDistance.java, CosineDistance.java, DistanceFunction.java, DotDistance.java, EuclideanDistance.java, WekaModifiedCosineDistance.java, 
+labels: vector, int, distance, lhs, length, 
+
+Cluster 8
+KmeansDynamic.java, AccumulativeEvaluation.java, Evaluation.java, Labeling.java, 
+labels: best, evaluation, public, int, clusters, 
+
+Cluster 9
+FeatureExtraction.java, 
+labels: string, feature, id, get, file, 
+
+Cluster 10
+NaiveFeatureExtraction.java, WordModelFeatureExtraction.java, WordModelFeatureExtractionAddedWeight.java, WordModelFeatureExtractionReferenceAddedWeight.java, 
+labels: feature, id, file, weight, word, 
+
+Cluster 11
+Database.java, DataObject.java, DBSCAN.java, EpsilonRange_ListElement.java, EuclideanDataObject.java, PriorityQueue.java, PriorityQueueElement.java, SequentialDatabase.java, UpdateQueue.java, UpdateQueueElement.java, 
+labels: object, get, return, data, the, 
+
+Cluster 12
+WekaClustering.java, WekaClusteringCanopy.java, WekaClusteringDBSCAN.java, WekaClusteringHierarchical.java, WekaClusteringKmeans.java, WekaClusteringXmeans.java, 
+labels: int, number, distance, clusters, weka, 
+
+Cluster 13
+FileInput.java, ProjectInput.java, JFrameVisualizer.java, Visualization.java, 
+labels: input, file, get, pos, project, 
+
+Cluster 14
+InvertibleStemmer.java, IteratedLovinsStemmer.java, Stemmer.java, 
+labels: stem, string, stemmer, word, get, 
+

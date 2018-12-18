@@ -1,0 +1,212 @@
+Cluster 1
+matching.py, test_matching.py, test_matching.py, matchhelpers.py, test_match_helpers.py, matching.py, test_matching.py, 
+labels: blossom, mancuso, maximal, min, matching, 
+
+Cluster 2
+redundancy.py, test_redundancy.py, structuralholes.py, 
+labels: rc, ell, nmw, bipartite, redundancy, 
+
+Cluster 3
+test_approx_clust_coeff.py, test_connectivity.py, test_connectivity.py, test_neighbor_degree.py, test_generators.py, test_utils.py, test_connected.py, test_edge_augmentation.py, test_edge_kcomponents.py, test_stoer_wagner.py, test_dense.py, test_dense_numpy.py, test_chains.py, test_cluster.py, test_core.py, test_cycles.py, test_dag.py, test_distance_measures.py, test_graphical.py, test_isolate.py, test_link_prediction.py, test_smetric.py, test_bfs.py, test_edgebfs.py, test_operations.py, test_atlas.py, test_duplication.py, test_ego.py, test_line.py, test_spectral_graph_forge.py, test_stochastic.py, test_cytoscape.py, test_contextmanager.py, test_mapped_queue.py, 
+labels: test, equal, clustering, average, assert, 
+
+Cluster 4
+test_tournament.py, tournament.py, 
+labels: implemented, hamiltonian, reachable, tournament, strongly, 
+
+Cluster 5
+bridges.py, efficiency.py, test_harmonic_function.py, test_local_and_global_consistency.py, __init__.py, test_bridges.py, test_efficiency.py, 
+labels: harmonic, efficiency, classification, bridge, local, 
+
+Cluster 6
+clustering_coefficient.py, directed.py, duplication.py, geometric.py, intersection.py, random_graphs.py, test_all_random_functions.py, decorators.py, random_sequence.py, test_decorators.py, 
+labels: sample, np, random, seed, state, 
+
+Cluster 7
+gexf.py, graphml.py, nx_shp.py, test_shp.py, 
+labels: shp, xml, geometry, geom, ogr, 
+
+Cluster 8
+connectivity.py, treewidth.py, __init__.py, dispersion.py, test_dispersion.py, greedy_coloring_with_interchange.py, test_coloring.py, __init__.py, label_propagation.py, semiconnected.py, test_semiconnected.py, edge_augmentation.py, utils.py, core.py, cycles.py, dag.py, distance_measures.py, euler.py, __init__.py, graphical.py, hybrid.py, isolate.py, minors.py, product.py, test_product.py, test_unary.py, unary.py, __init__.py, reciprocity.py, sparsifiers.py, test_euler.py, test_hybrid.py, test_planarity.py, test_reciprocity.py, test_sparsifiers.py, test_swap.py, test_threshold.py, test_triads.py, test_voronoi.py, beamsearch.py, breadth_first_search.py, edgebfs.py, test_beamsearch.py, __init__.py, branchings.py, test_branchings.py, __init__.py, triads.py, voronoi.py, filters.py, ordered.py, __init__.py, exception.py, line.py, mycielski.py, small.py, social.py, stochastic.py, test_mycielski.py, test_triads.py, triads.py, __init__.py, __init__.py, relabel.py, test.py, test_exceptions.py, contextmanagers.py, mapped_queue.py, rcm.py, test_rcm.py, __init__.py, 
+labels: spanner, color, reciprocity, triad, dispersion, 
+
+Cluster 9
+isomorph.py, isomorphvf2.py, temporalisomorphvf2.py, test_isomorphism.py, test_isomorphvf2.py, test_temporalisomorphvf2.py, test_vf2userfunc.py, vf2userfunc.py, __init__.py, 
+labels: isomorphic, iso, matcher, g2, g1, 
+
+Cluster 10
+similarity.py, test_similarity.py, 
+labels: distance, g2, cost, debug, edit, 
+
+Cluster 11
+test_kcomponents.py, test_kcomponents.py, test_kcutsets.py, all.py, binary.py, test_all.py, test_binary.py, 
+labels: intersection, union, rename, disjoint, compose, 
+
+Cluster 12
+generators.py, asyn_fluid.py, community_generators.py, swap.py, test_smallworld.py, threshold.py, community.py, degree_seq.py, random_clustered.py, test_directed.py, test_geometric.py, test_random_graphs.py, misc.py, test_misc.py, test_random_sequence.py, 
+labels: zipf, assert, sequence, choice, random, 
+
+Cluster 13
+test_connectivity.py, test_cuts.py, test_disjoint_paths.py, mincost.py, test_maxflow.py, test_maxflow_large_graph.py, test_mincost.py, hierarchy.py, test_hierarchy.py, __init__.py, 
+labels: cost, flow, hierarchy, msg, assert, 
+
+Cluster 14
+graph6.py, sparse6.py, test_gexf.py, test_gml.py, test_graph6.py, test_graphml.py, test_leda.py, test_p2g.py, test_pajek.py, test_sparse6.py, 
+labels: graph6, parse, sparse6, bytes, io, 
+
+Cluster 15
+chordal.py, test_asyn_fluid.py, test_kclique.py, test_label_propagation.py, test_modularity_max.py, test_chordal.py, expanders.py, test_expanders.py, 
+labels: chordal, margulis, frozenset, gabber, community, 
+
+Cluster 16
+quality.py, test_centrality.py, __init__.py, link_prediction.py, 
+labels: gamma, newman, next, community, girvan, 
+
+Cluster 17
+centrality.py, test_centrality.py, betweenness_subset.py, closeness.py, degree_alg.py, eigenvector.py, harmonic.py, load.py, reaching.py, test_betweenness_centrality.py, test_betweenness_centrality_subset.py, test_closeness_centrality.py, test_current_flow_betweenness_centrality.py, test_current_flow_betweenness_centrality_subset.py, test_current_flow_closeness.py, test_degree_centrality.py, test_eigenvector_centrality.py, test_harmonic_centrality.py, test_katz_centrality.py, test_load_centrality.py, test_percolation_centrality.py, test_reaching.py, test_second_order_centrality.py, test_subgraph.py, centrality.py, 
+labels: almost, assert, betweenness, centrality, closeness, 
+
+Cluster 18
+coreviews.py, reportviews.py, 
+labels: getitem, atlas, ok, nbrs, view, 
+
+Cluster 19
+test_vertex_cover.py, vertex_cover.py, covering.py, test_covering.py, covering.py, test_covering.py, 
+labels: cover, vertex, min, wg, bipartite, 
+
+Cluster 20
+clique.py, ramsey.py, test_clique.py, test_ramsey.py, clique.py, kclique.py, test_clique.py, 
+labels: r2, cliques, ramsey, eq, density, 
+
+Cluster 21
+steinertree.py, test_steinertree.py, test_treewidth.py, gomory_hu.py, test_gomory_hu.py, lowest_common_ancestors.py, test_lowest_common_ancestors.py, coding.py, mst.py, operations.py, recognition.py, test_coding.py, test_mst.py, test_recognition.py, nonisomorphic_trees.py, test_nonisomorphic_trees.py, trees.py, 
+labels: tree, nonisomorphic, prufer, minimum, steiner, 
+
+Cluster 22
+matrix.py, hmn.py, lgc.py, convert_matrix.py, attrmatrix.py, graphmatrix.py, laplacianmatrix.py, modularitymatrix.py, spectrum.py, test_graphmatrix.py, test_laplacian.py, test_modularity.py, test_convert_numpy.py, test_convert_scipy.py, 
+labels: todense, sparse, laplacian, matrix, modularity, 
+
+Cluster 23
+attracting.py, biconnected.py, connected.py, strongly_connected.py, test_attracting.py, test_biconnected.py, test_strongly_connected.py, test_weakly_connected.py, weakly_connected.py, __init__.py, edge_kcomponents.py, kcomponents.py, 
+labels: biconnected, attracting, connected, weakly, components, 
+
+Cluster 24
+nx_pydot.py, test_pydot.py, 
+labels: get, dot, pydot, pin, layout, 
+
+Cluster 25
+current_flow_betweenness.py, current_flow_betweenness_subset.py, current_flow_closeness.py, flow_matrix.py, algebraicconnectivity.py, 
+labels: row, cg, np, solve, solver, 
+
+Cluster 26
+independent_set.py, test_independent_set.py, greedy_coloring.py, mis.py, test_mis.py, 
+labels: strategy, maximal, independent, florentine, 32, 
+
+Cluster 27
+test_generators.py, test_minors.py, test_coreviews.py, test_digraph_historical.py, test_graphviews.py, test_ordered.py, test_reportviews.py, test_community.py, test_degree_seq.py, test_random_clustered.py, test_trees.py, test_adjacency.py, test_utils.py, utils.py, test_convert.py, test_relabel.py, 
+labels: equal, assert, sorted, test, degree, 
+
+Cluster 28
+boundary.py, cuts.py, cuts.py, test_boundary.py, test_cuts.py, 
+labels: volume, cut, boundary, expansion, size, 
+
+Cluster 29
+kcomponents.py, digraph.py, function.py, graph.py, graphviews.py, multidigraph.py, multigraph.py, convert.py, cytoscape.py, 
+labels: view, data, items, factory, warnings, 
+
+Cluster 30
+basic.py, cluster.py, matching.py, test_basic.py, test_cluster.py, test_matrix.py, __init__.py, 
+labels: matrix, alexander, clustering, bipartite, biadjacency, 
+
+Cluster 31
+edgelist.py, test_edgelist.py, atlas.py, adjlist.py, edgelist.py, gml.py, leda.py, multiline_adjlist.py, p2g.py, pajek.py, test_adjlist.py, test_edgelist.py, test_convert_pandas.py, 
+labels: read, line, write, adjlist, edgelist, 
+
+Cluster 32
+katz.py, second_order.py, utils.py, smallworld.py, layout.py, spectral_graph_forge.py, 
+labels: label, array, layout, predicted, np, 
+
+Cluster 33
+modularity_max.py, stoerwagner.py, __init__.py, heaps.py, test_heaps.py, test_unionfind.py, union_find.py, __init__.py, 
+labels: union, utils, dq, unionfind, heap, 
+
+Cluster 34
+lattice.py, test_lattice.py, 
+labels: triangular, lattice, 2d, grid, hexagonal, 
+
+Cluster 35
+__init__.py, test_vitality.py, test_wiener.py, vitality.py, wiener.py, 
+labels: eq, vitality, wiener, closeness, index, 
+
+Cluster 36
+test_graph_historical.py, test_special.py, 
+labels: my, up, historical, tester, set, 
+
+Cluster 37
+adjacency.py, jit.py, node_link.py, test_jit.py, test_node_link.py, test_tree.py, tree.py, __init__.py, 
+labels: json, link, tree, data, jit, 
+
+Cluster 38
+nx_agraph.py, nx_pylab.py, test_agraph.py, test_layout.py, test_pylab.py, __init__.py, 
+labels: pylab, layout, plt, agraph, draw, 
+
+Cluster 39
+chains.py, planarity.py, depth_first_search.py, edgedfs.py, test_dfs.py, test_edgedfs.py, 
+labels: visited, dfs, half, forward, stack, 
+
+Cluster 40
+classic.py, 
+labels: empty, pairwise, mygraph, range, multipartite, 
+
+Cluster 41
+dominating_set.py, test_dominating_set.py, dominance.py, dominating.py, test_dominance.py, test_dominating.py, 
+labels: dominating, frontiers, set, min, immediate, 
+
+Cluster 42
+test_spectral_bipartivity.py, subgraph_alg.py, communicability_alg.py, test_quality.py, test_communicability.py, test_structuralholes.py, test_algebraic_connectivity.py, test_spectrum.py, 
+labels: spectrum, almost, assert, sb, communicability, 
+
+Cluster 43
+test_subgraph_copies.py, historical_tests.py, test_digraph.py, test_filters.py, test_function.py, test_graph.py, test_multidigraph.py, test_multigraph.py, test_subgraphviews.py, test_classic.py, test_small.py, 
+labels: sorted, degree, assert, subgraph, equal, 
+
+Cluster 44
+mixing.py, base_test.py, test_mixing.py, test_joint_degree_seq.py, 
+labels: degree, mixing, matrix, npt, joint, 
+
+Cluster 45
+connectivity.py, disjoint_paths.py, kcutsets.py, boykovkolmogorov.py, capacityscaling.py, dinitz_alg.py, edmondskarp.py, maxflow.py, networksimplex.py, preflowpush.py, shortestaugmentingpath.py, utils.py, 
+labels: residual, append, samp, build, flow, 
+
+Cluster 46
+connectivity.py, correlation.py, neighbor_degree.py, pairs.py, test_correlation.py, test_pairs.py, __init__.py, spectral.py, cluster.py, community_utils.py, __init__.py, richclub.py, dense.py, smetric.py, test_richclub.py, joint_degree_seq.py, 
+labels: sum, coefficient, degree, xy, assortativity, 
+
+Cluster 47
+projection.py, test_project.py, 
+labels: projected, bipartite, panswer, weight, collaboration, 
+
+Cluster 48
+distance_regular.py, test_distance_regular.py, test_intersection.py, 
+labels: intersection, regular, array, random, distance, 
+
+Cluster 49
+hits_alg.py, pagerank_alg.py, test_hits.py, test_pagerank.py, __init__.py, 
+labels: analysis, link, alg, pagerank, hits, 
+
+Cluster 50
+astar.py, test_astar.py, 
+labels: astar, curnode, heuristic, path, dist, 
+
+Cluster 51
+gpickle.py, nx_yaml.py, test_gpickle.py, test_yaml.py, __init__.py, release.py, 
+labels: os, write, gpickle, readwrite, yaml, 
+
+Cluster 52
+kernighan_lin.py, test_kernighan_lin.py, 
+labels: gains, partition, lin, bisection, kernighan, 
+
+Cluster 53
+betweenness.py, percolation.py, generic.py, test_generic.py, test_unweighted.py, test_weighted.py, unweighted.py, weighted.py, __init__.py, simple_paths.py, test_simple_paths.py, ego.py, __init__.py, 
+labels: single, path, dijkstra, length, shortest, 
+
