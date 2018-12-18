@@ -21,7 +21,7 @@ public class FileInput {
 		FileInput[] inputArray = new FileInput[size];
 
 		for (int i=0; i<size; i++) {	
-			inputArray[i] = new FileInput(filesArray[i].getName(),readFile(filesArray[i]));
+			inputArray[i] = new FileInput(FilenameUtils.removeExtension(filesArray[i].getName()),readFile(filesArray[i]));
 		}
 
 		System.out.println(rootDir+" : found "+inputArray.length+" project files");

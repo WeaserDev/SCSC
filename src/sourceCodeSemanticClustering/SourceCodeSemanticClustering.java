@@ -22,7 +22,7 @@ public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\ergasiaTopicsnonRefWeight.txt";
+		String fileName = "results\\ergasiaKmeans0RefWeight.txt";
 		String projectPath = "C:\\Users\\Aris\\eclipse-workspace\\";
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight(), new BinaryWeight()};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
@@ -48,9 +48,9 @@ public class SourceCodeSemanticClustering {
 				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
 						if (projectIn[project].getInput().length>0) {
-							WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight);
+							WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight, 0, 2);
 							for (DistanceFunction dist:distance) {
-								for (int topicsNumber=5; topicsNumber < maxTopics; topicsNumber+=5) {
+								//for (int topicsNumber=5; topicsNumber < maxTopics; topicsNumber+=5) {
 									int times=100;
 									float averagePrecision = 0;
 									float averageRecall = 0;
@@ -59,7 +59,7 @@ public class SourceCodeSemanticClustering {
 									for (int repeat=0;repeat<times;repeat++) {
 										long startTime2=System.nanoTime();	
 										//Clustering clusterer = new Kmeans(features.getOccurenceTable(),9, dist);
-										Clustering clusterer = new TopicsKmeans(features.getOccurenceTable(),topicsNumber,clusterNumber,dist);
+										Clustering clusterer = new Kmeans(features.getOccurenceTable(),clusterNumber,dist);
 										int clusters[] = clusterer.returnClusters();
 										long endTime2 = System.nanoTime();
 										//writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, null) + " recall:" + recall.evaluate(clusters, null) + " mojoFM:" + mojo.evaluate(clusters, null) + " time:" + ((endTime2 - startTime2)/1000000) + " ms" );							
@@ -74,10 +74,10 @@ public class SourceCodeSemanticClustering {
 										i+=1;
 									}
 									writer.newLine();
-									writer.write("Total: "+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " topics number: " + topicsNumber + " repeated "+ times+" times:" + " Average Precision: " +  averagePrecision/times + " Average Recall:" + averageRecall/times + " Average mojoFM:" + averageMojoFM/times + " Average time:" + averageTime/times + " ms" );							
+									writer.write("Total: "+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " topics number: " + "no topics" + " repeated "+ times+" times:" + " Average Precision: " +  averagePrecision/times + " Average Recall:" + averageRecall/times + " Average mojoFM:" + averageMojoFM/times + " Average time:" + averageTime/times + " ms" );							
 									writer.newLine();
 									writer.newLine();
-								}
+								//}
 							}
 						}
 					}

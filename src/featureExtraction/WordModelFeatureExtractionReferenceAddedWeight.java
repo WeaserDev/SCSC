@@ -7,10 +7,12 @@ import featureExtraction.featureWeight.WeightMethod;
 public class WordModelFeatureExtractionReferenceAddedWeight extends WordModelFeatureExtractionAddedWeight {
 	float referenceWeight;
 	float depreciationRate;
+	private WeightMethod weight;
 	public WordModelFeatureExtractionReferenceAddedWeight(FileInput[] input, WeightMethod weightMethod,WordModel wordModel, int fileNameWeight, int functionWeight, float referenceWeight, float depreciationRate) {
 		super(input, new featureExtraction.featureWeight.NoWeight(), wordModel, fileNameWeight, functionWeight);
 		this.referenceWeight = referenceWeight;
 		this.depreciationRate = depreciationRate;
+		this.weight = weightMethod;
 	}
 	
 	protected float[][] createOccurenceTable() {

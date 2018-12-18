@@ -7,13 +7,14 @@ import featureExtraction.featureWeight.WeightMethod;
 
 public class WordModelFeatureExtractionAddedWeight extends WordModelFeatureExtraction {
 	private int fileNameWeight;
-	protected WeightMethod weight;
+	private WeightMethod weight;
 	private int functionWeight;
 	
 	public WordModelFeatureExtractionAddedWeight(FileInput[] input, WeightMethod weightMethod, WordModel wordModel, int fileNameWeight, int functionWeight) {
 		super(input, new NoWeight(), wordModel);
 		this.weight = weightMethod;
 		this.functionWeight = functionWeight;
+		this.fileNameWeight = fileNameWeight;
 	}
 	
 	protected void createFeatureIds(){
