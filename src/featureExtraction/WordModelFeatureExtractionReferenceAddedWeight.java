@@ -1,5 +1,7 @@
 package featureExtraction;
 
+import java.util.Arrays;
+
 import auth.eng.textManager.WordModel;
 import dataImport.FileInput;
 import featureExtraction.featureWeight.WeightMethod;
@@ -33,7 +35,7 @@ public class WordModelFeatureExtractionReferenceAddedWeight extends WordModelFea
 								}
 							}
 							for (int k=0;k<occurence[0].length;k++) {
-								updatedOccurence[fileIndex][k] += (countFeatures/features.length)*referenceWeight*oldOccurence[referencedFileIndex][k]/Math.pow(depreciationRate, n);	
+								updatedOccurence[fileIndex][k] += (countFeatures/features.length)*referenceWeight*oldOccurence[referencedFileIndex][k]/Math.pow(depreciationRate, n)/occurence[0].length;	
 							}
 						}
 					}	
@@ -41,6 +43,8 @@ public class WordModelFeatureExtractionReferenceAddedWeight extends WordModelFea
 			}
 		}
 		updatedOccurence = weight.weightOccurenceTable(updatedOccurence);
+		//for(int i=0;i<updatedOccurence.length;i++)
+			//System.out.println(Arrays.toString(updatedOccurence[i]));
 		return updatedOccurence;
 	}
 

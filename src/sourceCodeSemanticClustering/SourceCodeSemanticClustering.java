@@ -17,7 +17,6 @@ import clustering.distance.*;
 import clustering.evaluation.PackagesToClusters;
 import clustering.evaluation.*;
 
-
 public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
@@ -48,7 +47,7 @@ public class SourceCodeSemanticClustering {
 				for (int fileWeight=0;fileWeight<maxFileWeight;fileWeight+=fileWeightStep) {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
 						if (projectIn[project].getInput().length>0) {
-							WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight, 0, 2);
+							/*WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight, 0, 2);
 							for (DistanceFunction dist:distance) {
 								//for (int topicsNumber=5; topicsNumber < maxTopics; topicsNumber+=5) {
 									int times=100;
@@ -78,7 +77,7 @@ public class SourceCodeSemanticClustering {
 									writer.newLine();
 									writer.newLine();
 								//}
-							}
+							}*/
 						}
 					}
 				}
