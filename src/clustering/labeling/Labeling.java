@@ -1,5 +1,8 @@
 package clustering.labeling;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import featureExtraction.FeatureExtraction;
 
 
@@ -11,9 +14,9 @@ public abstract class Labeling {
 		this.features = features;
 		this.clusters = clusters;
 	}
-	protected abstract String[][] createLabels();
+	protected abstract HashMap<Integer, ArrayList<String>> createLabels();
 	
-	public String[][] getLabels(){
+	public HashMap<Integer, ArrayList<String>> getLabels(){
 		return createLabels();
 	}
 	

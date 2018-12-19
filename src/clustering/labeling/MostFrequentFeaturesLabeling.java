@@ -18,23 +18,19 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 		this.weightMethod = weightMethod;
 	}
 	
-	protected String[][] createLabels() {
-		String[][] labels = new String[clusterNumber()][labelsNumber];
+	protected HashMap<Integer, ArrayList<String>> createLabels() {
 		float[][] clusterTable = createClusterTable();
-		//HashMap<Integer, ArrayList<String>> labelss = new HashMap<Integer, ArrayList<String>>();
+		HashMap<Integer, ArrayList<String>> labelsMap = new HashMap<Integer, ArrayList<String>>();
 		clusterTable = weightMethod.weightOccurenceTable(clusterTable);
 		for (int i=0; i<clusterNumber();i++) {
 		int[] mostFrequentIds = kLargestElementsIndex(clusterTable[i],labelsNumber);
+		ArrayList<String> labels = new ArrayList<String>(labelsNumber);
 			for (int j=0; j<labelsNumber; j++) {
-				labels[i][j] = features.getIdFeature(mostFrequentIds[j]);
+				labels.add(j,features.describeFeature(mostFrequentIds[j]));
 			}
+		labelsMap.put(i, labels);
 		}
-		for (int i=0; i<labels.length; i++) {
-			for (int k=0; k<labels[0].length; k++) {
-				labels[i][k] = features.describeFeature(features.getFeatureId(labels[i][k]));		
-			}
-		}
-		return labels;
+		return labelsMap;
 		
 	}
 	

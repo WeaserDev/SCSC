@@ -18,8 +18,9 @@ public class WordModelFeatureExtractionReferenceAddedWeight extends WordModelFea
 	protected float[][] createOccurenceTable() {
 		float[][] occurence = super.createOccurenceTable();
 		float [][] updatedOccurence = occurence.clone();
+		float max=0;
 		if (referenceWeight>0) {
-			for (int n=0; n<10; n++) {
+			for (int n=1; n<11; n++) {
 				float [][] oldOccurence = updatedOccurence.clone();
 				for (int referencedFileIndex=0; referencedFileIndex<input.length; referencedFileIndex++) {
 					String[] features = wordModel.getSentenceFeatures(input[referencedFileIndex].getFileName());		
@@ -33,13 +34,16 @@ public class WordModelFeatureExtractionReferenceAddedWeight extends WordModelFea
 								}
 							}
 							for (int k=0;k<occurence[0].length;k++) {
-								updatedOccurence[fileIndex][k] += (countFeatures/features.length)*referenceWeight*oldOccurence[referencedFileIndex][k]/Math.pow(depreciationRate, n);	
+								updatedOccurence[fileIndex][k] += (countFeatures/features.length)*referenceWeight*oldOccurence[referencedFileIndex][k]/(Math.pow(depreciationRate, n)*occurence.length);
+								if (updatedOccurence[fileIndex][k]>max) max=updatedOccurence[fileIndex][k];
 							}
 						}
 					}	
 				}	
 			}
 		}
+		System.out.println(max);
+
 		updatedOccurence = weight.weightOccurenceTable(updatedOccurence);
 		return updatedOccurence;
 	}

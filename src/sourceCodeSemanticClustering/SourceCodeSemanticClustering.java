@@ -22,15 +22,15 @@ public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\ergasiaKmeans0RefWeight.txt";
-		String projectPath = "C:\\Users\\Aris\\eclipse-workspace\\";
+		String fileName = "results\\smileKmeansDocWeight.txt";
+		String projectPath = "C:\\projects\\";
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight(), new BinaryWeight()};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
 		DistanceFunction[] distance = {new CosineDistance()};
-		int maxFileWeight = 125;
-		int fileWeightStep = 40;
-		int maxFunctionWeight = 65;
-		int functionWeightStep = 20;
+		int maxFileWeight = 21;
+		int fileWeightStep = 5;
+		int maxFunctionWeight = 21;
+		int functionWeightStep = 5;
 		int maxTopics = 70;
 		int i=0;
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
@@ -42,6 +42,7 @@ public class SourceCodeSemanticClustering {
 		Recall recall = new Recall(packageClusters);
 		MojoFM mojo = new MojoFM(packageClusters);
 		int clusterNumber = clusterNumber(packageClusters);
+		DocumentDocumentFeatures doc = new featureExtraction.DocumentDocumentFeatures();
 
 		for (int project=0; project<projectIn.length; project++) {
 			for (WeightMethod weight:weights) {
@@ -49,17 +50,19 @@ public class SourceCodeSemanticClustering {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
 						if (projectIn[project].getInput().length>0) {
 							WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight, 0, 2);
+							
 							for (DistanceFunction dist:distance) {
+							float occurence[][] =  doc.calculateOccurenceTable(features.getOccurenceTable(), dist);	
 								//for (int topicsNumber=5; topicsNumber < maxTopics; topicsNumber+=5) {
-									int times=100;
+									int times=3;
 									float averagePrecision = 0;
 									float averageRecall = 0;
 									float averageMojoFM = 0;
 									float averageTime = 0;
 									for (int repeat=0;repeat<times;repeat++) {
 										long startTime2=System.nanoTime();	
-										//Clustering clusterer = new Kmeans(features.getOccurenceTable(),9, dist);
-										Clustering clusterer = new Kmeans(features.getOccurenceTable(),clusterNumber,dist);
+										Clustering clusterer = new Kmeans(occurence,clusterNumber, dist);
+										//Clustering clusterer = new TopicsKmeans(features.getOccurenceTable(),topicsNumber,clusterNumber,dist);
 										int clusters[] = clusterer.returnClusters();
 										long endTime2 = System.nanoTime();
 										//writer.write(i+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " "  + "precision: " +  precision.evaluate(clusters, null) + " recall:" + recall.evaluate(clusters, null) + " mojoFM:" + mojo.evaluate(clusters, null) + " time:" + ((endTime2 - startTime2)/1000000) + " ms" );							
