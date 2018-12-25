@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import auth.eng.textManager.WordModel;
-import clustering.algorithms.Clustering;
+import clustering.algorithms.OccurenceClustering;
 import clustering.algorithms.TopicsKmeans;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
@@ -29,7 +29,7 @@ public class Test2 {
 				
 			}
 		}		
-		Clustering clusterer = new clustering.algorithms.Kmeans(features.getOccurenceTable(),2, new clustering.distance.CosineDistance());
+		OccurenceClustering clusterer = new clustering.algorithms.Kmeans(features.getOccurenceTable(),2, new clustering.distance.CosineDistance());
 		int clusters[] = clusterer.returnClusters();
 		HashMap<Integer,ArrayList<String>> map =  new clustering.labeling.MostFrequentFeaturesLabeling(features,clusters,2,new NoWeight()).getLabels();
 		System.out.println(map.get(clusters[0]));

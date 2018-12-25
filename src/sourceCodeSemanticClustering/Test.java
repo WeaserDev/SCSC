@@ -3,9 +3,9 @@ package sourceCodeSemanticClustering;
 import java.io.File;
 
 import auth.eng.textManager.WordModel;
-import clustering.algorithms.Clustering;
+import clustering.algorithms.OccurenceClustering;
+import clustering.algorithms.PackagesToClusters;
 import clustering.evaluation.Evaluation;
-import clustering.evaluation.PackagesToClusters;
 import dataImport.FileInput;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
@@ -21,7 +21,7 @@ public class Test {
 		WordModelFeatureExtraction features = new WordModelFeatureExtractionAddedWeight(project.getInput(), new featureExtraction.featureWeight.TermFrequencyInverseDocumentFrequencyWeight(), wordModel, 1, 1);
 		
 		//Clustering algorithm = new clustering.algorithms.KmeansDynamic(features.getOccurenceTable(), new clustering.evaluation.IntraSimilarity(new clustering.distance.CosineDistance()), new clustering.distance.CosineDistance());
-		Clustering algorithm = new clustering.algorithms.TopicsKmeans(features.getOccurenceTable(), 10, 20, new clustering.distance.CosineDistance());
+		OccurenceClustering algorithm = new clustering.algorithms.TopicsKmeans(features.getOccurenceTable(), 10, 20, new clustering.distance.CosineDistance());
 		Evaluation[] metrics = {new clustering.evaluation.Precision(evaluationClusters), new clustering.evaluation.Recall(evaluationClusters)};
 		
 		int[] clusters = algorithm.returnClusters();

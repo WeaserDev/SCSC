@@ -5,7 +5,7 @@ import java.util.Arrays;
 import clustering.algorithms.kmeansUtils.*;
 import clustering.distance.DistanceFunction;
 
-public class Kmeans extends Clustering {
+public class Kmeans extends OccurenceClustering {
 	protected int clusterNumber;	
 	protected int maxIterations = 100;
 	protected DistanceFunction distance;
@@ -29,7 +29,7 @@ public class Kmeans extends Clustering {
 	protected int[] createClusters() {
 		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];
 		this.clusters = new int[occurenceTable.length];
-		clusterCentroids = initialize.initializeCentroids(occurenceTable, clusterNumber, distance);
+		clusterCentroids = initialize.initializeCentroids(occurenceTable, clusterNumber);
 		int iteration = 0;
 		int[] oldClusters = new int[occurenceTable.length];
 		

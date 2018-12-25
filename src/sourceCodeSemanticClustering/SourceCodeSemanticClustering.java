@@ -14,7 +14,6 @@ import visualization.PrintFile;
 import clustering.algorithms.*;
 import clustering.distance.*;
 //import weka.core.*;
-import clustering.evaluation.PackagesToClusters;
 import clustering.evaluation.*;
 
 
@@ -22,27 +21,27 @@ public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\smileKmeansDocWeight.txt";
-		String projectPath = "C:\\projects\\";
-		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight(), new BinaryWeight()};
+		String fileName = "results\\ergasiaNewInit.txt";
+		String projectPath = "C:\\Users\\Aris\\eclipse-workspace";
+		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight()};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
 		DistanceFunction[] distance = {new CosineDistance()};
-		int maxFileWeight = 21;
+		int maxFileWeight = 1;
 		int fileWeightStep = 5;
-		int maxFunctionWeight = 21;
+		int maxFunctionWeight = 1;
 		int functionWeightStep = 5;
 		int maxTopics = 70;
 		int i=0;
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput[] projectIn = ProjectInput.createProjectInput(new File(projectPath));
 		BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-		PackagesToClusters pack = new PackagesToClusters();		
-		int[] packageClusters = pack.Clusters(new File(projectPath));
+		PackagesToClusters pack = new PackagesToClusters(new File(projectPath));		
+		int[] packageClusters = pack.returnClusters();
 		Precision precision = new Precision(packageClusters);
 		Recall recall = new Recall(packageClusters);
 		MojoFM mojo = new MojoFM(packageClusters);
 		int clusterNumber = clusterNumber(packageClusters);
-		DocumentDocumentFeatures doc = new featureExtraction.DocumentDocumentFeatures();
+		
 
 		for (int project=0; project<projectIn.length; project++) {
 			for (WeightMethod weight:weights) {
@@ -52,16 +51,18 @@ public class SourceCodeSemanticClustering {
 							WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight, 0, 2);
 							
 							for (DistanceFunction dist:distance) {
-							float occurence[][] =  doc.calculateOccurenceTable(features.getOccurenceTable(), dist);	
+							DocumentDocumentFeatures doc = new featureExtraction.DocumentDocumentFeatures(features.getOccurenceTable(),dist);
+							float occurence[][] =  doc.getOccurenceTable();
+							
 								//for (int topicsNumber=5; topicsNumber < maxTopics; topicsNumber+=5) {
-									int times=3;
+									int times=30;
 									float averagePrecision = 0;
 									float averageRecall = 0;
 									float averageMojoFM = 0;
 									float averageTime = 0;
 									for (int repeat=0;repeat<times;repeat++) {
 										long startTime2=System.nanoTime();	
-										Clustering clusterer = new Kmeans(occurence,clusterNumber, dist);
+										OccurenceClustering clusterer = new Kmeans(occurence,clusterNumber, dist, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(dist,50));
 										//Clustering clusterer = new TopicsKmeans(features.getOccurenceTable(),topicsNumber,clusterNumber,dist);
 										int clusters[] = clusterer.returnClusters();
 										long endTime2 = System.nanoTime();
