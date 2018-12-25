@@ -16,7 +16,8 @@ public class KmeansDynamic extends Kmeans {
 	
 	protected int[] createClusters() { 
 		int[] bestResult = null; 
-		float bestEvaluation = Float.NEGATIVE_INFINITY; 
+		float bestEvaluation = Float.NEGATIVE_INFINITY;
+		float prevEvaluation = bestEvaluation;
 		int bestNum = 0;
 		for(int num=2;num<occurenceTable.length/2;num++){ 
 			this.clusterNumber = num;
@@ -25,13 +26,14 @@ public class KmeansDynamic extends Kmeans {
 			System.out.println(num + " " + currentEvaluation);
 			//if(currentEvaluation>bestEvaluation)
 				//break;
+			if(Float.isInfinite(currentEvaluation) || (num>5 && Math.abs(currentEvaluation-prevEvaluation)<0.0001))
+				break;
+			prevEvaluation = currentEvaluation;
 			if(currentEvaluation>bestEvaluation) {
 				bestEvaluation = currentEvaluation;
 				bestResult = result;
 				bestNum = num;
 			}
-			if(Float.isInfinite(currentEvaluation))
-				break;
 		} 
 		System.out.println("Selected "+bestNum + " " + bestEvaluation);
 		return bestResult; 

@@ -8,7 +8,7 @@ import clustering.distance.DistanceFunction;
 
 public class Kmeans extends OccurenceClustering {
 	protected int clusterNumber;	
-	protected int maxIterations = 100;
+	protected int maxIterations = 10000;
 	protected DistanceFunction distance;
 	protected KmeansInitialization initialize;
 	
