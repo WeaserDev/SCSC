@@ -10,9 +10,6 @@ public class KmeansInitializationPlusPlus extends KmeansInitialization {
 	public KmeansInitializationPlusPlus(DistanceFunction distance){
 		this.distance = distance;
 	}
-	public KmeansInitializationPlusPlus() {
-		this.distance = new clustering.distance.CosineDistance();
-	}
 	
 	public float[][] initializeCentroids(float[][] occurenceTable, int clusterNumber) {
 		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];

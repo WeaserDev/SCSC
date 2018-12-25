@@ -12,19 +12,6 @@ public class KmeansInitializationPlusPlusDeterministic extends KmeansInitializat
 		this.distance = distance;
 		this.weightPower = weightPower;
 	}
-	public KmeansInitializationPlusPlusDeterministic(DistanceFunction distance) {
-		this.distance = distance;
-		this.weightPower = 1;
-	}
-	public KmeansInitializationPlusPlusDeterministic(int weightPower) {
-		this.distance = new clustering.distance.CosineDistance();
-		this.weightPower = weightPower;
-	}	
-	public KmeansInitializationPlusPlusDeterministic() {
-		this.distance = new clustering.distance.CosineDistance();
-		this.weightPower = 1;
-	}
-
 	public float[][] initializeCentroids(float[][] occurenceTable, int clusterNumber) {
 		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];
 		double[] minDistances = new double[occurenceTable.length];

@@ -30,8 +30,10 @@ public class KmeansDynamic extends Kmeans {
 				bestResult = result;
 				bestNum = num;
 			}
+			if(Float.isInfinite(currentEvaluation))
+				break;
 		} 
-		System.out.println(bestNum + " " + bestEvaluation);
+		System.out.println("Selected "+bestNum + " " + bestEvaluation);
 		return bestResult; 
 	}
 }

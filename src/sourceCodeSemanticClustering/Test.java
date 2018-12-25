@@ -12,7 +12,7 @@ import featureExtraction.WordModelFeatureExtraction;
 
 public class Test {
 	public static void main(String[] args) throws Exception {
-		String testProjectPath = "..\\_repos\\smile";
+		String testProjectPath = ".\\";
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput project = new ProjectInput(FileInput.createFileInput(new File(testProjectPath)), "THIS");
 		int[] evaluationClusters = (new PackagesToClusters(new File(testProjectPath))).returnClusters();
@@ -20,8 +20,9 @@ public class Test {
 		WordModelFeatureExtraction features = new featureExtraction.WordModelFeatureExtractionReferenceAddedWeight(project.getInput(), new featureExtraction.featureWeight.TermFrequencyInverseDocumentFrequencyWeight(), wordModel, 1, 1,
 				0.5f, 2f);
 		
-		//Clustering algorithm = new clustering.algorithms.KmeansDynamic(features.getOccurenceTable(), new clustering.evaluation.IntraSimilarity(new clustering.distance.CosineDistance()), new clustering.distance.CosineDistance());
-		OccurenceClustering algorithm = new clustering.algorithms.TopicsKmeans(features.getOccurenceTable(), 10, 20, new clustering.distance.CosineDistance());
+		OccurenceClustering algorithm = new clustering.algorithms.KmeansDynamic(features.getOccurenceTable(), new clustering.evaluation.IntraSimilarity(new clustering.distance.CosineDistance()), new clustering.distance.CosineDistance());
+		//OccurenceClustering algorithm = new clustering.algorithms.TopicsKmeans(features.getOccurenceTable(), 10, 20, new clustering.distance.CosineDistance());
+		//OccurenceClustering algorithm = new clustering.algorithms.Kmeans(features.getOccurenceTable(), 20, new clustering.distance.CosineDistance());
 		Evaluation[] metrics = {new clustering.evaluation.Precision(evaluationClusters), new clustering.evaluation.Recall(evaluationClusters)};
 
 		int[] clusters = algorithm.returnClusters();
