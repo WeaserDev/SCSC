@@ -62,7 +62,7 @@ public class SourceCodeSemanticClustering {
 									float averageTime = 0;
 									for (int repeat=0;repeat<times;repeat++) {
 										long startTime2=System.nanoTime();	
-										OccurenceClustering clusterer = new Kmeans(occurence,clusterNumber, dist, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(dist,50));
+										OccurenceClustering clusterer = new Kmeans(occurence,clusterNumber, dist, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(dist,100));
 										//Clustering clusterer = new TopicsKmeans(features.getOccurenceTable(),topicsNumber,clusterNumber,dist);
 										int clusters[] = clusterer.returnClusters();
 										long endTime2 = System.nanoTime();

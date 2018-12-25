@@ -1,6 +1,7 @@
 package clustering.algorithms;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 import clustering.algorithms.kmeansUtils.*;
 import clustering.distance.DistanceFunction;
@@ -66,6 +67,7 @@ public class Kmeans extends OccurenceClustering {
 	private float[][] calculateCentroids(){
 		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];
 		int[] clusterElements = new int[clusterNumber];
+		HashSet<Integer> emptyClusters = new HashSet<Integer>(); 
 		for (int i=0; i<occurenceTable.length; i++) {
 			clusterElements[clusters[i]]+=1;
 			for (int k=0; k<occurenceTable[0].length; k++) {
@@ -78,8 +80,26 @@ public class Kmeans extends OccurenceClustering {
 				for (int k=0; k<clusterCentroids[0].length; k++) {		
 					clusterCentroids[i][k] = clusterCentroids[i][k]/clusterElements[i];
 				}
+			} else {
+				emptyClusters.add(i);
 			}
-		}		
+		}
+		if (emptyClusters.size()>0) {
+			for (int cluster=0;cluster<clusterNumber;cluster++) {
+				if (emptyClusters.contains(cluster)) {
+					float nonEmptyClusterCentroids[][] = new float[clusterNumber-emptyClusters.size()][occurenceTable[0].length];
+					int k=0;
+					for (int i=0; i<clusterNumber;i++) {
+						if (!emptyClusters.contains(i)) {
+							nonEmptyClusterCentroids[k] = Arrays.copyOf(clusterCentroids[i],occurenceTable[0].length);
+							k+=1;
+						} 
+					}
+					clusterCentroids[cluster] = initialize.getNextCentroid(occurenceTable, nonEmptyClusterCentroids);
+					emptyClusters.remove(cluster);
+				}
+			}
+		}
 		return clusterCentroids;	
 	}
 	
