@@ -21,7 +21,7 @@ public class PrintFile extends Visualization {
 			wr.newLine();
 				for (int k=0; k<clusters.length; k++) {
 					if (clusters[k]==i) {
-						wr.write(idFile.get(k) + ", ");
+						wr.write("file: " + idFile.get(k) + ", ");
 					}
 				}
 				wr.newLine();

@@ -62,7 +62,7 @@ public class MojoDistance extends SupervisedEvaluation {
         // the value -1 indicates nobody is assigned. 
         int matchR[] = new int[authoritativeClusterNumber]; 
   
-        // Initially all jobs are available 
+        // Initially all clusters are available 
         for(int i = 0; i < authoritativeClusterNumber; ++i) 
             matchR[i] = -1; 
   
