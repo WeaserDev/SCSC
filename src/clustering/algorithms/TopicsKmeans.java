@@ -2,7 +2,7 @@ package clustering.algorithms;
 
 import clustering.distance.DistanceFunction;
 
-public class TopicsKmeans extends Clustering {
+public class TopicsKmeans extends OccurenceClustering {
 	protected int clusterNumber;
 	protected int topicsNumber;
 	protected DistanceFunction distance;

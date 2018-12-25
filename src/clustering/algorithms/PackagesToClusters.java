@@ -1,4 +1,4 @@
-package clustering.evaluation;
+package clustering.algorithms;
 
 import java.io.File;
 import java.util.Collection;
@@ -6,8 +6,14 @@ import java.util.Collection;
 import org.apache.commons.io.FileUtils;
 
 
-public class PackagesToClusters {
-	public int[] Clusters(File rootDir) {
+public class PackagesToClusters implements Clustering {
+	File rootDir;
+	
+	public PackagesToClusters(File rootDir) {
+		this.rootDir = rootDir;
+	}
+	
+	public int[] returnClusters() {
 		String extensions[] = {"java" , "py"};
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		File[] filesArray = files.toArray(new File[files.size()]);

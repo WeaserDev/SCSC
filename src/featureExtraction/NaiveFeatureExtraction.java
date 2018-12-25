@@ -5,7 +5,7 @@ import java.util.HashMap;
 import dataImport.FileInput;
 import featureExtraction.featureWeight.WeightMethod;
 
-public class NaiveFeatureExtraction extends FeatureExtraction {
+public class NaiveFeatureExtraction extends InputFeatureExtraction {
 
 	private HashMap<String, Integer> featureIds;
 	private HashMap<Integer, String> idFeatures;

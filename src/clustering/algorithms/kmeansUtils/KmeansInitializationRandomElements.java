@@ -1,11 +1,12 @@
 package clustering.algorithms.kmeansUtils;
 
+import java.util.Arrays;
+
 import clustering.distance.DistanceFunction;
 
 public class KmeansInitializationRandomElements extends KmeansInitialization {
 
-
-	public float[][] initializeCentroids(float[][] occurenceTable, int clusterNumber, DistanceFunction distance) {
+	public float[][] initializeCentroids(float[][] occurenceTable, int clusterNumber) {
 		float[][] clusterCentroids= new float[clusterNumber][occurenceTable[0].length];
 		int[] randomElements = new int[clusterNumber];
 		for (int i = 0; i < clusterNumber; i++) {
@@ -25,5 +26,19 @@ public class KmeansInitializationRandomElements extends KmeansInitialization {
 		
 		return clusterCentroids;
 	}
+
+	public float[] getNextCentroid(float[][] occurenceTable, float[][] centroids) {
+		boolean duplicateCentroid = false;
+		do {
+			int randomElement = (int)(Math.random()*occurenceTable.length);	
+			float nextCentroid[] = Arrays.copyOf(occurenceTable[randomElement], occurenceTable[randomElement].length);
+			for (int i=0; i<centroids.length;i++) {
+				if(Arrays.equals(nextCentroid, centroids[i])) duplicateCentroid = true;
+			}
+		} while (duplicateCentroid);
+		return null;
+	}
+	
+	
 
 }

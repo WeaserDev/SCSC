@@ -3,14 +3,14 @@ package clustering.labeling;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import featureExtraction.FeatureExtraction;
+import featureExtraction.InputFeatureExtraction;
 
 
 public abstract class Labeling {
-	FeatureExtraction features;
+	InputFeatureExtraction features;
 	int[] clusters;
 	
-	Labeling(FeatureExtraction features,int[] clusters){
+	Labeling(InputFeatureExtraction features,int[] clusters){
 		this.features = features;
 		this.clusters = clusters;
 	}

@@ -1,6 +1,6 @@
 package clustering.labeling;
 
-import featureExtraction.FeatureExtraction;
+import featureExtraction.InputFeatureExtraction;
 import featureExtraction.featureWeight.WeightMethod;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class MostFrequentFeaturesLabeling extends Labeling {
 	int labelsNumber;
 	WeightMethod weightMethod;
 	
-	public MostFrequentFeaturesLabeling(FeatureExtraction features,int[] assignments, int labelsNumber, WeightMethod weightMethod) {
+	public MostFrequentFeaturesLabeling(InputFeatureExtraction features,int[] assignments, int labelsNumber, WeightMethod weightMethod) {
 		super(features,assignments);
 		this.labelsNumber = labelsNumber;
 		this.weightMethod = weightMethod;

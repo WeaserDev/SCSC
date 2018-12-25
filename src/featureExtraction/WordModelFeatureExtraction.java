@@ -7,8 +7,8 @@ import java.util.HashMap;
 
 import auth.eng.textManager.*;
 
-public class WordModelFeatureExtraction extends FeatureExtraction {
-	protected WordModel wordModel;
+public class WordModelFeatureExtraction extends InputFeatureExtraction {
+	WordModel wordModel;
 	protected HashMap<String, Integer> featureIds;
 	protected HashMap<Integer, String> idFeatures;
 	

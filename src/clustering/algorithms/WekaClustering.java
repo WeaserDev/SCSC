@@ -6,7 +6,7 @@ import java.util.List;
 import weka.clusterers.Clusterer;
 import weka.core.*;
 
-abstract public class WekaClustering extends Clustering {
+abstract public class WekaClustering extends OccurenceClustering {
 	protected Instances wekaDataset;
 
 	
