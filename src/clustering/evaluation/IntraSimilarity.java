@@ -15,19 +15,22 @@ public class IntraSimilarity extends Evaluation {
 		int clusterNumber = clusterNumber(clusters);
 		float sum=0;
 		int count = 0;
+		int total = 0;
 		for (int i=0; i<clusterNumber; i++) {
 			ArrayList<float[]> members = new ArrayList<float[]>();
 			for(int j=0;j<clusters.length;j++)
 				if(clusters[j]==i)
 					members.add(occurenceTable[j]);
-			if(!members.isEmpty()) {
+			if(members.size()>1) {
 				sum += sim(members);
 				count++;
 			}
+			if(!members.isEmpty())
+				total++;
 		}
 		if(count==0)
 			return Float.NEGATIVE_INFINITY;
-		return sum/count/count;
+		return sum/count/(float)Math.pow(total, 0.25);
 	}
 	
 	private float sim(ArrayList<float[]> members) {
@@ -40,7 +43,7 @@ public class IntraSimilarity extends Evaluation {
 					count++;
 				}
 		if(count==0)
-			return Float.NEGATIVE_INFINITY;
+			return -1;//Float.NEGATIVE_INFINITY;
 		return count/sum;
 	}
 	

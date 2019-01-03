@@ -8,7 +8,7 @@ import clustering.distance.DistanceFunction;
 
 public class Kmeans extends OccurenceClustering {
 	protected int clusterNumber;	
-	protected int maxIterations = 100;
+	protected int maxIterations = 10000;
 	protected DistanceFunction distance;
 	protected KmeansInitialization initialize;
 	
@@ -17,7 +17,7 @@ public class Kmeans extends OccurenceClustering {
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;
 		this.distance = distance;
-		this.initialize = new KmeansInitializationPlusPlus();
+		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 1);
 	}
 	
 	public Kmeans(float[][] occurenceTable, int clusterNumber, DistanceFunction distance, KmeansInitialization initialize) {

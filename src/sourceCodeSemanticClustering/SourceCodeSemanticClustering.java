@@ -16,7 +16,6 @@ import clustering.distance.*;
 //import weka.core.*;
 import clustering.evaluation.*;
 
-
 public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
@@ -52,7 +51,6 @@ public class SourceCodeSemanticClustering {
 					for (int functionWeight=0;functionWeight<maxFunctionWeight;functionWeight+=functionWeightStep) {
 						if (projectIn[project].getInput().length>0) {
 							WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[project].getInput(), weight, wordModel,fileWeight, functionWeight, 0, 2);
-							
 							for (DistanceFunction dist:distance) {
 							DocumentDocumentFeatures doc = new featureExtraction.DocumentDocumentFeatures(features.getOccurenceTable(),dist);
 							float occurence[][] =  doc.getOccurenceTable();
