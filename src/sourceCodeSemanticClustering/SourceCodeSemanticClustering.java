@@ -21,7 +21,7 @@ public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\ergasiaNewInit.txt";
+		String fileName = "results\\ergasiaNewPrec.txt";
 		String projectPath = "C:\\Users\\Aris\\eclipse-workspace";
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight()};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
@@ -41,7 +41,10 @@ public class SourceCodeSemanticClustering {
 		Recall recall = new Recall(packageClusters);
 		MojoFM mojo = new MojoFM(packageClusters);
 		int clusterNumber = clusterNumber(packageClusters);
-		
+		Evaluation aPrec = new AdjustedPrecision (new File("C:\\Users\\Aris\\eclipse-workspace\\ergasia"));
+		AverageClusterPrecision ACPrec = new AverageClusterPrecision(packageClusters);
+		AverageClusterRecall ACRec = new AverageClusterRecall(packageClusters);
+		Evaluation ACAPrec = new AverageClusterAdjustedPrecision(new File("C:\\Users\\Aris\\eclipse-workspace\\ergasia"));
 
 		for (int project=0; project<projectIn.length; project++) {
 			for (WeightMethod weight:weights) {
@@ -55,11 +58,15 @@ public class SourceCodeSemanticClustering {
 							float occurence[][] =  doc.getOccurenceTable();
 							
 								//for (int topicsNumber=5; topicsNumber < maxTopics; topicsNumber+=5) {
-									int times=30;
+									int times=1;
 									float averagePrecision = 0;
 									float averageRecall = 0;
 									float averageMojoFM = 0;
 									float averageTime = 0;
+									float averageAdjustedPrecision = 0;
+									float clusterAveragePrecision = 0;
+									float clusterAverageRecall = 0;
+									float clusterAverageAdjustedPrecision = 0;
 									for (int repeat=0;repeat<times;repeat++) {
 										long startTime2=System.nanoTime();	
 										OccurenceClustering clusterer = new Kmeans(occurence,clusterNumber, dist, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(dist,100));
@@ -71,14 +78,18 @@ public class SourceCodeSemanticClustering {
 										averagePrecision+=precision.evaluate(clusters, null);
 										averageRecall+=recall.evaluate(clusters, null);
 										averageMojoFM+=mojo.evaluate(clusters, null);
+										averageAdjustedPrecision+= aPrec.evaluate(clusters, null);
 										averageTime += ((endTime2 - startTime2)/1000000);
+										clusterAveragePrecision += ACPrec.evaluate(clusters, null);
+										clusterAverageRecall += ACRec.evaluate(clusters, null);
+										clusterAverageAdjustedPrecision += ACAPrec.evaluate(clusters, null);
 										//String S = i + ".txt";
 										//PrintFile print = new PrintFile(clusters,features.getIdFiles(),new MostFrequentFeaturesLabeling(features,clusters,5,new NoWeight()).getLabels());
 										//print.visualize("C:\\Users\\Aris\\eclipse-workspace\\Ergasia\\results\\" + "project60topics" + S);
 										i+=1;
 									}
 									writer.newLine();
-									writer.write("Total: "+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " topics number: " + "no topics" + " repeated "+ times+" times:" + " Average Precision: " +  averagePrecision/times + " Average Recall:" + averageRecall/times + " Average mojoFM:" + averageMojoFM/times + " Average time:" + averageTime/times + " ms" );							
+									writer.write("Total: "+ ":" + projectIn[project].getProjectName() +" " + weight.getClass().getSimpleName() +" "+dist.getClass().getSimpleName() + " " +"file weight:" + fileWeight + " "+ "fun weight:" + functionWeight  + " topics number: " + "no topics" + " repeated "+ times+" times:" + " Average Precision: " +  averagePrecision/times + " Average Recall:" + averageRecall/times + " Average mojoFM:" + averageMojoFM/times + " Average Adjusted Precision:" + averageAdjustedPrecision/times +" Average Cluster Precision: " + clusterAveragePrecision/times + " Average Cluster Recall: " + clusterAverageRecall/times + " Cluster Average Adjusted Precision: " + clusterAverageAdjustedPrecision  + " Average time:" + averageTime/times + " ms" );							
 									writer.newLine();
 									writer.newLine();
 								//}
