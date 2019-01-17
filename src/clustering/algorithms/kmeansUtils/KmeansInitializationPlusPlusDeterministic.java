@@ -31,23 +31,34 @@ public class KmeansInitializationPlusPlusDeterministic extends KmeansInitializat
 		for (int i=1; i<clusterNumber; i++) {
 			float centroids[][] = Arrays.copyOf(clusterCentroids, i);
 			double totalDistance = 0;
-			for (int k=0;k<occurenceTable.length;k++) { 
+			boolean distancesChanged = false;
+			for (int k=0;k<occurenceTable.length;k++) {
 				double dist = distance.distance(occurenceTable[k], centroids[i-1]);
 				dist = Math.pow(dist, 2);
+				if (Double.isNaN(dist)) {
+					System.out.println("Distance is nan");
+					System.out.println("OccurenceTable: " + Arrays.toString(occurenceTable[k]));
+					System.out.println("CentroidsTable: " + Arrays.toString(centroids[i-1]));
+				}
 				if (minDistances[k]>dist||i==1) {
 					minDistances[k]=dist;
+					distancesChanged = true;
 				}
 				totalDistance += minDistances[k];	
 			}
 			clusterCentroids[i] = getNextCentroid(occurenceTable, centroids, minDistances, totalDistance);		
+			if (Arrays.equals(clusterCentroids[i], clusterCentroids[i-1])) {
+				System.out.println("same centroid");
+			}
+			if (!distancesChanged) System.out.println("distances unchaged");
 		}	
 		return clusterCentroids;
 	}
 	
 	private float[] getNextCentroid(float[][] occurenceTable,  float[][] centroids, double[] minDistances, double totalDistance) {
 		float[] nextCentroid = new float[occurenceTable[0].length];
-		float[] selectionWeight = new float[minDistances.length];
-		float totalWeight=0;
+		double[] selectionWeight = new double[minDistances.length];
+		double totalWeight=0;
 		if (weightPower>=100) {
 			double maxDistance = minDistances[0];
 			int maxDistanceIndex = 0;
@@ -57,18 +68,20 @@ public class KmeansInitializationPlusPlusDeterministic extends KmeansInitializat
 					maxDistanceIndex = i;
 				}
 			}
-			nextCentroid =  Arrays.copyOf(occurenceTable[maxDistanceIndex], occurenceTable[maxDistanceIndex].length);
+			nextCentroid = Arrays.copyOf(occurenceTable[maxDistanceIndex], occurenceTable[maxDistanceIndex].length);
 		} 
 		else {
 			for (int i=0; i<minDistances.length;i++) {
-				selectionWeight[i] = (float) Math.pow(minDistances[i]/totalDistance, weightPower);
+				selectionWeight[i] = Math.pow(minDistances[i]/totalDistance, weightPower);
 				totalWeight +=selectionWeight[i];
 			}
 			
-			for (int i=0; i<occurenceTable.length;i++) {
-				for (int k=0;k<occurenceTable[0].length;k++) {
-					nextCentroid[k]+= selectionWeight[i]*occurenceTable[i][k]/totalWeight;
+			for (int k=0;k<occurenceTable[0].length;k++){
+				double next=0;
+				for (int i=0; i<occurenceTable.length;i++) {
+					next+= selectionWeight[i]*occurenceTable[i][k]/totalWeight;				
 				}
+				nextCentroid[k]=(float)next;
 			}
 		}
 		return nextCentroid;
@@ -84,11 +97,12 @@ public class KmeansInitializationPlusPlusDeterministic extends KmeansInitializat
 				dist = Math.pow(dist, 2);
 				if (minDistances[k]>dist||i==0) {
 					minDistances[k]=dist;
-				}			
+				}	
+				if (minDistances[k]==0d) System.out.println("axa");
 			}
-			totalDistance += minDistances[k];
-			nextCentroid = getNextCentroid(occurenceTable, centroids, minDistances, totalDistance);		
+			totalDistance += minDistances[k];			
 		}		
+		nextCentroid = getNextCentroid(occurenceTable, centroids, minDistances, totalDistance);
 		return nextCentroid;	
 	}
 	

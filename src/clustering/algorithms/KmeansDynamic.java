@@ -2,6 +2,7 @@ package clustering.algorithms;
 
 import java.util.Arrays;
 
+import clustering.algorithms.kmeansUtils.KmeansInitialization;
 import clustering.distance.DistanceFunction;
 import clustering.evaluation.Evaluation;
 
@@ -11,6 +12,11 @@ public class KmeansDynamic extends Kmeans {
 	
 	public KmeansDynamic(float[][] occurenceTable, Evaluation evaluation, DistanceFunction distanceFunction){
 		super(occurenceTable, 0 , distanceFunction);
+		this.evaluation = evaluation;
+	}
+	
+	public KmeansDynamic(float[][] occurenceTable, Evaluation evaluation, DistanceFunction distanceFunction, KmeansInitialization initialize) {
+		super(occurenceTable, 0, distanceFunction, initialize);
 		this.evaluation = evaluation;
 	}
 	
