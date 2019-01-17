@@ -6,6 +6,7 @@ import auth.eng.textManager.WordModel;
 import clustering.algorithms.OccurenceClustering;
 import clustering.algorithms.PackagesToClusters;
 import clustering.evaluation.Evaluation;
+import clustering.labeling.Labeling;
 import dataImport.FileInput;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
@@ -29,7 +30,8 @@ public class Test {
 		for(Evaluation metric : metrics) 
 			System.out.println(metric.toString()+" : "+metric.evaluate(clusters, null));
 		
-		(new visualization.JFrameVisualizer(clusters, project)).visualize();
+		Labeling labeling = new clustering.labeling.MostFrequentFeaturesLabeling(features, clusters, 3, new featureExtraction.featureWeight.NoWeight());
+		(new visualization.FirefoxVisualizer(clusters, project, labeling.getLabels())).visualize();
 		
 	}
 }
