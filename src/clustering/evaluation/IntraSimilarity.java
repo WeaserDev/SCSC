@@ -30,7 +30,7 @@ public class IntraSimilarity extends Evaluation {
 		}
 		if(count==0)
 			return Float.NEGATIVE_INFINITY;
-		return sum/count/(float)Math.pow(total, 0.25);
+		return sum/count;//(float)Math.pow(total, 0.25);
 	}
 	
 	private float sim(ArrayList<float[]> members) {
@@ -39,11 +39,11 @@ public class IntraSimilarity extends Evaluation {
 		for(float[] m1 : members)
 			for(float[] m2 : members)
 				if(m1!=m2) {
-					sum -= distance.distance(m1, m2);
+					sum += distance.distance(m1, m2);
 					count++;
 				}
 		if(count==0)
-			return -1;//Float.NEGATIVE_INFINITY;
+			return 0;//Float.NEGATIVE_INFINITY;
 		return count/sum;
 	}
 	

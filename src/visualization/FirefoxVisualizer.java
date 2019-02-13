@@ -51,8 +51,7 @@ public class FirefoxVisualizer {
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
-		String path = "file:///"+(new File("visualize/visualizeCluster.html")).getAbsolutePath()+"\"";
-		System.out.println(path);
+		String path = "file:///"+(new File("visualize/visualizeCluster.html")).getAbsolutePath();
 		try {
 			 Runtime rt = Runtime.getRuntime();
 		     try{
