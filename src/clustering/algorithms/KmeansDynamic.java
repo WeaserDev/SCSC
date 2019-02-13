@@ -26,7 +26,7 @@ public class KmeansDynamic extends Kmeans {
 			System.out.println(num + " " + currentEvaluation);
 			//if(currentEvaluation>bestEvaluation)
 				//break;
-			if(Float.isInfinite(currentEvaluation) || (num>5 && Math.abs(currentEvaluation-prevEvaluation)<0.0001))
+			if(Float.isInfinite(currentEvaluation) || (num>5 && Math.abs(currentEvaluation-prevEvaluation)<=0))
 				break;
 			prevEvaluation = currentEvaluation;
 			if(currentEvaluation>bestEvaluation) {

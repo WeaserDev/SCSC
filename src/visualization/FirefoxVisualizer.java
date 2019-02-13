@@ -39,7 +39,7 @@ public class FirefoxVisualizer {
 			for(FileInput child : fileClusters.get(cluster)) {
 				if(!children.isEmpty())
 					children += ",";
-				children += "{\"name\":\""+child.getFileName()+"\", \"size\": 3}";
+				children += "{\"name\":\""+child.getFileName()+"\", \"size\": "+(3+child.getFileCode().length()-child.getFileCode().replaceAll("\n", "").length())+"}";
 			}
 			if(cluster!=0)
 				output += ",";

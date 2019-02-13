@@ -13,7 +13,7 @@ import featureExtraction.WordModelFeatureExtraction;
 
 public class Test {
 	public static void main(String[] args) throws Exception {
-		String testProjectPath = ".\\";
+		String testProjectPath = "../KingClashers/";
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput project = new ProjectInput(FileInput.createFileInput(new File(testProjectPath)), "THIS");
 		int[] evaluationClusters = (new PackagesToClusters(new File(testProjectPath))).returnClusters();
