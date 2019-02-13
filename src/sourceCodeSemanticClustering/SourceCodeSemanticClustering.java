@@ -21,8 +21,8 @@ public class SourceCodeSemanticClustering {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\networkx.txt";
-		String projectPath = "C:\\project";
+		String fileName = "results\\aJedit.txt";
+		String projectPath = "C:\\projects\\pf";
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight()};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
 		DistanceFunction[] distance = {new CosineDistance()};
@@ -42,10 +42,10 @@ public class SourceCodeSemanticClustering {
 		Recall recall = new Recall(packageClusters);
 		MojoFM mojo = new MojoFM(packageClusters);
 		int clusterNumber = clusterNumber(packageClusters);
-		Evaluation aPrec = new AdjustedPrecision (new File("C:\\project\\networkx"));
+		Evaluation aPrec = new AdjustedPrecision (new File("C:\\projects\\pf"));
 		AverageClusterPrecision ACPrec = new AverageClusterPrecision(packageClusters);
 		AverageClusterRecall ACRec = new AverageClusterRecall(packageClusters);
-		Evaluation ACAPrec = new AverageClusterAdjustedPrecision(new File("C:\\project\\networkx"));
+		Evaluation ACAPrec = new AverageClusterAdjustedPrecision(new File("C:\\projects\\pf"));
 		Evaluation mojoq = new MojoQ(packageClusters);
 
 		for (int project=0; project<projectIn.length; project++) {

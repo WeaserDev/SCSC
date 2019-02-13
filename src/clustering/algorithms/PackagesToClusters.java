@@ -34,6 +34,9 @@ public class PackagesToClusters implements Clustering {
 				clusters[i]=clusterCount;
 			}
 		}
+		for (int i=0;i<clusters.length;i++) {
+			clusters[i]--;
+		}
 		return clusters;
 	}
 }
