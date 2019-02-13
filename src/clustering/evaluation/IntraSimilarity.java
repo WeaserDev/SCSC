@@ -6,9 +6,11 @@ import clustering.distance.DistanceFunction;
 
 public class IntraSimilarity extends Evaluation {
 	private DistanceFunction distance;
+	private float regularize;
 	
-	public IntraSimilarity(DistanceFunction distance) {
+	public IntraSimilarity(DistanceFunction distance, float regularize) {
 		this.distance = distance;
+		this.regularize = regularize;
 	}
 
 	public float evaluate(int[] clusters, float[][] occurenceTable) {
@@ -25,12 +27,11 @@ public class IntraSimilarity extends Evaluation {
 				sum += sim(members);
 				count++;
 			}
-			if(!members.isEmpty())
-				total++;
+			total++;
 		}
 		if(count==0)
 			return Float.NEGATIVE_INFINITY;
-		return sum/count/(float)Math.pow(total, 0.25);
+		return sum/total;
 	}
 	
 	private float sim(ArrayList<float[]> members) {
@@ -39,12 +40,12 @@ public class IntraSimilarity extends Evaluation {
 		for(float[] m1 : members)
 			for(float[] m2 : members)
 				if(m1!=m2) {
-					sum -= distance.distance(m1, m2);
+					sum += distance.distance(m1, m2);
 					count++;
 				}
 		if(count==0)
-			return -1;//Float.NEGATIVE_INFINITY;
-		return count/sum;
+			return 0;//Float.NEGATIVE_INFINITY;
+		return (float)Math.exp(-sum/count*regularize);
 	}
 	
 	private int clusterNumber(int[] clusters) {

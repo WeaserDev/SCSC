@@ -15,7 +15,6 @@
 .node--leaf {
   stroke: #000;
   stroke-width: 1px;
-  fill: white;
 }
 
 .node--root{
@@ -48,6 +47,7 @@ var color = d3.scaleLinear()
     .domain([0, 5])
     .range(["hsl(152,80%,80%)", "hsl(251,40%,40%)"])
     .interpolate(d3.interpolateHcl);
+	
 
 var pack = d3.pack()
     .size([diameter - margin, diameter - margin])
@@ -68,7 +68,7 @@ d3.json("dataCluster.json", function(error, root) {
     .data(nodes)
     .enter().append("circle")
       .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node--root"; })
-      .style("fill", function(d) { return d.parent ? d.children ? color(d.depth) : null : color(0); })
+      .style("fill", function(d) { return d.data.color? d3.rgb(d.data.color) : d.parent ? d.children ? color(d.depth) : d3.rgb("white") : color(0); })
       .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
   var text = g.selectAll("text")
