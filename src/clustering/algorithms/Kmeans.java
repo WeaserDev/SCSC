@@ -8,7 +8,7 @@ import clustering.distance.DistanceFunction;
 
 public class Kmeans extends OccurenceClustering {
 	protected int clusterNumber;	
-	protected int maxIterations = 10000;
+	protected int maxIterations = 100;
 	protected DistanceFunction distance;
 	protected KmeansInitialization initialize;
 	
@@ -17,7 +17,7 @@ public class Kmeans extends OccurenceClustering {
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;
 		this.distance = distance;
-		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 1);
+		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 100);
 	}
 	
 	public Kmeans(float[][] occurenceTable, int clusterNumber, DistanceFunction distance, KmeansInitialization initialize) {
@@ -40,7 +40,7 @@ public class Kmeans extends OccurenceClustering {
 				int cluster = 0; 
 				for (int k=1; k<clusterNumber; k++) {
 					double currentDistance = distance.distance(occurenceTable[i],clusterCentroids[k]);
-					if (currentDistance<=minDistance) {
+					if (currentDistance<minDistance) {
 						minDistance = currentDistance;
 						cluster = k;		
 					}
@@ -96,6 +96,13 @@ public class Kmeans extends OccurenceClustering {
 						} 
 					}
 					clusterCentroids[cluster] = initialize.getNextCentroid(occurenceTable, nonEmptyClusterCentroids);
+					if (Arrays.equals(clusterCentroids[cluster], clusterCentroids[cluster-1])) {
+						System.out.println("same centroid");
+						//System.out.println(Arrays.toString(clusterCentroids[cluster]));
+						//this.clusterNumber = cluster -1;
+						//clusterCentroids = nonEmptyClusterCentroids;
+						//break;
+					}
 					emptyClusters.remove(cluster);
 				}
 			}

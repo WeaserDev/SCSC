@@ -38,7 +38,12 @@ public class AdjustedPrecision extends SupervisedEvaluation {
 							break;
 						}
 					}
+					if (foldersList.get(i).size()==0 && foldersList.get(k).size()==0) {
+						precision+=1;
+					}
+					else {
 					precision += (float)commonFolders / (foldersList.get(i).size()+foldersList.get(k).size()-commonFolders);	
+					}
 				}		
 			}
 		}

@@ -28,7 +28,9 @@ public abstract class WeightMethod {
 			}
 		}
 		for (int k=0; k<featuresNumber; k++) {
+			if (featureCount[k]>0){
 			inverseDocumentFrequency[k] = (float)Math.log(filesNumber/featureCount[k]);
+			}
 		}
 		
 		return inverseDocumentFrequency;

@@ -1,21 +1,25 @@
 package clustering.algorithms;
 
+import clustering.algorithms.kmeansUtils.KmeansInitialization;
+import clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic;
 import clustering.distance.DistanceFunction;
 
 public class TopicsKmeans extends OccurenceClustering {
 	protected int clusterNumber;
 	protected int topicsNumber;
 	protected DistanceFunction distance;
+	protected KmeansInitialization initialize;
 	
 	public TopicsKmeans(float[][] occurenceTable,int topicsNumber, int clusterNumber, DistanceFunction distance) {
 		super(occurenceTable);	
 		this.topicsNumber = topicsNumber;
 		this.clusterNumber = clusterNumber;
 		this.distance = distance;
+		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 100);
 	}
 	
 	protected int[] createClusters() {
-		Kmeans topicsKmeans = new Kmeans(occurenceTable,topicsNumber, distance);
+		Kmeans topicsKmeans = new Kmeans(occurenceTable,topicsNumber, distance, initialize);
 		clusters = topicsKmeans.createClusters();
 		float topicsCentroids[][] = calculateCentroids();
 		float topicDistanceTable[][] = calculateTopicDistanceTable(topicsCentroids);

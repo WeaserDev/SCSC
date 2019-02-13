@@ -20,7 +20,6 @@ public class WordModelFeatureExtractionReferenceAddedWeight extends WordModelFea
 	protected float[][] createOccurenceTable() {
 		float[][] occurence = super.createOccurenceTable();
 		float [][] updatedOccurence = occurence.clone();
-		float max=0;
 		updatedOccurence = weight.weightOccurenceTable(updatedOccurence);
 		if (referenceWeight>0) {
 			for (int n=0; n<11; n++) {
@@ -44,10 +43,6 @@ public class WordModelFeatureExtractionReferenceAddedWeight extends WordModelFea
 				}	
 			}
 		}
-		System.out.println(max);
-
-		//for(int i=0;i<updatedOccurence.length;i++)
-			//System.out.println(Arrays.toString(updatedOccurence[i]));
 		return updatedOccurence;
 	}
 
