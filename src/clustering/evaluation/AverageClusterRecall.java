@@ -19,7 +19,7 @@ public class AverageClusterRecall extends SupervisedEvaluation {
 				}		
 			}
 		}
-		for (int i=0; i<clusterNumber(clusters);i++) {
+		for (int i=0; i<clusterNumber(authoritativeClusters);i++) {
 			if (clusterIntrapairs[i]!=0) {
 				clusterRecall += (float) commonIntrapairs[i]/clusterIntrapairs[i];
 			}

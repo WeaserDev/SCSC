@@ -1,6 +1,7 @@
 package sourceCodeSemanticClustering;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -9,6 +10,8 @@ import clustering.algorithms.OccurenceClustering;
 import clustering.algorithms.TopicsKmeans;
 import clustering.evaluation.*;
 import dataImport.ProjectInput;
+import experiments.*;
+import featureExtraction.DocumentDocumentFeatures;
 import featureExtraction.WordModelFeatureExtraction;
 import featureExtraction.WordModelFeatureExtractionAddedWeight;
 import featureExtraction.WordModelFeatureExtractionReferenceAddedWeight;
@@ -16,20 +19,13 @@ import featureExtraction.featureWeight.*;
 
 public class Test2 {
 
-	public static void main(String[] args) {
-		String projectPath = "C:\\Users\\Aris\\eclipse-workspace\\ergasia";
-		ProjectInput[] projectIn = ProjectInput.createProjectInput(new File(projectPath));
+	public static void main(String[] args) throws IOException {
+		String projectPath = "./";
+		ProjectInput project = new ProjectInput(new File(projectPath));
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
-
-		WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(projectIn[5].getInput(), new NoWeight(), wordModel,10,10,0.5f ,2);
-		float occurence[][] = features.getOccurenceTable();
-	
-		OccurenceClustering clusterer = new clustering.algorithms.Kmeans(features.getOccurenceTable(),2, new clustering.distance.CosineDistance());
-		int clusters[] = clusterer.returnClusters();
-
-		SupervisedEvaluation sup = new AdjustedPrecision (new File("C:\\Users\\Aris\\eclipse-workspace\\ergasia"));
-		float ev = sup.evaluate(clusters, null);
-		System.out.println(ev);
+		
+		Experiment exp = new KmeansDeterministicInitKKnown();
+		exp.test(project, wordModel);
 	}
 
 }

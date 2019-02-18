@@ -34,6 +34,12 @@ public class NonExtremityClusterDistribution extends Evaluation {
 		max+=1;
 		return max;
 	}
+	
+	@Override
+	public String toString() {
+		String string = getClass().getSimpleName()+"L"+lowerLimit+"U"+upperLimit;
+		return string;
+	}
 }
 
 

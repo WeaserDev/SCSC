@@ -17,7 +17,7 @@ public class Kmeans extends OccurenceClustering {
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;
 		this.distance = distance;
-		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 100);
+		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 1);
 	}
 	
 	public Kmeans(float[][] occurenceTable, int clusterNumber, DistanceFunction distance, KmeansInitialization initialize) {

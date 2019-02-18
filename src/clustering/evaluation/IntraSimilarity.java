@@ -58,5 +58,11 @@ public class IntraSimilarity extends Evaluation {
 		max+=1;
 		return max;
 	}
+	
+	@Override
+	public String toString() {
+		String string = getClass().getSimpleName()+"Reg"+regularize;
+		return string;
+	}
 
 }
