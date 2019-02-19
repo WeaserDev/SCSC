@@ -10,12 +10,12 @@ public class TopicsKmeans extends OccurenceClustering {
 	protected DistanceFunction distance;
 	protected KmeansInitialization initialize;
 	
-	public TopicsKmeans(float[][] occurenceTable,int topicsNumber, int clusterNumber, DistanceFunction distance) {
+	public TopicsKmeans(float[][] occurenceTable,int topicsNumber, int clusterNumber, DistanceFunction distance,KmeansInitialization initialize) {
 		super(occurenceTable);	
 		this.topicsNumber = topicsNumber;
 		this.clusterNumber = clusterNumber;
 		this.distance = distance;
-		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 100);
+		this.initialize = initialize;
 	}
 	
 	protected int[] createClusters() {
@@ -23,7 +23,7 @@ public class TopicsKmeans extends OccurenceClustering {
 		clusters = topicsKmeans.createClusters();
 		float topicsCentroids[][] = calculateCentroids();
 		float topicDistanceTable[][] = calculateTopicDistanceTable(topicsCentroids);
-		Kmeans kmeans = new Kmeans(topicDistanceTable,clusterNumber, distance);
+		Kmeans kmeans = new Kmeans(topicDistanceTable,clusterNumber, distance, initialize);
 		clusters = kmeans.createClusters();
 		return clusters;
 	}

@@ -22,7 +22,7 @@ import featureExtraction.featureWeight.WeightMethod;
 public class KmeansDeterministicInitKDynamic extends Experiment {
 
 	/**
-	 * In this experinment we use Kmeans algorithm with deterministic initialization, trying every k between 2 and entities/2.
+	 * In this experinment we use Kmeans algorithm with deterministic initialization, trying every k between 5 and entities/3.
 	 * Features are extracted using WordModelFeatureExtractionReferenceAddedWeight
 	 * @throws IOException 
 	 */
@@ -37,8 +37,8 @@ public class KmeansDeterministicInitKDynamic extends Experiment {
 		int maxFunctionWeight = 2;
 		int functionWeightStep = 1;
 		float referenceWeightStep = 0.25f;
-		float maxReferenceWeight = 0.5f;
-		int maxClosestCentroids = 3;
+		float maxReferenceWeight = 0.25f;
+		int maxClosestCentroids = 2;
 		
 		
 		int i=0;
@@ -55,7 +55,7 @@ public class KmeansDeterministicInitKDynamic extends Experiment {
 						WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(project.getInput(), weight, wordModel, fileWeight, functionWeight,referenceWeight,2);
 						for (DistanceFunction distance:distances) {
 							for (int closestCentroids=1; closestCentroids<=maxClosestCentroids;closestCentroids++) {
-								for (int clusterNumber=2;clusterNumber<=project.getInput().length;clusterNumber++) {
+								for (int clusterNumber=5;clusterNumber<=project.getInput().length/3;clusterNumber++) {
 									float occurence[][] =  features.getOccurenceTable();
 										long startTime2=System.nanoTime();	
 										OccurenceClustering clusterer = new Kmeans(occurence,clusterNumber, distance, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(distance,closestCentroids));

@@ -20,11 +20,11 @@ import featureExtraction.featureWeight.*;
 public class Test2 {
 
 	public static void main(String[] args) throws IOException {
-		String projectPath = "./";
+		String projectPath = "C:\\projects\\jEdit";
 		ProjectInput project = new ProjectInput(new File(projectPath));
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
-		Experiment exp = new KmeansDeterministicInitKKnown();
+		Experiment exp = new KmeansDeterministicInitKDynamic();
 		exp.test(project, wordModel);
 	}
 

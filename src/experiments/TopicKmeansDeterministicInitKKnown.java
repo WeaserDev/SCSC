@@ -9,6 +9,7 @@ import auth.eng.textManager.WordModel;
 import clustering.algorithms.Kmeans;
 import clustering.algorithms.OccurenceClustering;
 import clustering.algorithms.PackagesToClusters;
+import clustering.algorithms.TopicsKmeans;
 import clustering.distance.CosineDistance;
 import clustering.distance.DistanceFunction;
 import clustering.evaluation.Evaluation;
@@ -28,16 +29,16 @@ public class TopicKmeansDeterministicInitKKnown extends Experiment {
 	@Override
 	public void test(ProjectInput project, WordModel wordModel) throws IOException {
 		long startTime = System.nanoTime();
-		String fileName = "results\\" + project.getProjectName() + this.getClass().getSimpleName() + "("+ wordModel.getClass().getSimpleName()+")" + ".txt";
+		String fileName = "results\\" + project.getProjectName() + this.getClass().getSimpleName() + "("+ wordModel.getClass().getSimpleName()+")" + ".csv";
 		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight()};
 		DistanceFunction[] distances = {new CosineDistance()};
-		int maxFileWeight = 100;
+		int maxFileWeight = 2;
 		int fileWeightStep = 1;
-		int maxFunctionWeight = 50;
+		int maxFunctionWeight = 2;
 		int functionWeightStep = 1;
-		float referenceWeightStep = 0.1f;
+		float referenceWeightStep = 0.25f;
 		float maxReferenceWeight = 0.5f;
-		int maxClosestCentroids = 10;
+		int maxClosestCentroids = 3;
 		int maxTopicsNumber = project.getInput().length/2;
 		int topicsStep = 5;
 		int minTopicsNumber = 5;
@@ -61,7 +62,7 @@ public class TopicKmeansDeterministicInitKKnown extends Experiment {
 								for (int closestCentroids=1; closestCentroids<maxClosestCentroids;closestCentroids++) {
 									float occurence[][] =  features.getOccurenceTable();
 										long startTime2=System.nanoTime();	
-										OccurenceClustering clusterer = new Kmeans(occurence,clusterNumber, distance, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(distance,closestCentroids));
+										OccurenceClustering clusterer = new TopicsKmeans(occurence,topics, clusterNumber, distance, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(distance,closestCentroids));
 										int clusters[] = clusterer.returnClusters();
 										long endTime2 = System.nanoTime();
 										Evaluation[] metrics = {new clustering.evaluation.Precision(evaluationClusters), new clustering.evaluation.Recall(evaluationClusters),new clustering.evaluation.Fmeasure(evaluationClusters),new clustering.evaluation.AdjustedPrecision(project.getProjectDirectory()), new clustering.evaluation.AverageClusterPrecision(evaluationClusters),new clustering.evaluation.AverageClusterRecall(evaluationClusters),new clustering.evaluation.AverageClusterAdjustedPrecision(project.getProjectDirectory()), new clustering.evaluation.MojoFM(evaluationClusters),new clustering.evaluation.SilhuetteIndex(new clustering.distance.CosineDistance()),new clustering.evaluation.NonExtremityClusterDistribution(5, 100),new clustering.evaluation.IntraSimilarity(distance, 1),new clustering.evaluation.IntraSimilarity(distance,2),new clustering.evaluation.IntraSimilarity(distance, 3),new clustering.evaluation.IntraSimilarity(distance, 4),new clustering.evaluation.IntraSimilarity(distance, 5),new clustering.evaluation.IntraInterDistance(distance, 1, 1), new clustering.evaluation.AverageClusterIntraInterDistance(distance, 1, 1)};
