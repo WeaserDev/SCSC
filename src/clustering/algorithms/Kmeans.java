@@ -96,13 +96,6 @@ public class Kmeans extends OccurenceClustering {
 						} 
 					}
 					clusterCentroids[cluster] = initialize.getNextCentroid(occurenceTable, nonEmptyClusterCentroids);
-					if (Arrays.equals(clusterCentroids[cluster], clusterCentroids[cluster-1])) {
-						System.out.println("same centroid");
-						//System.out.println(Arrays.toString(clusterCentroids[cluster]));
-						//this.clusterNumber = cluster -1;
-						//clusterCentroids = nonEmptyClusterCentroids;
-						//break;
-					}
 					emptyClusters.remove(cluster);
 				}
 			}

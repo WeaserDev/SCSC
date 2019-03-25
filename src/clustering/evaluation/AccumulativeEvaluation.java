@@ -5,6 +5,7 @@ public class AccumulativeEvaluation extends Evaluation {
 	private float bestScore = Float.NEGATIVE_INFINITY;
 	private int timesRun = 0;
 	private Evaluation baseEvaluation;
+	private int bestScoreRun = 0;
 	
 	public AccumulativeEvaluation(Evaluation baseEvaluation) {
 		this.baseEvaluation = baseEvaluation;
@@ -15,8 +16,11 @@ public class AccumulativeEvaluation extends Evaluation {
 		if(clusters!=null || occurenceTable!=null) {
 			accumulativeScore += baseEvaluation.evaluate(clusters, occurenceTable);
 			timesRun++;
-			if(baseEvaluation.evaluate(clusters, occurenceTable) > bestScore)
+			if(baseEvaluation.evaluate(clusters, occurenceTable) > bestScore) {
 				bestScore = baseEvaluation.evaluate(clusters, occurenceTable);
+				bestScoreRun = timesRun;
+			}
+				
 		}
 		return getCurrentResults();
 	}
@@ -32,5 +36,9 @@ public class AccumulativeEvaluation extends Evaluation {
 	
 	public float getBestResults() {
 		return bestScore;
+	}
+	
+	public int getBestScoreRun() {
+		return bestScoreRun;
 	}
 }

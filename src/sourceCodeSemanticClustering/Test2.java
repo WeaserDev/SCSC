@@ -24,7 +24,7 @@ public class Test2 {
 		ProjectInput project = new ProjectInput(new File(projectPath));
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
-		Experiment exp = new KmeansDeterministicInitKDynamic();
+		Experiment exp = new KmeansRandomInitKKnown();
 		exp.test(project, wordModel);
 	}
 

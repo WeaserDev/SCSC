@@ -14,7 +14,7 @@ import featureExtraction.WordModelFeatureExtraction;
 
 public class Test {
 	public static void main(String[] args) throws Exception {
-		String testProjectPath = "./";
+		String testProjectPath = "C:\\projects\\jEdit";
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput project = new ProjectInput(new File(testProjectPath));
 		int[] evaluationClusters = (new PackagesToClusters(new File(testProjectPath))).returnClusters();
@@ -24,7 +24,7 @@ public class Test {
 		DocumentDocumentFeatures doc = new featureExtraction.DocumentDocumentFeatures(features.getOccurenceTable(),new clustering.distance.CosineDistance());
 
 		float regularizeIntraSimilarity = 1;//1 to split to fewer clusters, 5 to split to more clusters
-		OccurenceClustering algorithm = new clustering.algorithms.KmeansDynamic(features.getOccurenceTable(), new clustering.evaluation.SilhuetteIndex(new clustering.distance.CosineDistance()), new clustering.distance.CosineDistance(), new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(new clustering.distance.CosineDistance(),1));
+		OccurenceClustering algorithm = new clustering.algorithms.KmeansDynamic(features.getOccurenceTable(), new clustering.evaluation.IntraSimilarity(new clustering.distance.CosineDistance(),1), new clustering.distance.CosineDistance(), new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(new clustering.distance.CosineDistance(),1));
 		//OccurenceClustering algorithm = new clustering.algorithms.TopicsKmeans(features.getOccurenceTable(), 10, 20, new clustering.distance.CosineDistance());
 		//OccurenceClustering algorithm = new clustering.algorithms.Kmeans(features.getOccurenceTable(), 20, new clustering.distance.CosineDistance());
 		Evaluation[] metrics = {new clustering.evaluation.Precision(evaluationClusters), new clustering.evaluation.Recall(evaluationClusters), new clustering.evaluation.AdjustedPrecision(new File(testProjectPath)),new clustering.evaluation.MojoFM(evaluationClusters),new clustering.evaluation.SilhuetteIndex(new clustering.distance.CosineDistance())};

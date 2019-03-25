@@ -88,7 +88,7 @@ public class KmeansRandomInitKKnown extends Experiment {
 							toPrint.add(String.valueOf(repeated));
 							for (AccumulativeEvaluation metric:acMetrics) {
 								toPrint.add(String.valueOf(metric.getCurrentResults()));
-								toPrint.add(String.valueOf(metric.getBestResults()));
+								toPrint.add(String.valueOf(metric.getBestResults()) + " (" + String.valueOf(metric.getBestScoreRun()) + ")");
 							}
 							toPrint.add(String.valueOf((endTime2-startTime2)/1000000/repeated));
 							String print = arrayListToCSVString(toPrint);
