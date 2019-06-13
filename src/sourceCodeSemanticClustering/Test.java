@@ -14,7 +14,7 @@ import featureExtraction.WordModelFeatureExtraction;
 
 public class Test {
 	public static void main(String[] args) throws Exception {
-		String testProjectPath = "C:\\projects\\jEdit";
+		String testProjectPath = "..\\";
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput project = new ProjectInput(new File(testProjectPath));
 		int[] evaluationClusters = (new PackagesToClusters(new File(testProjectPath))).returnClusters();

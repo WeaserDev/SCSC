@@ -1,11 +1,11 @@
 package clustering.distance;
 
-public class JaccardSimilarity extends AssociationCoefficient {
+public class JaccardDistance extends AssociationCoefficient {
 
 	@Override
 	public double distance(float[] firstVector, float[] secondVector) {
 		calculateQuantities(firstVector,secondVector);		
-		return a/(a+b+c);
+		return 1 - (a/(a+b+c));
 	}
 
 }

@@ -11,7 +11,7 @@ import clustering.algorithms.OccurenceClustering;
 import clustering.algorithms.PackagesToClusters;
 import clustering.distance.CosineDistance;
 import clustering.distance.DistanceFunction;
-import clustering.distance.JaccardSimilarity;
+import clustering.distance.JaccardDistance;
 import clustering.evaluation.Evaluation;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
@@ -31,7 +31,7 @@ public class KmeansDeterministicInitKKnownBinaryFeatures extends Experiment {
 		long startTime = System.nanoTime();
 		String fileName = "results\\" + project.getProjectName() + this.getClass().getSimpleName() + "("+ wordModel.getClass().getSimpleName()+")" + ".csv";
 		WeightMethod[] weights = {new BinaryWeight()};
-		DistanceFunction[] distances = {new JaccardSimilarity(), new CosineDistance()};
+		DistanceFunction[] distances = {new JaccardDistance(), new CosineDistance()};
 		int maxFileWeight = 2;
 		int fileWeightStep = 1;
 		int maxFunctionWeight = 2;
