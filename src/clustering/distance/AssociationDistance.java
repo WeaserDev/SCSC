@@ -1,6 +1,6 @@
 package clustering.distance;
 
-public abstract class AssociationCoefficient extends DistanceFunction {
+public abstract class AssociationDistance extends DistanceFunction {
 	int a,b,c,d;
 	
 	protected void calculateQuantities(float[] firstVector, float[] secondVector) {
@@ -15,7 +15,7 @@ public abstract class AssociationCoefficient extends DistanceFunction {
 				if(secondVector[i]!=0) {
 					c+=1; //c is the number of features that exist only in second entity
 				} else {
-					d+=1; //d is the number of features that doesnt exist in any of the two entities
+					d+=1; //d is the number of features that doesn't exist in any of the two entities
 				}
 			}
 		}

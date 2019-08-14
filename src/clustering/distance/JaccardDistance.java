@@ -1,6 +1,6 @@
 package clustering.distance;
 
-public class JaccardDistance extends AssociationCoefficient {
+public class JaccardDistance extends AssociationDistance {
 
 	@Override
 	public double distance(float[] firstVector, float[] secondVector) {

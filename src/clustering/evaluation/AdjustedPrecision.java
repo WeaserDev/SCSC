@@ -52,7 +52,7 @@ public class AdjustedPrecision extends SupervisedEvaluation {
 	}
 	
 	protected List<List<String>> createFoldersList(){
-		String extensions[] = {"java" , "py"};
+		String extensions[] = {"java" , "py", "html"};
 		Collection<File> files= FileUtils.listFiles(rootDirectory, extensions , true);
 		List<List<String>> foldersList = new ArrayList<List<String>>();
 		for (File file : files) {

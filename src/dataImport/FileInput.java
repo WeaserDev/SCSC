@@ -12,7 +12,7 @@ public class FileInput {
 	private String fileCode;
 
 	public static FileInput[] createFileInput(File rootDir) {
-		String extensions[] = {"java" , "py"};
+		String extensions[] = {"java" , "py", "html"};
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		File[] filesArray = files.toArray(new File[files.size()]);
 

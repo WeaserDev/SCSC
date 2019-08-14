@@ -15,7 +15,9 @@ public class LSA {
 	double[][] truncatedVT;
 	double[][] truncatedUT;
 	double[][] truncatedV;
-	
+	/**
+	 * This is the basic constructor of the LSA class, the cutoffPoint has to be manually selected
+	 */
 	public LSA(float occurenceTable[][], int cutoffPoint) {
 		double table[][] = new double[occurenceTable.length][occurenceTable[0].length];
 		for (int i = 0 ; i < occurenceTable.length; i++){
@@ -25,6 +27,27 @@ public class LSA {
 		}
 		this.initialTable = new Array2DRowRealMatrix(table);
 		this.cutoffPoint = cutoffPoint;
+		if (this.cutoffPoint>occurenceTable.length) {
+			this.cutoffPoint = occurenceTable.length;
+		}
+		if(this.cutoffPoint>occurenceTable[0].length) {
+			this.cutoffPoint = occurenceTable[0].length;
+		}
+		calculateTables();
+	}
+	/**
+	 * This constructor creates an LSA object setting the cutoff point to (m*n)^0.2, where m and n are the dimensions of the occurenceTable
+	 */
+	public LSA(float occurenceTable[][]) {
+		double table[][] = new double[occurenceTable.length][occurenceTable[0].length];
+		for (int i = 0 ; i < occurenceTable.length; i++){
+			for (int k=0;k<occurenceTable[0].length;k++){	
+			    table[i][k] = (double) occurenceTable[i][k];				
+			}
+		}
+		this.initialTable = new Array2DRowRealMatrix(table);
+		double rank = Math.pow(occurenceTable.length*occurenceTable[0].length, 0.2);
+		this.cutoffPoint = (int) Math.round(rank);
 		if (this.cutoffPoint>occurenceTable.length) {
 			this.cutoffPoint = occurenceTable.length;
 		}
