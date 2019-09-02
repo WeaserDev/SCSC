@@ -16,9 +16,9 @@ import clustering.evaluation.Evaluation;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
 import featureExtraction.WordModelFeatureExtractionReferenceAddedWeight;
-import featureExtraction.featureWeight.TermFrequencyInverseDocumentFrequencyWeight;
-import featureExtraction.featureWeight.TermFrequencyWeight;
 import featureExtraction.featureWeight.WeightMethod;
+import featureExtraction.featureWeight.globalWeight.InverseDocumentFrequencyWeight;
+import featureExtraction.featureWeight.localWeight.TermFrequencyWeight;
 
 public class KmeansRandomInitKKnown extends Experiment {
 
@@ -31,7 +31,7 @@ public class KmeansRandomInitKKnown extends Experiment {
 	public void test(ProjectInput project, WordModel wordModel) throws IOException {
 		long startTime = System.nanoTime();
 		String fileName = "results\\" + project.getProjectName() + this.getClass().getSimpleName() + "("+ wordModel.getClass().getSimpleName()+")" + ".csv";
-		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight()};
+		WeightMethod[] weights = {new WeightMethod(new TermFrequencyWeight(),new InverseDocumentFrequencyWeight())};
 		DistanceFunction[] distances = {new CosineDistance()};
 		int maxFileWeight = 2;
 		int fileWeightStep = 1;

@@ -11,6 +11,8 @@ import dataImport.FileInput;
 import dataImport.ProjectInput;
 import featureExtraction.*;
 import featureExtraction.featureWeight.*;
+import featureExtraction.featureWeight.globalWeight.InverseDocumentFrequencyWeight;
+import featureExtraction.featureWeight.localWeight.TermFrequencyWeight;
 import visualization.PrintFile;
 import clustering.algorithms.*;
 import clustering.distance.*;
@@ -23,7 +25,7 @@ public class SourceCodeSemanticClustering {
 		long startTime = System.nanoTime();
 		String fileName = "results\\aJedit.txt";
 		String projectPath = "C:\\projects\\pf";
-		WeightMethod[] weights = {new TermFrequencyInverseDocumentFrequencyWeight(), new TermFrequencyWeight()};
+		WeightMethod[] weights = {new WeightMethod(new TermFrequencyWeight(),new InverseDocumentFrequencyWeight())};
 		//DistanceFunction[] distance = {new WekaCosineDistance()};
 		DistanceFunction[] distance = {new CosineDistance()};
 		int maxFileWeight = 2;

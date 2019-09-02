@@ -10,6 +10,7 @@ import clustering.labeling.Labeling;
 import dataImport.FileInput;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
+import featureExtraction.featureWeight.WeightMethod;
 
 public class ValidateProject {
 	public static void main(String[] args) throws Exception {
@@ -18,7 +19,7 @@ public class ValidateProject {
 		ProjectInput project = new ProjectInput(new File(testProjectPath));
 		int[] evaluationClusters = (new PackagesToClusters(new File(testProjectPath))).returnClusters();
 		
-		WordModelFeatureExtraction features = new featureExtraction.WordModelFeatureExtractionReferenceAddedWeight(project.getInput(), new featureExtraction.featureWeight.TermFrequencyInverseDocumentFrequencyWeight(), wordModel, 1, 1,
+		WordModelFeatureExtraction features = new featureExtraction.WordModelFeatureExtractionReferenceAddedWeight(project.getInput(), new featureExtraction.featureWeight.WeightMethod(new featureExtraction.featureWeight.localWeight.TermFrequencyWeight(), new featureExtraction.featureWeight.globalWeight.InverseDocumentFrequencyWeight()), wordModel, 1, 1,
 				0f, 2f);
 		
 		//OccurenceClustering algorithm = new clustering.algorithms.KmeansDynamic(features.getOccurenceTable(), new clustering.evaluation.IntraSimilarity(new clustering.distance.CosineDistance(), 5), new clustering.distance.CosineDistance(), new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(new clustering.distance.CosineDistance(),100));
@@ -29,7 +30,7 @@ public class ValidateProject {
 		for(Evaluation metric : metrics) 
 			System.out.println(metric.toString()+" : "+metric.evaluate(clusters, null));
 		
-		Labeling labeling = new clustering.labeling.MostFrequentFeaturesLabeling(features, evaluationClusters, 3, new featureExtraction.featureWeight.NoWeight());
+		Labeling labeling = new clustering.labeling.MostFrequentFeaturesLabeling(features, evaluationClusters, 3, new featureExtraction.featureWeight.WeightMethod(null,null));
 		(new visualization.FirefoxVisualizer(evaluationClusters, project, labeling.getLabels(), clusters)).visualize();
 		
 	}

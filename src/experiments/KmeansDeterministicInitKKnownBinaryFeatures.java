@@ -16,8 +16,8 @@ import clustering.evaluation.Evaluation;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
 import featureExtraction.WordModelFeatureExtractionReferenceAddedWeight;
-import featureExtraction.featureWeight.BinaryWeight;
 import featureExtraction.featureWeight.WeightMethod;
+import featureExtraction.featureWeight.localWeight.BinaryWeight;
 
 public class KmeansDeterministicInitKKnownBinaryFeatures extends Experiment {
 	
@@ -30,11 +30,11 @@ public class KmeansDeterministicInitKKnownBinaryFeatures extends Experiment {
 	public void test(ProjectInput project, WordModel wordModel) throws IOException {
 		long startTime = System.nanoTime();
 		String fileName = "results\\" + project.getProjectName() + this.getClass().getSimpleName() + "("+ wordModel.getClass().getSimpleName()+")" + ".csv";
-		WeightMethod[] weights = {new BinaryWeight()};
+		WeightMethod[] weights = {new WeightMethod(new BinaryWeight(),null)};
 		DistanceFunction[] distances = {new JaccardDistance(), new CosineDistance()};
-		int maxFileWeight = 2;
+		int maxFileWeight = 0;
 		int fileWeightStep = 1;
-		int maxFunctionWeight = 2;
+		int maxFunctionWeight = 0;
 		int functionWeightStep = 1;
 		float referenceWeightStep = 0.25f;
 		float maxReferenceWeight = 0.5f;

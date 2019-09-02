@@ -14,7 +14,7 @@ public class PackagesToClusters implements Clustering {
 	}
 	
 	public int[] returnClusters() {
-		String extensions[] = {"java" , "py", "html"};
+		String extensions[] = {"java" , "py"};
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		File[] filesArray = files.toArray(new File[files.size()]);
 

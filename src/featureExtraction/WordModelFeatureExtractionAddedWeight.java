@@ -2,7 +2,6 @@ package featureExtraction;
 
 import auth.eng.textManager.WordModel;
 import dataImport.FileInput;
-import featureExtraction.featureWeight.NoWeight;
 import featureExtraction.featureWeight.WeightMethod;
 
 public class WordModelFeatureExtractionAddedWeight extends WordModelFeatureExtraction {
@@ -11,7 +10,7 @@ public class WordModelFeatureExtractionAddedWeight extends WordModelFeatureExtra
 	private int functionWeight;
 	
 	public WordModelFeatureExtractionAddedWeight(FileInput[] input, WeightMethod weightMethod, WordModel wordModel, int fileNameWeight, int functionWeight) {
-		super(input, new NoWeight(), wordModel);
+		super(input, new WeightMethod(null,null), wordModel);
 		this.weight = weightMethod;
 		this.functionWeight = functionWeight;
 		this.fileNameWeight = fileNameWeight;

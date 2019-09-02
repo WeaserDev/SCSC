@@ -1,8 +1,9 @@
-package featureExtraction.featureWeight;
+package featureExtraction.featureWeight.localWeight;
 
-public class BinaryWeight extends WeightMethod {
+public class BinaryWeight extends LocalWeightMethod {
 	
-	public float[][] weightOccurenceTable(float[][] occurenceTable) {
+	@Override
+	public float[][] getLocalWeight(float[][] occurenceTable) {
 		int featuresNumber = occurenceTable[0].length;
 		int filesNumber = occurenceTable.length;
 		for (int i=0; i<filesNumber; i++) {
@@ -17,6 +18,4 @@ public class BinaryWeight extends WeightMethod {
 		}
 		return occurenceTable;
 	}
-	
-
 }

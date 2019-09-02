@@ -1,13 +1,13 @@
-package featureExtraction.featureWeight;
+package featureExtraction.featureWeight.globalWeight;
 
-public class LogEntropyWeight extends WeightMethod {
+
+public class EntropyWeight extends GlobalWeightMethod {
 
 	@Override
-	public float[][] weightOccurenceTable(float[][] occurenceTable) {
+	public float[] getGlobalWeight(float[][] occurenceTable) {
 		float[] entropyWeights = new float[occurenceTable[0].length];
 		float[][] probability = new float[occurenceTable.length][occurenceTable[0].length];
 		float rowSum[] = new float[occurenceTable.length];
-		float[][] logEntropyWeights = new float[occurenceTable.length][occurenceTable[0].length];
 		
 		for (int i=0; i<occurenceTable.length; i++) {
 			for (int j=0; j<occurenceTable[0].length; j++) {
@@ -28,12 +28,7 @@ public class LogEntropyWeight extends WeightMethod {
 				}			
 			}
 		}
-		for (int i=0; i<occurenceTable.length; i++) {
-			for (int j=0; j<occurenceTable[0].length; j++) {
-				logEntropyWeights[i][j] = entropyWeights[j]*(float)Math.log(occurenceTable[i][j] + 1);
-			}
-		}
-		return logEntropyWeights;
+		return entropyWeights;
 	}
 
 }
