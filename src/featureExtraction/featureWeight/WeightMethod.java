@@ -27,4 +27,9 @@ public class WeightMethod {
 		}
 		return localWeightOccurenceTable;
 	}
+	
+	@Override
+	public String toString() {
+		return localWeight.getClass().getSimpleName() + " " + globalWeight.getClass().getSimpleName();
+	}
 }

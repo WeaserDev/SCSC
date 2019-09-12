@@ -52,7 +52,7 @@ public class AdjustedPrecision extends SupervisedEvaluation {
 	}
 	
 	protected List<List<String>> createFoldersList(){
-		String extensions[] = {"java" , "py"};
+		String extensions[] = {"java" , "py", "html", "xml", "c", "h"};
 		Collection<File> files= FileUtils.listFiles(rootDirectory, extensions , true);
 		List<List<String>> foldersList = new ArrayList<List<String>>();
 		for (File file : files) {
@@ -72,7 +72,11 @@ public class AdjustedPrecision extends SupervisedEvaluation {
 		boolean notEqual=false;
 		for (int i=0; i<foldersList.get(0).size();i++) {
 			for (int k=1; k<foldersList.size();k++) {
-				if (!foldersList.get(0).get(i).equals(foldersList.get(k).get(i))) {
+				if(foldersList.get(k).size()<=i) {
+					notEqual = true;
+					break;
+				}
+				else if (!foldersList.get(0).get(i).equals(foldersList.get(k).get(i))) {
 					notEqual = true;
 					break;
 				}

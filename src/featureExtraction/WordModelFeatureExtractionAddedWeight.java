@@ -55,6 +55,7 @@ public class WordModelFeatureExtractionAddedWeight extends WordModelFeatureExtra
 					//System.out.println(end);
 					if (end == -1) break;
 					start = fileCode.lastIndexOf(" ", end-2);
+					if (start == -1) break;
 					if (fileCode.lastIndexOf("(",end-2)>start) start = fileCode.lastIndexOf("(",end-2);
 					if (fileCode.lastIndexOf("\n", end -2)>start) start = fileCode.lastIndexOf("\n", end -2);			
 					//System.out.println(start);
