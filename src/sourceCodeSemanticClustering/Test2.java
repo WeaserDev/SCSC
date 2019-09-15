@@ -21,7 +21,7 @@ import featureExtraction.featureWeight.*;
 public class Test2 {
 
 	public static void main(String[] args) throws IOException {
-		String projectPath = "C:\\projects\\openssl-0.9.8";
+		String projectPath = "C:\\projectakia\\postgres-master\\src";
 		ProjectInputWithNameExtension project = new ProjectInputWithNameExtension(new File(projectPath));
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		

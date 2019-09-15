@@ -61,9 +61,9 @@ public class TestMethodsKknown extends Experiment {
 								System.out.println("FE complete");
 								double rank = Math.pow(occurence.length*occurence[0].length, 0.2);
 								int factors = (int) Math.round(rank);
-								LSA[] lsis = {new LSA(occurence, factors), new LSA(occurence)};
+								LSA[] lsis = {new LSA(occurence,95.0f), new LSA(occurence, factors), new LSA(occurence)};
 								System.out.println("Lsis complete");
-								float occurences[][][] = {occurence, lsis[0].getDocumentConceptTable(), lsis[0].getLowRankApproximation(), lsis[1].getDocumentConceptTable(),lsis[1].getLowRankApproximation()};
+								float occurences[][][] = {occurence, lsis[0].getDocumentConceptTable(), lsis[0].getLowRankApproximation(), lsis[1].getDocumentConceptTable(),lsis[1].getLowRankApproximation(),lsis[2].getDocumentConceptTable(),lsis[2].getLowRankApproximation()};
 								String occurenceMethods[] = {"initial table", "95% concept", "95% aprox", "n*m^0.2 concept", "n*m^0.2 aprox", "kaiser concept","kaiser aprox"};
 								for (int t=0; t<occurences.length;t++) {
 									long startTime2=System.nanoTime();	
