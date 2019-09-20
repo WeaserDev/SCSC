@@ -8,13 +8,14 @@ import org.apache.commons.io.FileUtils;
 
 public class PackagesToClusters implements Clustering {
 	File rootDir;
+	String[] extensions;
 	
-	public PackagesToClusters(File rootDir) {
+	public PackagesToClusters(File rootDir, String[] extensions) {
+		this.extensions = extensions;
 		this.rootDir = rootDir;
 	}
 	
 	public int[] returnClusters() {
-		String extensions[] = {"java" , "py", "html", "xml", "c", "h"};
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		File[] filesArray = files.toArray(new File[files.size()]);
 

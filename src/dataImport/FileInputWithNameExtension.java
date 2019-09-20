@@ -8,11 +8,8 @@ import java.util.Collection;
 
 
 public class FileInputWithNameExtension extends FileInput {
-	private String fileName;
-	private String fileCode;
 
-	public static FileInputWithNameExtension[] createFileInput(File rootDir) {
-		String extensions[] = {"java" , "py", "html", "xml", "c", "h"};
+	public static FileInputWithNameExtension[] createFileInput(File rootDir, String[] extensions) {
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		File[] filesArray = files.toArray(new File[files.size()]);
 
@@ -39,8 +36,6 @@ public class FileInputWithNameExtension extends FileInput {
 
 	public FileInputWithNameExtension(String fileName, String fileCode) {
 		super(fileName,fileCode);
-		this.fileName = fileName;
-		this.fileCode = fileCode;
 	}
 
 	public String getFileName() {

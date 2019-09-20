@@ -21,12 +21,14 @@ import featureExtraction.featureWeight.*;
 public class Test2 {
 
 	public static void main(String[] args) throws IOException {
-		String projectPath = "C:\\projectakia\\postgres-master\\src";
-		ProjectInputWithNameExtension project = new ProjectInputWithNameExtension(new File(projectPath));
+		String projectPath = "C:\\projects\\openssl-0.9.8";
+		String[] extensions = {"c", "h", "cpp", "chh"};
+		
+		ProjectInput project = new ProjectInputWithNameExtension(new File(projectPath), extensions);
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
-		Experiment exp = new TestMethodsKknown();
-		exp.test(project, wordModel);
+		Experiment exp = new TestFinalMethodsKknown();
+		exp.test(project, wordModel, extensions);
 	}
 
 }

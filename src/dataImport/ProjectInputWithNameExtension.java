@@ -5,12 +5,10 @@ import java.io.File;
 
 public class ProjectInputWithNameExtension extends ProjectInput {
 	private FileInputWithNameExtension[] fileInput;
-	private String projectName;
-	private File projectDirectory;
 	
-	public ProjectInputWithNameExtension (File rootDirectory) {
-		super(rootDirectory);
-		this.fileInput = FileInputWithNameExtension.createFileInput(rootDirectory);
+	public ProjectInputWithNameExtension (File rootDirectory, String[] extensions) {
+		super(rootDirectory, new String[]{""});
+		this.fileInput = FileInputWithNameExtension.createFileInput(rootDirectory, extensions);
 		this.projectName = rootDirectory.getName();
 		this.projectDirectory = rootDirectory;
 	}
@@ -26,13 +24,13 @@ public class ProjectInputWithNameExtension extends ProjectInput {
 		return projectName;
 	}
 	
-	public static ProjectInput[] createProjectInput(File projectDir) {
+	public static ProjectInput[] createProjectInput(File projectDir, String[] extensions) {
 		File[] directories = projectDir.listFiles(File::isDirectory);
 		ProjectInput[] input = new ProjectInput[directories.length];
 		
 		for (int i=0; i<directories.length; i++) {
 			if (directories[i].listFiles().length>0) {
-				input[i] = new ProjectInput(directories[i]);
+				input[i] = new ProjectInput(directories[i], extensions);
 				System.out.println("Imported project "+directories[i].getPath());
 			}
 		}

@@ -1,8 +1,6 @@
 package featureExtraction.dimensionReduction;
 import org.apache.commons.math3.linear.SingularValueDecomposition;
 
-import java.io.IOException;
-
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.RealMatrix;
 
@@ -140,7 +138,8 @@ public class LSA {
 		
 		for (int i=0; i<S.length;i++) {
 			if(S[i][i]<1) {
-				k=i+1;
+				k=i;
+				break;
 			}
 		}
 		if (k==0) {

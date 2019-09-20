@@ -8,11 +8,10 @@ import java.util.Collection;
 
 
 public class FileInput {
-	private String fileName;
-	private String fileCode;
+	protected String fileName;
+	protected String fileCode;
 
-	public static FileInput[] createFileInput(File rootDir) {
-		String extensions[] = {"java" , "py"};
+	public static FileInput[] createFileInput(File rootDir, String[] extensions) {
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		File[] filesArray = files.toArray(new File[files.size()]);
 

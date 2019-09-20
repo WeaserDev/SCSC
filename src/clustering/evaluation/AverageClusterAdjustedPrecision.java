@@ -4,8 +4,8 @@ import java.io.File;
 
 public class AverageClusterAdjustedPrecision extends AdjustedPrecision {
 
-	public AverageClusterAdjustedPrecision(File rootDirectory) {
-		super(rootDirectory);
+	public AverageClusterAdjustedPrecision(File rootDirectory, String[] extensions) {
+		super(rootDirectory, extensions);
 	}
 	
 	@Override

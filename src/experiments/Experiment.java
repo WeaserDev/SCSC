@@ -8,7 +8,7 @@ import dataImport.ProjectInput;
 
 public abstract class Experiment {
 	
-	public abstract void test(ProjectInput project, WordModel wordModel) throws IOException;
+	public abstract void test(ProjectInput project, WordModel wordModel, String[] Extensions) throws IOException;
 	
 	protected String arrayListToCSVString(ArrayList<String> strings){
 		String csvString = new String();

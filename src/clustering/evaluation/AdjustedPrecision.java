@@ -12,8 +12,11 @@ import org.apache.commons.io.FileUtils;
 public class AdjustedPrecision extends SupervisedEvaluation {
 	File rootDirectory;
 	List<List<String>> foldersList = new ArrayList<List<String>>();
-	public AdjustedPrecision(File rootDirectory) {
+	String[] extensions;
+	
+	public AdjustedPrecision(File rootDirectory, String[] extensions) {
 		super(null);
+		this.extensions = extensions;
 		this.rootDirectory = rootDirectory;
 		
 	}
@@ -52,7 +55,6 @@ public class AdjustedPrecision extends SupervisedEvaluation {
 	}
 	
 	protected List<List<String>> createFoldersList(){
-		String extensions[] = {"java" , "py", "html", "xml", "c", "h"};
 		Collection<File> files= FileUtils.listFiles(rootDirectory, extensions , true);
 		List<List<String>> foldersList = new ArrayList<List<String>>();
 		for (File file : files) {

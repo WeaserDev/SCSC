@@ -13,8 +13,10 @@ import org.apache.commons.io.FileUtils;
 public class MergePackagesToClusters implements Clustering {
 	File rootDir;
 	int mergeThreshold;
+	String extensions[];
 	
-	public MergePackagesToClusters(File rootDir, int mergeThreshold) {
+	public MergePackagesToClusters(File rootDir, String[] extensions, int mergeThreshold) {
+		this.extensions = extensions;
 		this.rootDir = rootDir;
 		this.mergeThreshold = mergeThreshold;
 	}
@@ -68,7 +70,6 @@ public class MergePackagesToClusters implements Clustering {
 	}
 	
 	protected List<List<String>> createFoldersList(){
-		String extensions[] = {"java" , "py", "html", "xml", "c", "h"};
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		List<List<String>> foldersList = new ArrayList<List<String>>();
 		for (File file : files) {
