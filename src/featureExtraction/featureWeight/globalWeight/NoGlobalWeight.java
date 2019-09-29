@@ -10,5 +10,4 @@ public class NoGlobalWeight extends GlobalWeightMethod {
 		}
 		return noWeight;
 	}
-
 }

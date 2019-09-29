@@ -24,13 +24,13 @@ public class ProjectInputWithNameExtension extends ProjectInput {
 		return projectName;
 	}
 	
-	public static ProjectInput[] createProjectInput(File projectDir, String[] extensions) {
+	public static ProjectInputWithNameExtension[] createProjectInput(File projectDir, String[] extensions) {
 		File[] directories = projectDir.listFiles(File::isDirectory);
-		ProjectInput[] input = new ProjectInput[directories.length];
+		ProjectInputWithNameExtension[] input = new ProjectInputWithNameExtension[directories.length];
 		
 		for (int i=0; i<directories.length; i++) {
 			if (directories[i].listFiles().length>0) {
-				input[i] = new ProjectInput(directories[i], extensions);
+				input[i] = new ProjectInputWithNameExtension(directories[i], extensions);
 				System.out.println("Imported project "+directories[i].getPath());
 			}
 		}

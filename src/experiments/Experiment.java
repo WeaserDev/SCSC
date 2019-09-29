@@ -18,4 +18,16 @@ public abstract class Experiment {
 		return csvString;
 		
 	}
+	
+	protected String arrayListToLatexTableRow(ArrayList<String> strings){
+		String rowString = new String();
+		for (String string:strings) {
+			rowString = rowString + string  +  " & ";
+		}
+		rowString = rowString.substring(0, rowString.length()-2);
+		rowString = rowString + "\\\\";
+		
+		return rowString;
+		
+	}
 }

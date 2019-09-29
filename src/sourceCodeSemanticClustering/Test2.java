@@ -21,14 +21,18 @@ import featureExtraction.featureWeight.*;
 public class Test2 {
 
 	public static void main(String[] args) throws IOException {
-		String projectPath = "C:\\projects\\openssl-0.9.8";
-		String[] extensions = {"c", "h", "cpp", "chh"};
+		String projectPath = "C:\\projectC";
+		String[] extensions = {"c", "h", "cpp", "hh", "cc", "hpp"};
 		
-		ProjectInput project = new ProjectInputWithNameExtension(new File(projectPath), extensions);
+		ProjectInputWithNameExtension[] projects = ProjectInputWithNameExtension.createProjectInput(new File(projectPath), extensions);
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
-		Experiment exp = new TestFinalMethodsKknown();
-		exp.test(project, wordModel, extensions);
+		for(ProjectInput project: projects) {
+			Experiment exp = new TestMethodsToLatex();
+			exp.test(project, wordModel, extensions);
+
+		}
+
 	}
 
 }

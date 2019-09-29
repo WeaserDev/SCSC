@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import auth.eng.textManager.WordModel;
 import clustering.algorithms.Kmeans;
+import clustering.algorithms.MergePackagesToClusters;
 import clustering.algorithms.OccurenceClustering;
 import clustering.algorithms.PackagesToClusters;
 import clustering.distance.CosineDistance;
@@ -21,7 +22,7 @@ import featureExtraction.featureWeight.WeightMethod;
 import featureExtraction.featureWeight.globalWeight.*;
 import featureExtraction.featureWeight.localWeight.*;
 
-public class TestFinalMethodsKknown extends Experiment {
+public class TestFinalMethodsKKnownMerge extends Experiment {
 	
 	/**
 	 * In this experinment we use Kmeans algorithm with deterministic initialization, k is chosen to be equal to the number of packages of the project.
@@ -43,7 +44,7 @@ public class TestFinalMethodsKknown extends Experiment {
 		
 		
 		BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-		PackagesToClusters pack = new PackagesToClusters(project.getProjectDirectory(), extensions);
+		MergePackagesToClusters pack = new MergePackagesToClusters(project.getProjectDirectory(), extensions, 6);
 		int[] evaluationClusters = pack.returnClusters();
 		int clusterNumber = clusterNumber(evaluationClusters);
 	
