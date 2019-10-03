@@ -13,6 +13,7 @@ import clustering.algorithms.PackagesToClusters;
 import clustering.distance.CosineDistance;
 import clustering.distance.DistanceFunction;
 import clustering.distance.ModifiedCosineDistance;
+import clustering.evaluation.AccumulativeEvaluation;
 import clustering.evaluation.Evaluation;
 import dataImport.ProjectInput;
 import featureExtraction.WordModelFeatureExtraction;
@@ -22,7 +23,7 @@ import featureExtraction.featureWeight.WeightMethod;
 import featureExtraction.featureWeight.globalWeight.*;
 import featureExtraction.featureWeight.localWeight.*;
 
-public class TestMethodsToLatex extends Experiment {
+public class TestMethodsToLatexRandom extends Experiment {
 	
 	/**
 	 * In this experinment we use Kmeans algorithm with deterministic initialization, k is chosen to be equal to the number of packages of the project.
@@ -41,6 +42,7 @@ public class TestMethodsToLatex extends Experiment {
 		int[] fileWeights = {0, 1, 3, 5};
 		int[] functionWeights = {0, 1, 3, 5};
 		int closestCentroids = 1;
+		int repeated = 20;
 		int i=0;
 		String occurenceMethods[] = {"document-term", "document-concept", "low rank approx"};
 		
@@ -66,29 +68,42 @@ public class TestMethodsToLatex extends Experiment {
 						LSA lsi = new LSA(occurence,factors);
 						float occurences[][][] = {occurence, lsi.getDocumentConceptTable(), lsi.getLowRankApproximation()};	
 						for (int t=0; t<occurences.length; t++) {						
-							OccurenceClustering clusterer = new Kmeans(occurences[t], clusterNumber, distance, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(distance,closestCentroids));
-							int clusters[] = clusterer.returnClusters();
 							Evaluation[] metrics = {new clustering.evaluation.MojoFM(evaluationClusters), new clustering.evaluation.AdjustedPrecision(project.getProjectDirectory(),extensions), new clustering.evaluation.Fmeasure(evaluationClusters), new clustering.evaluation.NonExtremityClusterDistribution(5, 100)};	
+							AccumulativeEvaluation[] acMetrics = new AccumulativeEvaluation[metrics.length];
+							for (int ev=0;ev<metrics.length;ev++) {
+								acMetrics[ev] = new AccumulativeEvaluation(metrics[ev]);
+							}
+							for (int times=0;times<repeated;times++) {
+								OccurenceClustering clusterer = new Kmeans(occurence,clusterNumber, distance, new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlus(distance));
+								int clusters[] = clusterer.returnClusters();
+								for (AccumulativeEvaluation metric:acMetrics) {
+									metric.evaluate(clusters, occurence);
+								}
+							}
 							ArrayList<String> toPrint = new ArrayList<String>();
 							toPrint.add(localNames[k]);
 							toPrint.add(globalNames[j]);
 							toPrint.add(String.valueOf(fileWeight));
 							toPrint.add(String.valueOf(functionWeight));
 							toPrint.add(occurenceMethods[t]);
-							for (Evaluation metric:metrics) {
+							for (AccumulativeEvaluation metric:acMetrics) {
 								float eval;
-								if(metric.toString().equals("MojoFM")) {
-									eval = metric.evaluate(clusters, occurence);
+								float bestEval;
+								if(metric.toString().equals("Avg. MojoFM")) {
+									eval = metric.getCurrentResults();
+									bestEval = metric.getBestResults();
 								} else {
-									eval = metric.evaluate(clusters, occurence)*100;
+									eval = metric.getCurrentResults()*100;
+									bestEval = metric.getBestResults()*100;
 								}
 								int roundedEval = Math.round(eval);
+								int bestRoundedEval = Math.round(bestEval);
 								toPrint.add(String.valueOf(roundedEval));
+								toPrint.add(String.valueOf(bestRoundedEval)+ " (" + String.valueOf(metric.getBestScoreRun()) + ")");
 							}
 							String print = arrayListToLatexTableRow(toPrint);
 							writer.write(print);
 							writer.newLine();	
-							writer.flush();
 							i+=1;
 							System.out.println("clustering complete " + i);		
 						}
