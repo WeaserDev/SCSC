@@ -21,14 +21,14 @@ import featureExtraction.featureWeight.*;
 public class Test2 {
 
 	public static void main(String[] args) throws IOException {
-		String projectPath = "C:\\projects";
-		String[] extensions = {"java"};
+		String projectPath = "C:\\project";
+		String[] extensions = {"js"};
 		
 		ProjectInput[] projects = ProjectInput.createProjectInput(new File(projectPath), extensions);
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
 		for(ProjectInput project: projects) {
-			Experiment exp = new TestBestMethodsToLatex();
+			Experiment exp = new TestBestMethodsToLatexRandom();
 			exp.test(project, wordModel, extensions);
 		}
 
