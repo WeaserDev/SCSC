@@ -22,13 +22,13 @@ public class Test2 {
 
 	public static void main(String[] args) throws IOException {
 		String projectPath = "C:\\projects";
-		String[] extensions = {"java"};
+		String[] extensions = {"c", "h", "cpp", "java", "html", "xml"};
 		
-		ProjectInput[] projects = ProjectInput.createProjectInput(new File(projectPath), extensions);
+		ProjectInput[] projects = ProjectInputWithNameExtension.createProjectInput(new File(projectPath), extensions);
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
 		for(ProjectInput project: projects) { 
-			Experiment exp = new TestBestMethodsToLatexRef();
+			Experiment exp = new TestBestMethodsToLatexRemove();
 			exp.test(project, wordModel, extensions);
 		}
 
