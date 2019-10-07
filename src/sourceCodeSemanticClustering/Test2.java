@@ -28,7 +28,7 @@ public class Test2 {
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
 		for(ProjectInput project: projects) { 
-			Experiment exp = new TestBestMethodsToLatexKaiser();
+			Experiment exp = new TestBestMethodsToLatexRemove4();
 			exp.test(project, wordModel, extensions);
 		}
 
