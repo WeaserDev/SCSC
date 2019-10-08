@@ -21,8 +21,8 @@ import featureExtraction.featureWeight.*;
 public class Test2 {
 
 	public static void main(String[] args) throws IOException {
-		String projectPath = "C:\\proj";
-		String[] extensions = {"js"};
+		String projectPath = "C:\\projectpy";
+		String[] extensions = {"py"};
 	
 		
 		ProjectInput[] projects = ProjectInput.createProjectInput(new File(projectPath), extensions);

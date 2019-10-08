@@ -102,11 +102,11 @@ public class TestBestMethodsToLatexRandomBestNed extends Experiment {
 				for (AccumulativeEvaluation metric:acMetrics) {
 					metric.evaluate(clusters, occurence);
 				}
-				if(acMetrics[3].evaluate(clusters, occurence)>bestNed) {
-					bestNed = acMetrics[3].evaluate(clusters, occurence);
-					bestNedMojo = acMetrics[0].evaluate(clusters, occurence);
-					bestNedPrec = acMetrics[1].evaluate(clusters, occurence);
-					bestNedF1 = acMetrics[2].evaluate(clusters, occurence);
+				if(metrics[3].evaluate(clusters, occurence)>bestNed) {
+					bestNed = metrics[3].evaluate(clusters, occurence);
+					bestNedMojo = metrics[0].evaluate(clusters, occurence);
+					bestNedPrec = metrics[1].evaluate(clusters, occurence);
+					bestNedF1 = metrics[2].evaluate(clusters, occurence);
 				}
 			}			
 			for (int j=0; j< acMetrics.length; j++) {
