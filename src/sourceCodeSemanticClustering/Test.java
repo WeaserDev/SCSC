@@ -27,13 +27,12 @@ public class Test {
 		
 		WordModelFeatureExtraction features = new featureExtraction.WordModelFeatureExtractionReferenceAddedWeight(project.getInput(), new featureExtraction.featureWeight.WeightMethod(new featureExtraction.featureWeight.localWeight.LogWeight(), new featureExtraction.featureWeight.globalWeight.InverseDocumentFrequencyWeight()), wordModel, 1, 1,
 				0f, 0f);
-		LSA svd = new LSA(features.getOccurenceTable());
+		//LSA svd = new LSA(features.getOccurenceTable());
 		float regularizeIntraSimilarity = 1;//1 to split to fewer clusters, 5 to split to more clusters
 		//OccurenceClustering algorithm = new clustering.algorithms.KmeansDynamic(svd.getDocumentConceptTable(), new clustering.evaluation.IntraSimilarity(new clustering.distance.CosineDistance(),regularizeIntraSimilarity), new clustering.distance.ModifiedCosineDistance(), new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(new clustering.distance.CosineDistance(),1));
 		//OccurenceClustering algorithm = new clustering.algorithms.TopicsKmeans(features.getOccurenceTable(), 10, 20, new clustering.distance.CosineDistance());
-		OccurenceClustering algorithm = new clustering.algorithms.Kmeans(svd.getDocumentConceptTable(), 31, new clustering.distance.CosineDistance(),new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(new clustering.distance.CosineDistance(), 1));
+		OccurenceClustering algorithm = new clustering.algorithms.Kmeans(features.getOccurenceTable(), 31, new clustering.distance.CosineDistance(),new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(new clustering.distance.CosineDistance(), 1));
 		Evaluation[] metrics = {new clustering.evaluation.Precision(evaluationClusters), new clustering.evaluation.Recall(evaluationClusters), new clustering.evaluation.AdjustedPrecision(new File(testProjectPath), extensions),new clustering.evaluation.MojoFM(evaluationClusters),new clustering.evaluation.SilhuetteIndex(new clustering.distance.ModifiedCosineDistance())};
-		System.out.println(svd.getCutoffPoint());
 		int[] clusters = algorithm.returnClusters();
 		for(Evaluation metric : metrics) 
 			System.out.println(metric.toString()+" : "+metric.evaluate(clusters, features.getOccurenceTable()));
