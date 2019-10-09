@@ -21,7 +21,7 @@ import featureExtraction.featureWeight.*;
 public class Test2 {
 
 	public static void main(String[] args) throws IOException {
-		String projectPath = "C:\\projectpy";
+		String projectPath = "C:\\projectPython";
 		String[] extensions = {"py"};
 	
 		
@@ -29,7 +29,7 @@ public class Test2 {
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		
 		for(ProjectInput project: projects) { 
-			Experiment exp = new TestBestMethodsToLatexRandomBestNed();
+			Experiment exp = new TestBestMethodsToLatexKaiser();
 			exp.test(project, wordModel, extensions);
 		}
 
