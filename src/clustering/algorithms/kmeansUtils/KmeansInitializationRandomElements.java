@@ -3,7 +3,11 @@ package clustering.algorithms.kmeansUtils;
 import java.util.Arrays;
 
 import clustering.distance.DistanceFunction;
-
+/**
+ * K-means random initialization method
+ * @see clustering.algorithms.Kmeans Kmeans
+ * @author Lefas Aristeidis
+ */
 public class KmeansInitializationRandomElements extends KmeansInitialization {
 
 	public float[][] initializeCentroids(float[][] occurenceTable, int clusterNumber) {

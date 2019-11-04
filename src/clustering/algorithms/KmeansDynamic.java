@@ -6,15 +6,32 @@ import clustering.algorithms.kmeansUtils.KmeansInitialization;
 import clustering.distance.DistanceFunction;
 import clustering.evaluation.Evaluation;
 
-
+/**
+ * Extends the Kmeans class. 
+ * Iteratively uses the kmeans algorithm for different cluster numbers until it finds the number of clusters that maximizes a given evaluation metric.
+ * @author Lefas Aristeidis
+ */
 public class KmeansDynamic extends Kmeans {
 	Evaluation evaluation;
-	
+	/**
+	 * A simplified constructor for the initialization of kmeans class.
+	 * The initialization is done with the deterministic version of kmeans++ initialization.
+	 * @param occurenceTable The document-term table. occurenceTable(i,j) value represents the relevant importance of term j for document i.
+	 * @param evaluation The evaluation metric we want to maximize.
+	 * @param distance The distance function that will be used to calculate the distance between entities.
+	 */
 	public KmeansDynamic(float[][] occurenceTable, Evaluation evaluation, DistanceFunction distanceFunction){
 		super(occurenceTable, 0 , distanceFunction);
 		this.evaluation = evaluation;
 	}
-	
+	/**
+	 * The basic constructor for the initialization of KmeansDynamic class.
+	 * @param occurenceTable The document-term table. occurenceTable(i,j) value represents the relevant importance of term j for document i.
+	 * @param evaluation The evaluation metric we want to maximize.
+	 * @param distance The distance function that will be used to calculate the distance between entities.
+	 * @param initialize The k-means initialization object is used to initialize the algorithm
+	 * @see KmeansInitialization
+	 */
 	public KmeansDynamic(float[][] occurenceTable, Evaluation evaluation, DistanceFunction distanceFunction, KmeansInitialization initialize) {
 		super(occurenceTable, 0, distanceFunction, initialize);
 		this.evaluation = evaluation;

@@ -1,7 +1,10 @@
 package clustering.algorithms;
 
 import weka.clusterers.Canopy;;
-
+/**
+ * Uses weka's Canopy clustering algorithm
+ * @author Lefas Aristeidis
+ */
 public class WekaClusteringCanopy extends WekaClustering {
 	
 	public WekaClusteringCanopy(float[][] occurenceTable) {

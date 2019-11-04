@@ -16,6 +16,7 @@ import clustering.distance.DistanceFunction;
 import clustering.distance.ModifiedCosineDistance;
 import clustering.evaluation.Evaluation;
 import dataImport.ProjectInput;
+import featureExtraction.RemoveLowOccurences;
 import featureExtraction.WordModelFeatureExtraction;
 import featureExtraction.WordModelFeatureExtractionReferenceAddedWeight;
 import featureExtraction.dimensionReduction.LSA;
@@ -72,7 +73,8 @@ public class TestBestMethodsToLatexKaiser extends Experiment {
 			} else {
 				weight = weightMethods[2];
 			}	
-			WordModelFeatureExtraction features = new WordModelFeatureExtractionReferenceAddedWeight(project.getInput(), weight, wordModel, fileWeights[k], functionWeights[k],0,2);
+			WordModelFeatureExtraction feature = new WordModelFeatureExtractionReferenceAddedWeight(project.getInput(), weight, wordModel, fileWeights[k], functionWeights[k],0,2);
+			RemoveLowOccurences features  = new RemoveLowOccurences(feature,4);
 			float occurence[][];
 
 			if(lsiMethods.contains((k+1))) {

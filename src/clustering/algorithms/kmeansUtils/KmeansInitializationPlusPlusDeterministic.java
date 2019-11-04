@@ -3,12 +3,19 @@ package clustering.algorithms.kmeansUtils;
 import java.util.Arrays;
 
 import clustering.distance.DistanceFunction;
-
+/**
+ * Deterministic alternative of k-means++ initialization method
+ * @see clustering.algorithms.Kmeans Kmeans
+ * @author Lefas Aristeidis
+ */
 public class KmeansInitializationPlusPlusDeterministic extends KmeansInitialization {
 	int kClosestCentroids;
 	DistanceFunction distance;
-	
-	//Next centroid is selected to be the entity that is the most distant from its k closest centroids
+	/**
+	 * The basic constructor of the KmeansInitializationPlusPlusDeterministic class
+	 * @param distance The distance function used to calculate the closest centroids
+	 * @param kClosestCentroid The number of closest centroids taken into consideration for next centroid calculation
+	 */
 	public KmeansInitializationPlusPlusDeterministic(DistanceFunction distance,int kClosestCentroids) {
 		this.distance = distance;
 		this.kClosestCentroids = kClosestCentroids;

@@ -5,16 +5,27 @@ import java.util.Collection;
 
 import org.apache.commons.io.FileUtils;
 
-
+/**
+ * Implements the clustering interface.
+ * Generates the clusters corresponding to the folder structure of the project.
+ * @author Lefas Aristeidis
+ */
 public class PackagesToClusters implements Clustering {
 	File rootDir;
 	String[] extensions;
-	
+	/**
+	 * Basic constructor of the class.
+	 * @param rootDir File object corresponding to the folder that contains the project
+	 * @param extensions Array of Strings that contains the extensions of files we want to cluster
+	 */
 	public PackagesToClusters(File rootDir, String[] extensions) {
 		this.extensions = extensions;
 		this.rootDir = rootDir;
 	}
-	
+	/**
+	 * Returns the cluster assignments.
+	 * @return An array containing the cluster assignment for each entity.
+	 */
 	public int[] returnClusters() {
 		Collection<File> files= FileUtils.listFiles(rootDir, extensions , true);
 		File[] filesArray = files.toArray(new File[files.size()]);

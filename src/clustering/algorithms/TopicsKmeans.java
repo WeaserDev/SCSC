@@ -3,13 +3,18 @@ package clustering.algorithms;
 import clustering.algorithms.kmeansUtils.KmeansInitialization;
 import clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic;
 import clustering.distance.DistanceFunction;
-
+/**
+ * This class extends the OccurenceClustering abstract class. It uses the {@link Kmeans} clustering algorithm.
+ * It produces a number of clusters and produces an occurenceTable where the features are the distances from those cluster centroids.
+ * Then it produces the final clustering based on this table.
+ * @author Lefas Aristeidis
+ */
 public class TopicsKmeans extends OccurenceClustering {
 	protected int clusterNumber;
 	protected int topicsNumber;
 	protected DistanceFunction distance;
 	protected KmeansInitialization initialize;
-	
+
 	public TopicsKmeans(float[][] occurenceTable,int topicsNumber, int clusterNumber, DistanceFunction distance,KmeansInitialization initialize) {
 		super(occurenceTable);	
 		this.topicsNumber = topicsNumber;

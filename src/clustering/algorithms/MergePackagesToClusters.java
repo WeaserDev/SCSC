@@ -9,18 +9,32 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 
-
+/**
+ * Implements the clustering interface.
+ * Generates the clusters corresponding to the folder structure of the project.
+ * Folders with few files are getting merged with their parents.
+ * @see PackagesToClusters
+ * @author Lefas Aristeidis
+ */
 public class MergePackagesToClusters implements Clustering {
 	File rootDir;
 	int mergeThreshold;
 	String extensions[];
-	
+	/**
+	 * Basic constructor of the class.
+	 * @param rootDir File object corresponding to the folder that contains the project
+	 * @param extensions Array of Strings that contains the extensions of files we want to cluster
+	 * @param mergeThreshold The threshold at which we merge, if a folder contains less files than the mergeThreshold then it is merged with its parent folder.
+	 */
 	public MergePackagesToClusters(File rootDir, String[] extensions, int mergeThreshold) {
 		this.extensions = extensions;
 		this.rootDir = rootDir;
 		this.mergeThreshold = mergeThreshold;
 	}
-	
+	/**
+	 * Returns the cluster assignments.
+	 * @return An array containing the cluster assignment for each entity.
+	 */
 	public int[] returnClusters() {
 		List<List<String>> foldersList  = createFoldersList();
 		int[] clusters = createClusters(foldersList);

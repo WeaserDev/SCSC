@@ -63,7 +63,7 @@ public class FirefoxVisualizer {
 				if(!children.isEmpty())
 					children += ",";
 				children += "{\"name\":\""+child.getFileName()+"\", \"size\": "+(3+child.getFileCode().length()-child.getFileCode().replaceAll("\n", "").length())
-						 +", \"color\":"+(wrong.contains(child)?"\"red\"":"\"white\"")	
+						 +", \"color\":"+(wrong.contains(child)?"\"yellow\"":"\"white\"")	
 						+"}";
 			}
 			if(!output.isEmpty())

@@ -2,7 +2,11 @@ package clustering.algorithms;
 
 import clustering.evaluation.Evaluation;
 import weka.core.DistanceFunction;
-
+/**
+ * Extends the WekaClusteringKmeans class. 
+ * Iteratively uses weka's kmeans algorithm for different cluster numbers until it finds the number of clusters that maximizes a given evaluation metric.
+ * @author Lefas Aristeidis
+ */
 public class WekaClusteringKmeansDynamic extends WekaClusteringKmeans {
 	Evaluation evaluation;
 		

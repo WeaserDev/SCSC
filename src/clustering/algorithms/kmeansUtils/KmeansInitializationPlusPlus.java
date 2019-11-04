@@ -3,10 +3,17 @@ package clustering.algorithms.kmeansUtils;
 import java.util.Arrays;
 
 import clustering.distance.DistanceFunction;
-
+/**
+ * k-means++ initialization method
+ * @see clustering.algorithms.Kmeans Kmeans
+ * @author Lefas Aristeidis
+ */
 public class KmeansInitializationPlusPlus extends KmeansInitialization {
 	DistanceFunction distance;
-	
+	/**
+	 * The basic constructor of the KmeansInitializationPlusPlus class
+	 * @param distance The distance function used to calculate the centroids distance
+	 */
 	public KmeansInitializationPlusPlus(DistanceFunction distance){
 		this.distance = distance;
 	}

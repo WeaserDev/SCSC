@@ -1,7 +1,10 @@
 package clustering.algorithms;
 import clustering.distance.*;
 import weka.core.DistanceFunction;
-
+/**
+ * Uses weka's Xmeans clustering algorithm
+ * @author Lefas Aristeidis
+ */
 public class WekaClusteringXmeans extends WekaClustering {
 
 		int maxClusterNumber;

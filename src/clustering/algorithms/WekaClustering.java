@@ -5,7 +5,11 @@ import java.util.List;
 
 import weka.clusterers.Clusterer;
 import weka.core.*;
-
+/**
+ * This class extends the OccurenceClustering abstract class. It contains classes that convert the data input and output to work with weka libary.
+ * Classes that extend this class implement algorithms from the weka library.
+ * @author Lefas Aristeidis
+ */
 abstract public class WekaClustering extends OccurenceClustering {
 	protected Instances wekaDataset;
 

@@ -5,21 +5,37 @@ import java.util.HashSet;
 
 import clustering.algorithms.kmeansUtils.*;
 import clustering.distance.DistanceFunction;
-
+/**
+ * Extends the OccurenceClustering abstract class. Implements the k-means clustering algorithm.
+ * @author Lefas Aristeidis
+ */
 public class Kmeans extends OccurenceClustering {
 	protected int clusterNumber;	
 	protected int maxIterations = 100;
 	protected DistanceFunction distance;
 	protected KmeansInitialization initialize;
 	
-	
+	/**
+	 * A simplified constructor for the initialization of kmeans class.
+	 * The initialization is done with the deterministic version of kmeans++ initialization.
+	 * @param occurenceTable The document-term table. occurenceTable(i,j) value represents the relevant importance of term j for document i.
+	 * @param clusterNumber The number of clusters to be returned.
+	 * @param distance The distance function that will be used to calculate the distance between entities.
+	 */
 	public Kmeans(float[][] occurenceTable, int clusterNumber, DistanceFunction distance) {
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;
 		this.distance = distance;
 		this.initialize = new KmeansInitializationPlusPlusDeterministic(distance, 1);
 	}
-	
+	/**
+	 * The basic constructor for the initialization of Kmeans class.
+	 * @param occurenceTable The document-term table. occurenceTable(i,j) value represents the relevant importance of term j for document i.
+	 * @param clusterNumber The number of clusters to be returned.
+	 * @param distance The distance function that will be used to calculate the distance between entities.
+	 * @param initialize The k-means initialization object is used to initialize the algorithm
+	 * @see KmeansInitialization
+	 */
 	public Kmeans(float[][] occurenceTable, int clusterNumber, DistanceFunction distance, KmeansInitialization initialize) {
 		super(occurenceTable);
 		this.clusterNumber = clusterNumber;

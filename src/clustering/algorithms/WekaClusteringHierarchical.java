@@ -2,7 +2,10 @@ package clustering.algorithms;
 
 import weka.clusterers.HierarchicalClusterer;
 import clustering.distance.*;
-
+/**
+ * Uses weka's Hierarchical clustering algorithm
+ * @author Lefas Aristeidis
+ */
 public class WekaClusteringHierarchical extends WekaClustering {
 
 	

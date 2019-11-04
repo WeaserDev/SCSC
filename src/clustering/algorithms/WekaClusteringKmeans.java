@@ -4,7 +4,10 @@ import weka.core.SelectedTag;
 import weka.core.DistanceFunction;
 import weka.core.ManhattanDistance;
 import clustering.distance.*;
-
+/**
+ * Uses weka's K-means clustering algorithm
+ * @author Lefas Aristeidis
+ */
 public class WekaClusteringKmeans extends WekaClustering {
 	int clusterNumber;
 	DistanceFunction distanceFunction;
