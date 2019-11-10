@@ -17,8 +17,8 @@ import featureExtraction.featureWeight.globalWeight.NoGlobalWeight;
 
 public class ValidateProject {
 	public static void main(String[] args) throws Exception {
-		String testProjectPath = "C:\\proj\\junit4-r4.12";
-		String[] extensions = {"java"};
+		String testProjectPath = "C:\\projectpy\\keras-2.3.0";
+		String[] extensions = {"py"};
 		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
 		ProjectInput project = new ProjectInput(new File(testProjectPath), extensions);
 		int[] evaluationClusters = (new PackagesToClusters(new File(testProjectPath), extensions)).returnClusters();
@@ -29,9 +29,10 @@ public class ValidateProject {
 //		double rank = Math.pow(occur.length*occur[0].length, 0.2);
 //		int factors = (int) Math.round(rank);
 //		LSA lsi = new LSA(occur,factors);
+		System.out.println(features.getOccurenceTable()[0].length);
 
 		//OccurenceClustering algorithm = new clustering.algorithms.KmeansDynamic(features.getOccurenceTable(), new clustering.evaluation.IntraSimilarity(new clustering.distance.CosineDistance(), 5), new clustering.distance.CosineDistance(), new clustering.algorithms.kmeansUtils.KmeansInitializationPlusPlusDeterministic(new clustering.distance.CosineDistance(),100));
-		OccurenceClustering algorithm = new clustering.algorithms.Kmeans(features.getOccurenceTable(), clusterNumber(evaluationClusters), new clustering.distance.CosineDistance());
+		OccurenceClustering algorithm = new clustering.algorithms.Kmeans(features.getOccurenceTable(), 10, new clustering.distance.CosineDistance());
 		Evaluation[] metrics = {new clustering.evaluation.Precision(evaluationClusters), new clustering.evaluation.Recall(evaluationClusters), new clustering.evaluation.AdjustedPrecision(new File(testProjectPath),extensions)};
 		
 		int[] clusters = algorithm.returnClusters();

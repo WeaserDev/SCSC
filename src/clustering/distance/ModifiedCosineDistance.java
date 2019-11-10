@@ -1,6 +1,14 @@
 package clustering.distance;
-
+/**
+ * Calculates the Modified Cosine Distance of the 2 vectors.
+ * Extends abstract class distanceFunction.
+ * @see clustering.distance distanceFunction
+ * @author Lefas Aristeidis
+ */
 public class ModifiedCosineDistance extends CosineDistance {
+	/**
+	 * Calculates the Modified Cosine Distance of the 2 vectors.
+	 */
 	public double distance(float[] firstVector, float[] secondVector) {
 		  double distance = super.distance(firstVector, secondVector);
 		  

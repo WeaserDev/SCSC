@@ -1,5 +1,12 @@
 package clustering.distance;
-
+/**
+ * The abstract class for methods that calculate the distance between binary feature vectors.
+ * Extends DistanceFunction class
+ * Calculates quantitties a,b,c,d
+ * Class that extend this class should implement {@link #distance(float[][], float[][])} method.
+ * @see clustering.distance distanceFunction
+ * @author Lefas Aristeidis
+ */
 public abstract class AssociationDistance extends DistanceFunction {
 	int a,b,c,d;
 	

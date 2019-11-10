@@ -23,18 +23,11 @@ public class Test2 {
 	public static void main(String[] args) throws IOException {
 
 		
-		String projectPath = "C:\\proj";
+		String projectPath = "C:\\projectpy\\keras-2.3.0";
 		String[] extensions = {"js"};
+		String[] argas = {projectPath, "py"};
+		sourceCodeSemanticClustering.SourceCodeSemanticClustering.main(argas);
 			
-		ProjectInput[] projects = ProjectInput.createProjectInput(new File(projectPath), extensions);
-
-	
-		WordModel wordModel = new WordModel.BagOfWords(new auth.eng.textManager.stemmers.InvertibleStemmer(new auth.eng.textManager.stemmers.PorterStemmer()));
-		
-		for(ProjectInput project: projects) { 
-			Experiment exp = new TestBestMethodsToLatexClosest3();
-			exp.test(project, wordModel, extensions);
-		}
 
 	}
 

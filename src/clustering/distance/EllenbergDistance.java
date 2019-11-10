@@ -1,5 +1,10 @@
 package clustering.distance;
-
+/**
+ * Calculates the Ellenberg distance of the 2 vectors.
+ * Extends abstract class distanceFunction.
+ * @see clustering.distance distanceFunction
+ * @author Lefas Aristeidis
+ */
 public class EllenbergDistance extends DistanceFunction {
 	double ma,mb,mc;
 	@Override
@@ -7,7 +12,9 @@ public class EllenbergDistance extends DistanceFunction {
 		calculateQuantities(firstVector,secondVector);
 		return 1 - ma/(2*(ma/2 + mc + mb));
 	}
-	
+	/**
+	 * Calculates the Ellenberg distance of the 2 vectors.
+	 */
 	protected void calculateQuantities(float[] firstVector, float[] secondVector) {
 		for (int i=0;i<firstVector.length;i++) {
 			if (firstVector[i]!=0) {

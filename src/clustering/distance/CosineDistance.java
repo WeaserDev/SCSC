@@ -1,8 +1,14 @@
 package clustering.distance;
-
+/**
+ * Calculates the cosine distance of the 2 vectors. 
+ * Extends abstract class distanceFunction.
+ * @see clustering.distance distanceFunction
+ * @author Lefas Aristeidis
+ */
 public class CosineDistance extends DistanceFunction {
-
-
+	/**
+	 * Calculates the cosine distance of the 2 vectors.
+	 */
 	public double distance(float[] firstVector, float[] secondVector) {
 		double distance = 0;
 		double normFirst = 0;

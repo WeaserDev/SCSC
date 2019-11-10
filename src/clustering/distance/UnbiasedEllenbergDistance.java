@@ -1,8 +1,16 @@
 package clustering.distance;
-
+/**
+ * Calculates the Unbiased Ellenberg Distance of the 2 vectors.
+ * Extends abstract class distanceFunction.
+ * @see clustering.distance distanceFunction
+ * @author Lefas Aristeidis
+ */
 public class UnbiasedEllenbergDistance extends DistanceFunction {
 	int b,c;
 	double ma;
+	/**
+	 * Calculates the Unbiased Ellenberg Distance of the 2 vectors.
+	 */
 	@Override
 	public double distance(float[] firstVector, float[] secondVector) {
 		calculateQuantities(firstVector,secondVector);
